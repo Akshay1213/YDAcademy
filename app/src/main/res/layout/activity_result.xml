@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/layoutcardview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="0dp"
+            android:clickable="true"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="2.0px"
+            android:elevation="1dp"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:orientation="horizontal"
+            android:paddingTop="0dp"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="10dp"
+            app:cardPreventCornerOverlap="true">
+
+            <TextView
+                android:id="@+id/txt_scoreBoard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Score Board"
+                android:textSize="20dp" />
+
+        </android.support.v7.widget.CardView>
+
+        <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/layout_table"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context="com.example.user.adapter_imageview.start_Test">
+
+
+            <TableRow>
+
+                <TextView
+                    android:layout_column="1"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="50dp"
+                    android:text="Correct questions"></TextView>
+
+                <TextView
+                    android:id="@+id/txt_Correct"
+                    android:layout_width="wrap_content"
+                    android:layout_column="2"
+                    android:layout_marginTop="50dp"
+                    android:paddingLeft="10dp"></TextView>
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_column="1"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="3dp"
+                    android:text="Incorrect questions"></TextView>
+
+                <TextView
+                    android:id="@+id/txt_incorrect"
+                    android:layout_width="wrap_content"
+                    android:layout_column="2"
+                    android:layout_marginTop="3dp"
+                    android:paddingLeft="10dp"></TextView>
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_column="1"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="3dp"
+                    android:text="Number of attended questions"></TextView>
+
+                <TextView
+                    android:id="@+id/txt_answer"
+                    android:layout_width="wrap_content"
+                    android:layout_column="2"
+                    android:layout_marginTop="3dp"
+                    android:paddingLeft="10dp"></TextView>
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_column="1"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="3dp"
+                    android:text="Number of unattended questions"></TextView>
+
+                <TextView
+                    android:id="@+id/txt_unanswer"
+                    android:layout_width="wrap_content"
+                    android:layout_column="2"
+                    android:layout_marginTop="3dp"
+                    android:paddingLeft="10dp"></TextView>
+            </TableRow>
+
+        </TableLayout>
+
+        <TextView
+            android:id="@+id/txt_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="150dp" />
+
+        <Button
+            android:id="@+id/btn_viewdescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_message"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="view Description" />
+
+    </RelativeLayout>
+</ScrollView>

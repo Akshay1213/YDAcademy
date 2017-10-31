@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_queNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp" />
+
+            <ImageView
+                android:id="@+id/ivresult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="23dp"
+                android:scaleType="fitXY"
+                android:visibility="visible" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ivresult"
+                android:layout_marginTop="10dp"
+                android:clickable="false"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="4">
+
+                        <RadioButton
+                            android:id="@+id/radiobutton_A"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:checked="false"
+                            android:clickable="false"
+                            android:inputType="textAutoComplete"
+                            android:text="A" />
+
+                        <ImageView
+                            android:id="@+id/imageview_A"
+                            android:layout_width="10dp"
+                            android:layout_height="30dp"
+                            android:layout_weight="1" />
+
+                        <RadioButton
+                            android:id="@+id/radiobutton_B"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:checked="false"
+                            android:clickable="false"
+                            android:inputType="textAutoComplete"
+                            android:text="B" />
+
+                        <ImageView
+                            android:id="@+id/imageview_B"
+                            android:layout_width="10dp"
+                            android:layout_height="30dp"
+                            android:layout_weight="1" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="4">
+
+                        <RadioButton
+                            android:id="@+id/radiobutton_C"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:checked="false"
+                            android:clickable="false"
+                            android:inputType="textAutoComplete"
+                            android:text="C" />
+
+                        <ImageView
+                            android:id="@+id/imageview_C"
+                            android:layout_width="10dp"
+                            android:layout_height="30dp"
+                            android:layout_weight="1" />
+
+                        <RadioButton
+                            android:id="@+id/radiobutton_D"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:checked="false"
+                            android:clickable="false"
+                            android:inputType="textAutoComplete"
+                            android:text="D" />
+
+                        <ImageView
+                            android:id="@+id/imageview_D"
+                            android:layout_width="10dp"
+                            android:layout_height="30dp"
+                            android:layout_weight="1" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </RadioGroup>
+
+
+            <com.phelat.fun.Layouts.Funny xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/mFunny"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@+id/radioGroup">
+
+                <com.phelat.fun.Widget.FunnyButton
+                    android:id="@+id/mFunnyButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="20dp"
+                    android:minWidth="100dp"
+                    app:cardBackgroundColor="#8d6e63"
+                    app:text="View Description"
+                    app:textColor="#FFFFFF"
+                    app:textSize="15sp">
+
+                    <LinearLayout
+                        android:id="@+id/mFunContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/imageview_description"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:adjustViewBounds="true"
+                            android:scaleType="fitXY"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+                </com.phelat.fun.Widget.FunnyButton>
+
+            </com.phelat.fun.Layouts.Funny>
+
+
+        </RelativeLayout>
+    </android.support.v4.widget.NestedScrollView>
+</RelativeLayout>

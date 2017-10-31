@@ -1,0 +1,223 @@
+<resources>
+    <string name="app_name">YDAcademy</string>
+    <string name="login_success">login success</string>
+    <string name="login">LOGIN</string>
+    <string name="Username">Username</string>
+    <string name="Password">Password</string>
+    <string name="forgot_your_password">Forgot your password ?</string>
+    <string name="go">GO</string>
+    <string name="repeat_password">Repeat Password</string>
+    <string name="next">NEXT</string>
+    <string name="register">REGISTER</string>
+    <string name="chapter1">
+  Lorem ipsum dolor sit amet,us elementum semper nisi.</string>
+    <!-- <string name="chapter2">
+    Lorem ipsum dolor sit amet,us elementum semper nisi.</string>
+<string name="chapter3">
+    Lorem ipsum dolor sit amet,us elementum semper nisi.</string>-->
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="course_prompt">Choose a course</string>
+    <string name="version">V1.0.0</string>
+    <string name="aboutus">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula.</string>
+    <string-array name="courses1">
+        <!--  <item>Career After 10th</item>-->
+        <item>Art Teacher Diploma</item>
+        <item>Commercial Art Diploma</item>
+        <item>Diploma in Beauty culture and Hair dressing</item>
+        <item>Diploma in Garment technology</item>
+        <item>Diploma in Stenography</item>
+        <item>Engineering Diploma</item>
+        <item>Industrial Training Institutes</item>
+        <item>Laboratory Technician Diploma</item>
+    </string-array>
+    <string-array name="courses2">
+        <!-- <item>Career After 12th</item>-->
+
+        <item>B.Sc. in Hospitality and Hotel Administration</item>
+        <item>Diploma in Dance and Music</item>
+
+        <item>Diploma in Elementary Education</item>
+        <item>Diploma in travel and tourism</item>
+
+        <item>L.L.B (Hons) Integrated Course</item>
+        <item>Bachelor of Ayurveda, Medicine and Surgery (B.A.M.S.)</item>
+
+        <item>Bachelor of Dental Surgery (B. D. S.)</item>
+        <item>Bachelor of Homeopathic Medicine and Surgery (B.H.M.S.)</item>
+
+        <item>Bachelor of Medicine and Surgery (M.B.B.S)</item>
+        <item>Bachelor of Science</item>
+
+        <item>Bachelor of Science Nursing </item>
+        <item>Bachelor of Veterinary Science and Animal Husbandry (B.V.Sc.and AH)</item>
+
+        <item>Bachelor of Architecture (B. Arch.)</item>
+        <item>Bachelor of Computer Applications (BCA)</item>
+
+        <item>Bachelor of Engineering (BE/B Tech)</item>
+        <item>Bachelor of Planning</item>
+
+        <item>Cinematographer</item>
+        <item>Bachelor of Science in Dairy Technology (B. Sc. Dairy Technology)</item>
+
+        <item>B. Tech. in Agriculture</item>
+
+    </string-array>
+    <string name="description1">It is typically a 2-year program to train candidates in the fundamental principles of visual and design experience</string>
+    <string name="scope1">Arts Teacher</string>
+    <string name="description2">Commercial art, often called advertising art, helps understand nuance of selling goods and services. It is completely different from fine art.</string>
+    <string name="scope2">Art studios, Advertising companies, Publishing houses, Fashion houses</string>
+    <string name="description3">Beauty Care courses, ranging from 3 months to a year, impart training in body care. Job profile generally begins with trainee in beauty salons.</string>
+    <string name="scope3">Self Beauty saloon and Beauty Expert</string>
+    <string name="description4">Garment Technology is a 3-year diploma course which equips candidates with techniques of timely delivery of merchandise and optimal resource utilization.</string>
+    <string name="scope4">Self Boutique and Fashion designer</string>
+    <string name="description5">It is a one-year diploma in administrative vocational trade where candidates are equipped in taking short-hand dictations and perform clerical duties.</string>
+    <string name="scope5">Secretary, Stenographer, Computer Operator, Clerk-cum-Typist in Private and Govt. sector</string>
+    <string name="description6">It is a technical degree below the undergraduate rank which aims to enable students to understand technical communication and apply basic problem solving techniques.</string>
+    <string name="scope6"> Govt. Contractor</string>
+    <string name="description7">Industrial Training Institutes (ITIs) are government-run training organizations which offer post-school technical training ranging from 6 months to 2 years in varied fields.</string>
+    <string name="scope7">Apprentice, welder and Govt. jobs</string>
+    <string name="description8">This course is meant for training in Clinical Laboratory technology where students are equipped with technical know-how for placement in clinical labs and hospitals. Though duration varies, it is mostly a 3-year course.</string>
+    <string name="scope8"> Lab Technician, Lab Assistant, Self employmentr</string>
+    <!--   <string name="description9">It is typically a 2-year program to train candidates in the fundamental principles of visual and design experience</string>
+       <string name="scope9">Arts Teacher</string>-->
+    <!-- <string name="description1">It is typically a 2-year program to train candidates in the fundamental principles of visual and design experience</string>
+    <string name="scope1">Arts Teacher</string>-->
+    <string name="relevant_courses1">Lateral entry BFA, MFA</string>
+    <string name="relevant_courses2">* Degree Engineering  "\n"*  Associate membership of institute of engineers ,"\n"
+                                    * Diploma in civil engineering,"\n"
+                                    * Diploma in electrical engineerin  "\n"
+                                    * Diploma in mechanical engineering  "\n"
+                                    * Diploma in computer engineering  "\n"
+
+                                    * Diploma in automobile engineering  "\n"
+
+                                     * Diploma in chemical engineering  "\n"
+
+                                     * Diploma in information technology  "\n"
+
+                                    * Diploma in electronics and telecommunications"\n"
+
+                                     * Diploma in textile engineering"\n"
+
+                                     * Diploma in printing technology"\n"
+
+                                    *  Diploma in tool engineering"\n"
+
+                                    *  Diploma in Pharmacy"\n"
+
+                                   * Diploma in Hotel Management"\n"
+
+                                    * Opting for Class 11 and 12 (Best option)"\n"
+
+                                    * Diploma in Social Service."\n"
+
+                                    * Diploma in Stenography."\n"
+
+                                    * Diploma in Footware Designing."\n"
+
+                                    * Diploma in Animal Husbendary, Nursing, Food Technology etc."\n"
+
+                                    * Dozens of ITI courses."\n"
+
+                                    * 40 Hours or 3 months of AUTOCAD."\n"
+
+                                    * Training for Student Pilot Licence (SPL), but of no use until follwed by PPL an CPL (which requires +2 with POCM 60%)."\n"
+
+                                   * Training for Private Pilot Licence (PPL)."\n"
+
+                                   </string>
+
+    <string name="description11">It is a 3-year degree programme affiliated by National Council for Hotel Management and Catering Technology (NCHMCT). Admission is conducted through an All India Joint Entrance Exam- NCHMJEE.</string>
+    <string name="scope11"> Management Trainee in Hotel and hospitality.
+                            > Kitchen Management/Housekeeping positions in Hotels.
+                            > Flight Kitchens and on-board flight services
+                            > Indian Navy Hospitality services</string>
+    <!--<string name="relevant_courses11"></string>-->
+
+    <string name="description12">Diploma courses in varied dance forms and music genres as well as instruments can be pursued by candidate for hobby or as a professional programme.Admission to the program is same as that for 3-year BSc. ie. through All India Joint Entrance Examination-JEE,  in which the first three semesters are common to both the streams ie. Generic and Specialisation. In the forth semester, students who opt for specialisation are allotted their choice based on merit and marks scored by them in the semesters one and two.
+    </string>
+    <string name="scope12">Choreographers, Dance Teacher, Performing Artist</string>
+    <!--<string name="relevant_job12"></string>-->
+
+    <string name="description13">It is a one-year diploma in administrative vocational trade where candidates are equipped in taking short-hand dictations and perform clerical duties.</string>
+    <string name="scope13">Elementary school teacher and Nursery school teacher</string>
+    <!--<string name="relevant_courses13"></string>-->
+
+    <string name="description14">One year diploma course offering management training in entry level jobs in hotels, airports, travel companies/agencies, cruise liners and online travel booking websites.</string>
+    <string name="scope14">Job opportunities in hotels, Quick Service Restaurant (QSR)</string>
+    <!-- <string name="relevant_courses14"></string>-->
+
+    <string name="description15">This is a 5-year integrated law course where candidates can choose a Law programme aligned with their core stream - B.A. LL.B (Hons.) , B.B.A. LL.B (Hons.) , B.Sc. LL.B (Hons.) , B.Com. LL.B (Hons.) and , B.S.W. LL.B (Hons.)</string>
+    <string name="scope15">Legal Advisor, Legal Practitioner and Advocate</string>
+    <string name="relevant_courses15">L.L.M , M. Phil. , Ph.D , Post Graduate Law Diploma, Post Graduate Law Diploma, Master of Public Policy, Post Graduate Diploma in Labour Law (D.L.L.)</string>
+
+    <string name="description16">It is a five-and-a-half-year undergraduate degree course that also includes one year of internship. After successful completion of the course, students are designated as Ayurvedacharya doctor.</string>
+    <string name="scope16">Ayurveda Consultation, General Practice, Clinical Research</string>
+    <string name="relevant_courses16">Master of Public Health, PG Diploma</string>
+
+    <string name="description17">It is 5-year degree course, which includes 4 years of study followed by one year of internship. After successful completion of this degree programme, candidate is designated as Dentist.</string>
+    <string name="scope17">Lecturer, General Practice</string>
+    <string name="relevant_courses17">Master of Dental Surgery, Master of Public Health</string>
+
+    <string name="description18">BHMS is an undergraduate degree course of five-and-a-half-year duration (including one year compulsory internship). After successful completion of the course, students are designated as Homeopathic doctor.</string>
+    <string name="scope18">Homeopathy Consultation, General Practice, Clinical Research</string>
+    <string name="relevant_courses18">Doctor of Medicine in Homeopathy, PG Diploma</string>
+
+    <string name="description19">MBBS is a five-and-a-half-year degree course which includes one year of mandatory internship in a hospital attached or approved by the concerned medical college. After successful completion of the course, students can practice Medicine and Surgery.</string>
+    <string name="scope19">Doctor, General Clinical Practice, Research</string>
+    <string name="relevant_courses19">Doctor of Medicine(MD), Master of surgery (MS)</string>
+
+    <string name="description20">Bachelor of Science is three-year degree programme offered in multitude of specializations under the pure sciences domain such as Maths, Physics, Chemistry, Botany, Zoology etc.</string>
+    <string name="scope20">BPO, SSC Exams, Graduate level exams</string>
+    <string name="relevant_courses20">MSc,MA</string>
+
+    <string name="description21">Bachelor of Science in Nursing is a four-year programme which involves classroom lessons, practical sessions as well as clinical work apart from internship.</string>
+    <string name="scope21">Employment in Hospitals and Clinics, Training institutes</string>
+    <string name="relevant_courses21">MSc Nursing, Post Graduate Program in Public Health Management (PGPPHM)</string>
+
+    <string name="description22">This is a five year undergraduate degree course with 6 months mandatory internship which includes training in practicing and teaching Veterinary science and livestock and poultry farm management.</string>
+    <string name="scope22">Veterinary Clinics, Zoos and  Wild life Research organizations</string>
+    <string name="relevant_courses22">Master of Veterinary Science, PhD (Veterinary and Animal Sciences)</string>
+
+    <string name="description23">The Bachelor of Architecture (B.Arch.), recognized by Council of Architecture (COA), is 5-year degree programme including a period of practical training prior to professional examination and registration.</string>
+    <string name="scope23">Design Architect, Project Architect, Interior Architect</string>
+    <string name="relevant_courses23">Master in Architecture (M Arch), MBA</string>
+
+    <string name="description24">Bachelor of Computer Applications is an undergraduate degree course of three years which equips candidate with skills to analyze and synthesize computer systems, applications and information systems.</string>
+    <string name="scope24">Programmer, Networking Professional</string>
+    <string name="relevant_courses24">MCA, MCM, B. Ed.</string>
+
+    <string name="description25">BE/B Tech is a four-year engineering degree programme approved by AICTE in specific branchs such as Civil, Mechanical, Electrical, Information Technology etc.</string>
+    <string name="scope25">IT Professional, Government Contractors</string>
+    <string name="relevant_courses25">ME/M Tech, MS, MBA</string>
+
+    <string name="description26">Bachelor of planning is a professional four-year technical degree programme which prepares candidates with adequate skills for infrastructure planning in different capacities.</string>
+    <string name="scope26">Professional Planner, Architectural Firms</string>
+    <string name="relevant_courses26">Master of Planning</string>
+
+    <!--<string name="description27">Bachelor of Science is three-year degree programme offered in multitude of specializations under the pure sciences domain such as Maths, Physics, Chemistry, Botany, Zoology etc.</string>
+    <string name="scope27">Graduate level Exams, BPO, SSC Exams</string>
+    <string name="relevant_courses27">MSc, MA</string>
+-->
+    <string name="description27">Candidates interested in careers as Cinematographer can pursue diploma course which enables them to operate technical devices and understand props towards getting perfect shots.</string>
+
+    <string name="description28">It is a 4-year undergraduate agriculture science and technology course which deals with processing milk and other allied products.</string>
+    <string name="scope28">Quality Control Analyst in dairy processing plants</string>
+    <string name="relevant_courses28">Master of Science in Dairy Technology</string>
+
+
+    <string name="description29">Bachelor of Technology in Agriculture Engineering is a 4-year programme which deals with the study of breeding plants which are consumed by human beings and livestock</string>
+    <string name="scope29">Teaching, Farm Manager, Researcher</string>
+    <string name="relevant_courses29">Master of Technology in Agriculture</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_main">MainActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+</resources>

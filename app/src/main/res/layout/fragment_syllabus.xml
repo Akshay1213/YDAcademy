@@ -1,0 +1,288 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.user.ydacademy.TabActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:animateLayoutChanges="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/header1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_green_dark"
+            android:gravity="center_vertical"
+            android:minHeight="?android:attr/listPreferredItemHeight"
+            android:padding="20dp"
+            android:text="NEET"
+            android:textColor="@android:color/white"
+            android:textSize="28sp" />
+
+        <LinearLayout
+            android:id="@+id/section1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/txtPhysics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:gravity="center_vertical"
+                android:minHeight="?android:attr/listPreferredItemHeight"
+                android:padding="20dp"
+                android:text="Physics"
+                android:textColor="@android:color/holo_green_dark"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/txtChemistry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:gravity="center_vertical"
+                android:minHeight="?android:attr/listPreferredItemHeight"
+                android:padding="20dp"
+                android:text="Chemistry"
+                android:textColor="@android:color/holo_green_dark"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/txtBiology"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:gravity="center_vertical"
+                android:minHeight="?android:attr/listPreferredItemHeight"
+                android:padding="20dp"
+                android:text="Biology"
+                android:textColor="@android:color/holo_green_dark"
+                android:textSize="22sp" />
+
+            <!--  <TextView
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:background="@android:color/white"
+                  android:gravity="center_vertical"
+                  android:minHeight="?android:attr/listPreferredItemHeight"
+                  android:padding="20dp"
+                  android:id="@+id/txtMaths"
+                  android:text="Mathematics"
+                  android:textColor="@android:color/holo_green_dark"
+                  android:textSize="22sp"
+                  />-->
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/header2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_green_dark"
+            android:gravity="center_vertical"
+            android:minHeight="?android:attr/listPreferredItemHeight"
+            android:padding="20dp"
+            android:text="CET"
+            android:textColor="@android:color/white"
+            android:textSize="28sp" />
+
+        <LinearLayout
+            android:id="@+id/section2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/txtPhysics1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:gravity="center_vertical"
+                android:minHeight="?android:attr/listPreferredItemHeight"
+                android:padding="20dp"
+                android:text="Physics"
+                android:textColor="@android:color/holo_green_dark"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/txtChemistry1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:gravity="center_vertical"
+                android:minHeight="?android:attr/listPreferredItemHeight"
+                android:padding="20dp"
+                android:text="Chemistry"
+                android:textColor="@android:color/holo_green_dark"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/txtBiology1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:gravity="center_vertical"
+                android:minHeight="?android:attr/listPreferredItemHeight"
+                android:padding="20dp"
+                android:text="Biology"
+                android:textColor="@android:color/holo_green_dark"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/txtMaths1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:gravity="center_vertical"
+                android:minHeight="?android:attr/listPreferredItemHeight"
+                android:padding="20dp"
+                android:text="Mathematics"
+                android:textColor="@android:color/holo_green_dark"
+                android:textSize="22sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/header3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_green_dark"
+            android:gravity="center_vertical"
+            android:minHeight="?android:attr/listPreferredItemHeight"
+            android:padding="20dp"
+            android:text="JEE"
+            android:textColor="@android:color/white"
+            android:textSize="28sp" />
+
+        <LinearLayout
+            android:id="@+id/section3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/txtPhysics2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:gravity="center_vertical"
+                android:minHeight="?android:attr/listPreferredItemHeight"
+                android:padding="20dp"
+                android:text="Physics"
+                android:textColor="@android:color/holo_green_dark"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/txtChemistry2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:gravity="center_vertical"
+                android:minHeight="?android:attr/listPreferredItemHeight"
+                android:padding="20dp"
+                android:text="Chemistry"
+                android:textColor="@android:color/holo_green_dark"
+                android:textSize="22sp" />
+
+            <!-- <TextView
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:background="@android:color/white"
+                 android:gravity="center_vertical"
+                 android:minHeight="?android:attr/listPreferredItemHeight"
+                 android:padding="20dp"
+                 android:text="Biology"
+                 android:id="@+id/txtBiology2"
+                 android:textColor="@android:color/holo_green_dark"
+                 android:textSize="22sp"
+                 />
+ -->
+            <TextView
+                android:id="@+id/txtMaths2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:gravity="center_vertical"
+                android:minHeight="?android:attr/listPreferredItemHeight"
+                android:padding="20dp"
+                android:text="Mathematics"
+                android:textColor="@android:color/holo_green_dark"
+                android:textSize="22sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/header4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_green_dark"
+            android:gravity="center_vertical"
+            android:minHeight="?android:attr/listPreferredItemHeight"
+            android:padding="20dp"
+            android:text="StateBoard"
+            android:textColor="@android:color/white"
+            android:textSize="28sp" />
+
+        <LinearLayout
+            android:id="@+id/section4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/txtPhysics3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:gravity="center_vertical"
+                android:minHeight="?android:attr/listPreferredItemHeight"
+                android:padding="20dp"
+                android:text="Physics"
+                android:textColor="@android:color/holo_green_dark"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/txtChemistry3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:gravity="center_vertical"
+                android:minHeight="?android:attr/listPreferredItemHeight"
+                android:padding="20dp"
+                android:text="Chemistry"
+                android:textColor="@android:color/holo_green_dark"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/txtBiology3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:gravity="center_vertical"
+                android:minHeight="?android:attr/listPreferredItemHeight"
+                android:padding="20dp"
+                android:text="Biology"
+                android:textColor="@android:color/holo_green_dark"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/txtMaths3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:gravity="center_vertical"
+                android:minHeight="?android:attr/listPreferredItemHeight"
+                android:padding="20dp"
+                android:text="Mathematics"
+                android:textColor="@android:color/holo_green_dark"
+                android:textSize="22sp" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
