@@ -22,8 +22,7 @@ import butterknife.OnClick;
 
 public class StartTest extends AppCompatActivity {
 
-    @InjectView(R.id.btn_startTest)
-    Button start_test;
+    @InjectView(R.id.btn_startTest)Button start_test;
     String exam, subject, class1, es, id, chapter;
     int count;
     UrlRequest urlRequest;
@@ -64,6 +63,7 @@ public class StartTest extends AppCompatActivity {
                                            @Override
                                            public void onSuccess(String response) {
                                                Log.d("ResponseCount", response);
+                                               Log.d("***","http://yashodeepacademy.co.in/getexamcount.php?student_id=" + id + "&examcode=" + es + chapter + "&class=" + class1);
                                                try {
                                                    JSONArray jsonArray = new JSONArray(response);
                                                    for (int i = 0; i < jsonArray.length(); i++) {
