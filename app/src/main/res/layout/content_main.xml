@@ -90,7 +90,7 @@
                         android:id="@+id/imageClassroom"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:src="@mipmap/ic_launcher" />
+                        android:src="@drawable/myclassroom" />
                 </android.support.v7.widget.CardView>
 
             </LinearLayout>
