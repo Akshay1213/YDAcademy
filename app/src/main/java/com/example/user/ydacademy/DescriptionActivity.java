@@ -1,14 +1,15 @@
 package com.example.user.ydacademy;
 
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.SharedPreferences;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,6 +31,7 @@ public class DescriptionActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_description);
+        actionBarSetup();
         ButterKnife.inject(this);
         List<DataResult> data = new ArrayList<>();
         sp = getSharedPreferences("YourSharedPreference", Activity.MODE_PRIVATE);
@@ -47,11 +49,7 @@ public class DescriptionActivity extends AppCompatActivity {
         b = getIntent().getExtras();
         String name = b.getString("data");
         String arr[] = name.split(" ");
-        // DataResult hosteldata=new DataResult();
 
-
-        // data.add(hosteldata);
-        Toast.makeText(DescriptionActivity.this, arr[0].length() + "", Toast.LENGTH_LONG).show();
         Log.d("desc", arr[0]);
 
         for (int i = 0; i < 25; i++) {
@@ -63,19 +61,20 @@ public class DescriptionActivity extends AppCompatActivity {
             data.add(testData);
         }
 
-        //recyclerView = (RecyclerView)findViewById(R.id.hostelList);
         recyclerView.setVisibility(View.VISIBLE);
-
-//                LinearLayoutManager llm = new LinearLayoutManager(NewMenu.this);
-//                llm.setOrientation(LinearLayoutManager.VERTICAL);
-
         adapter = new AdapterResult(DescriptionActivity.this, data);
         recyclerView.setAdapter(adapter);
         LinearLayoutManager llm = new LinearLayoutManager(DescriptionActivity.this);
         recyclerView.setLayoutManager(llm);
-//        DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(mRVhostelList.getContext(),
-//                llm.getOrientation());
-//        mRVhostelList.addItemDecoration(dividerItemDecoration);
         adapter.notifyDataSetChanged();
+    }
+
+    @TargetApi(Build.VERSION_CODES.HONEYCOMB)
+    private void actionBarSetup() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+            android.support.v7.app.ActionBar ab = getSupportActionBar();
+            ab.setTitle("Yashodeep Academy");
+            ab.setSubtitle("Description/" + exam + "/" + subject);
+        }
     }
 }
