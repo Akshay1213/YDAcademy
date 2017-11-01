@@ -51,7 +51,7 @@ public class TabActivity extends AppCompatActivity {
         public Fragment getItem(int position) {
             return mFragmentList.get(position);
         }
-
+    
         @Override
         public int getCount() {
             return mFragmentList.size();
