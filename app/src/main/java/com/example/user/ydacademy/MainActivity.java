@@ -42,6 +42,7 @@ public class MainActivity extends AppCompatActivity
     AppCompatButton btn_career;
     @InjectView(R.id.imageClassroom)
     ImageView imageClassroom;
+    Menu menu1;
     @InjectView(R.id.btn_Staff)
     AppCompatButton btnStaff;
     @InjectView(R.id.btn_success)
@@ -133,6 +134,7 @@ public class MainActivity extends AppCompatActivity
     }
 
 
+
     @OnClick({/*R.id.btn_login,*/R.id.imageClassroom, R.id.btn_career, R.id.btn_Staff, R.id.btn_success, R.id.btn_contactus, R.id.btn_aboutus, R.id.btn_achiever})
 
     public void onClick(View view) {
@@ -154,26 +156,17 @@ public class MainActivity extends AppCompatActivity
                 }
                 break;*/
             case R.id.imageClassroom:
+                SharedPreferences sp = getSharedPreferences("YourSharedPreference", Activity.MODE_PRIVATE);
+                MenuItem item = menu1.findItem(R.id.action_login);
+                if (item.getTitle().equals("Login")) {
 
-                sp = getSharedPreferences("YourSharedPreference", Activity.MODE_PRIVATE);
-                username = sp.getString("USERNAME", null);
-                id = sp.getString("ID", null);
-                class1 = sp.getString("CLASS", null);
+                    Log.d("am i null", "onClick: " + (item == null ? "am null" : "not null"));
+                    onOptionsItemSelected(item);
+                } else if (sp.getString("CLASS", null).equals("10"))
+                    startActivity(new Intent(this, TenthActivity.class));
+                else
+                    startActivity(new Intent(this, TabActivity.class));
 
-
-                if (username != null || id != null || class1 != null) {
-                    if (!class1.equals("10")) {
-                        intent = new Intent(MainActivity.this, TabActivity.class);
-                        startActivity(intent);
-                    } else {
-                        intent = new Intent(MainActivity.this, TenthActivity.class);
-                        startActivity(intent);
-                    }
-
-                } else {
-                    intent = new Intent(MainActivity.this, LoginActivity.class);
-                    startActivity(intent);
-                }
                 break;
             case R.id.btn_career:
                 fragment = new CareerGuidenceFragment();
@@ -184,34 +177,25 @@ public class MainActivity extends AppCompatActivity
             case R.id.btn_Staff:
                 intent = new Intent(MainActivity.this, StaffActivity.class);
                 startActivity(intent);
-
-                /*getSupportFragmentManager().beginTransaction()
-                        .add(android.R.id.content, new StaffFragment ()).commit();*/
                 break;
             case R.id.btn_success:
 
                 intent = new Intent(MainActivity.this, SuccessStories.class);
                 startActivity(intent);
-               /* getSupportFragmentManager().beginTransaction()
-                        .add(android.R.id.content, new SuccessStoriesFragment ()).commit();*/
                 break;
             case R.id.btn_contactus:
                 intent = new Intent(MainActivity.this, ContactUs.class);
                 startActivity(intent);
-               /* getSupportFragmentManager().beginTransaction()
-                        .add(android.R.id.content, new ContactUsFragment()).commit();*/
                 break;
             case R.id.btn_aboutus:
                 intent = new Intent(MainActivity.this, AboutUs.class);
                 startActivity(intent);
-               /* getSupportFragmentManager().beginTransaction()
-                        .add(android.R.id.content, new AboutUsFragment()).commit();*/
+
                 break;
             case R.id.btn_achiever:
                 Intent intent = new Intent(MainActivity.this, OurAchievers.class);
                 startActivity(intent);
-               /* getSupportFragmentManager().beginTransaction()
-                        .add(android.R.id.content, new AchieversFragment()).commit();*/
+
                 break;
         }
     }
@@ -221,6 +205,7 @@ public class MainActivity extends AppCompatActivity
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
+        menu1 = menu;
 
         return true;
     }
