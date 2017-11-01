@@ -6,9 +6,9 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.os.Build;
+import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -18,17 +18,21 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestListener;
 import com.bumptech.glide.request.target.Target;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 import butterknife.OnClick;
 
 public class TestActivity extends AppCompatActivity {
+    static int i, flag = 0;
     @InjectView(R.id.btn_next) Button btn_next;
     @InjectView(R.id.btn_submit) Button btn_submit;
     @InjectView(R.id.imageview) ImageView imageview;
@@ -36,8 +40,7 @@ public class TestActivity extends AppCompatActivity {
     @InjectView(R.id.txt_timer) TextView Text_timer;
     @InjectView(R.id.txt_queNumber) TextView text_queNumber;
     CountDownTimer countDownTimer;
-    String answerKey,ans,data,userans,exam,subject,chapter,radio_text,result,es,class1;
-    static int i,flag=0;
+    String answerKey, ans, data, userans, exam, subject, chapter, es, class1;
     ProgressBar progressBar ;
     int count;
     UrlRequest urlRequest;
@@ -72,7 +75,7 @@ public class TestActivity extends AppCompatActivity {
         switch (view.getId()) {
             case R.id.btn_submit:
 
-                if(count==24||flag==0)
+                if (count == 24 || flag == 0 || count == 25)
                     check_result();
                 while (userans.length()<25)
                 {
@@ -101,7 +104,7 @@ public class TestActivity extends AppCompatActivity {
                                 answerKey+=json_data.getString("ans");
                             }
                             Log.d("answerkey***",answerKey);
-                            Toast.makeText(TestActivity.this,answerKey,Toast.LENGTH_LONG).show();
+
                             data=userans+" "+answerKey;
                             Intent intent=new Intent(TestActivity.this,ResultActivity.class);
                             intent.putExtra("data",data);
@@ -134,32 +137,7 @@ public class TestActivity extends AppCompatActivity {
                 break;
         }
     }
-    public  class Mycountdowntimer extends CountDownTimer
-    {
-        public Mycountdowntimer(long starttime,long interval)
 
-        {
-            super(starttime,interval);
-        }
-
-
-        @Override
-        public void onTick(long miliseconds) {
-            //  time=miliseconds;
-            Text_timer.setText(miliseconds/1000+":00");
-
-        }
-
-        @Override
-        public void onFinish() {
-
-
-            check_result();
-            if(count<25)
-            load_image();
-
-        }
-    }
     public void load_image()
     {
 
@@ -189,7 +167,6 @@ public class TestActivity extends AppCompatActivity {
 
     }
 
-
     public void check_result()
     {
         if(radioGroup.getCheckedRadioButtonId()!=-1)
@@ -207,15 +184,40 @@ public class TestActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        //super.onBackPressed();
         Toast.makeText(TestActivity.this,"You can't go back",Toast.LENGTH_LONG).show();
     }
+
     @TargetApi(Build.VERSION_CODES.HONEYCOMB)
     private void actionBarSetup() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
             android.support.v7.app.ActionBar ab = getSupportActionBar();
             ab.setTitle("Yashodeep Academy");
-            ab.setSubtitle("test/"+exam+"/"+subject);
+            ab.setSubtitle("Test/" + exam + "/" + subject);
+        }
+    }
+
+    public class Mycountdowntimer extends CountDownTimer {
+        public Mycountdowntimer(long starttime, long interval)
+
+        {
+            super(starttime, interval);
+        }
+
+
+        @Override
+        public void onTick(long miliseconds) {
+            Text_timer.setText(miliseconds / 1000 + ":00");
+
+        }
+
+        @Override
+        public void onFinish() {
+
+
+            check_result();
+            if (count < 25)
+                load_image();
+
         }
     }
 }

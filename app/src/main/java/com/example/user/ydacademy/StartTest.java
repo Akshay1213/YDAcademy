@@ -48,7 +48,6 @@ public class StartTest extends AppCompatActivity {
         Log.d("chapter*", chapter);
         Log.d("ID", id);
 
-        //Toast.makeText(StartTest.this,es,Toast.LENGTH_LONG).show();
     }
 
     @OnClick({R.id.btn_startTest})
@@ -103,7 +102,7 @@ public class StartTest extends AppCompatActivity {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
             android.support.v7.app.ActionBar ab = getSupportActionBar();
             ab.setTitle("Yashodeep Academy");
-            // ab.setSubtitle("Home");
+
         }
     }
 }

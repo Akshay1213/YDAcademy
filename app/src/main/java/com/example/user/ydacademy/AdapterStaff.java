@@ -22,7 +22,6 @@ import java.util.List;
 
 public class AdapterStaff extends RecyclerView.Adapter<RecyclerView.ViewHolder> implements View.OnClickListener {
 
-    protected boolean amuser = true;
     List<DataStaff> data = Collections.emptyList();
 
     MyHolder myHolder;

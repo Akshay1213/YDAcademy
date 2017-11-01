@@ -13,7 +13,6 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
-import com.android.volley.RequestQueue;
 import com.bumptech.glide.Glide;
 import com.phelat.fun.Control.FunControl;
 import com.phelat.fun.Layouts.Funny;
@@ -30,18 +29,10 @@ public class AdapterResult extends RecyclerView.Adapter<RecyclerView.ViewHolder>
 
     protected boolean amuser = true;
     List<DataResult> data = Collections.emptyList();
-    DataResult current;
-    int currentPos = 0;
-    RequestQueue requestQueue;
-    String hostel_id = "", phone = "", status = "", body;
     MyHolder myHolder;
-    String userans;
     private Context context;
     private LayoutInflater inflater;
-    private int prevpos;
 
-
-    // create constructor to innitilize context and data sent frm MainActivity
     public AdapterResult(Context context, List<DataResult> data) {
         this.context = context;
         inflater = LayoutInflater.from(context);

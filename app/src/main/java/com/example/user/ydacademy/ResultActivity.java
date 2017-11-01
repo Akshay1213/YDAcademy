@@ -1,8 +1,10 @@
 package com.example.user.ydacademy;
 
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -14,7 +16,6 @@ import butterknife.ButterKnife;
 import butterknife.InjectView;
 
 public class ResultActivity extends AppCompatActivity {
-
     Bundle b;
     @InjectView(R.id.btn_viewdescription)
     Button viewDescription;
@@ -39,6 +40,7 @@ public class ResultActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
         ButterKnife.inject(this);
+        actionBarSetup();
         sp = getSharedPreferences("YourSharedPreference", Activity.MODE_PRIVATE);
         class1 = sp.getString("CLASS", null);
         exam = getIntent().getStringExtra("Exam");
@@ -115,5 +117,14 @@ public class ResultActivity extends AppCompatActivity {
         super.onBackPressed();
         startActivity(new Intent(ResultActivity.this, TabActivity.class));
         finish();
+    }
+
+    @TargetApi(Build.VERSION_CODES.HONEYCOMB)
+    private void actionBarSetup() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+            android.support.v7.app.ActionBar ab = getSupportActionBar();
+            ab.setTitle("Yashodeep Academy");
+            ab.setSubtitle("Result/" + exam + "/" + subject);
+        }
     }
 }
