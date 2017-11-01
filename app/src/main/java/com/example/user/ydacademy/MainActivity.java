@@ -157,9 +157,9 @@ public class MainActivity extends AppCompatActivity
                 break;*/
             case R.id.imageClassroom:
                 SharedPreferences sp = getSharedPreferences("YourSharedPreference", Activity.MODE_PRIVATE);
+                MenuItem item = menu1.findItem(R.id.action_login);
+                if (item.getTitle().equals("Login")) {
 
-                if (sp.getString("USERNAME", null) == null) {
-                    MenuItem item = menu1.findItem(R.id.action_login);
                     Log.d("am i null", "onClick: " + (item == null ? "am null" : "not null"));
                     onOptionsItemSelected(item);
                 } else if (sp.getString("CLASS", null).equals("10"))
