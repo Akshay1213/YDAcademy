@@ -259,16 +259,15 @@
                     app:cardPreventCornerOverlap="false">
 
                     <android.support.v7.widget.AppCompatButton
-                            android:id="@+id/btn_career"
-                            android:layout_width="match_parent"
+                        android:id="@+id/btn_career"
+                        android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                            android:layout_gravity="center"
-                            android:layout_marginTop="0dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="0dp"
                         android:layout_weight="1"
                         android:background="@drawable/career"
-
-                            android:textColor="@color/white"
-                            android:textSize="15dp" />
+                        android:textColor="@color/white"
+                        android:textSize="15dp" />
 
 
                     <!--      </LinearLayout>-->
