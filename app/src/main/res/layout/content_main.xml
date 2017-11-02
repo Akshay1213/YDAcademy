@@ -186,8 +186,7 @@
                     app:cardElevation="2dp"
                     app:cardPreventCornerOverlap="false">
 
-
-                        <android.support.v7.widget.AppCompatButton
+                    <android.support.v7.widget.AppCompatButton
                             android:id="@+id/btn_Staff"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
