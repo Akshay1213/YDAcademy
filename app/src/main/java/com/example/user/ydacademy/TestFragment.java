@@ -190,22 +190,14 @@ public class TestFragment extends Fragment {
                 intent.putExtra("Subject", subject);
                 startActivity(intent);
                 break;
-        /*    case R.id.txtBiology2:
-                subject = txtBiology2.getText().toString();
-                intent.putExtra("Subject", subject);
-                startActivity(intent);
-                break;*/
+
             case R.id.txtBiology3:
                 subject = txtBiology3.getText().toString();
                 intent = new Intent(getActivity(), ImpQuestions.class);
                 intent.putExtra("Subject", subject);
                 startActivity(intent);
                 break;
-          /*  case R.id.txtMaths:
-                subject = txtMaths.getText().toString();
-                intent.putExtra("Subject", subject);
-                startActivity(intent);
-                break;*/
+
             case R.id.txtMaths1:
                 subject = txtMaths1.getText().toString();
                 intent.putExtra("Subject", subject);

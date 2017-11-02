@@ -10,6 +10,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,8 +18,10 @@ import java.util.List;
 public class TabActivity extends AppCompatActivity {
 
     public TabLayout tabLayout;
+    Toast toast;
     private Toolbar toolbar;
     private ViewPager viewPager;
+    private long back_pressed = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,9 +39,7 @@ public class TabActivity extends AppCompatActivity {
                 // tab.getIcon().setColorFilter(Color.WHITE, PorterDuff.Mode.SRC_IN);
 
                 tabLayout.setTabTextColors(Color.parseColor("#000000"), Color.parseColor("#ffffff"));
-
             }
-
             @Override
             public void onTabUnselected(TabLayout.Tab tab) {
                // tab.getIcon().setColorFilter(Color.parseColor("#808080"), PorterDuff.Mode.SRC_IN);
@@ -64,7 +65,19 @@ public class TabActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        startActivity(new Intent(this, MainActivity.class));
+        if (back_pressed + 2000 > System.currentTimeMillis()) {
+            // need to cancel the toast here
+            toast.cancel();
+            // code for exit
+            startActivity(new Intent(this, MainActivity.class));
+
+        } else {
+            // ask user to press back button one more time to close app
+            toast = Toast.makeText(getBaseContext(), "Press once again to exit!", Toast.LENGTH_SHORT);
+            toast.show();
+        }
+        back_pressed = System.currentTimeMillis();
+
     }
 
     class ViewPagerAdapter extends FragmentPagerAdapter {
