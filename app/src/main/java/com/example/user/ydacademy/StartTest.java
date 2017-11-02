@@ -71,7 +71,6 @@ public class StartTest extends AppCompatActivity {
                                                        count = jsonObject.getInt("count(id)");
 
                                                        Log.d("Count****", jsonObject.getInt("count(id)") + "");
-
                                                    }
 
                                                    if (count < 2) {
@@ -84,7 +83,6 @@ public class StartTest extends AppCompatActivity {
                                                        startActivity(intent);
                                                    } else
                                                        Toast.makeText(StartTest.this, "Sorry,You can attemp test maximum 2 times", Toast.LENGTH_LONG).show();
-
 
                                                } catch (JSONException e1) {
                                                    e1.printStackTrace();
