@@ -129,7 +129,6 @@ public class LoginActivity extends AppCompatActivity {
                                                        intent.putExtra("data", true);
                                                        setResult(RESULT_OK, intent);
                                                        finish();
-
                                                        return;
                                                    } else {
                                                        //Toast.makeText(LoginActivity.this,"Invalid login",Toast.LENGTH_LONG).show();

@@ -19,7 +19,6 @@
             android:orientation="vertical">
 
 
-
             <LinearLayout
                 android:id="@+id/LinearLayout_1"
                 android:layout_width="match_parent"
@@ -94,7 +93,7 @@
                 android:orientation="horizontal">
 
                 <android.support.v7.widget.CardView
-                    android:id="@+id/sliderlayout4"
+                    android:id="@+id/cardAboutUs"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_alignParentStart="true"
@@ -109,36 +108,22 @@
                     app:cardElevation="8dp"
                     app:cardPreventCornerOverlap="false">
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical"
-                        android:weightSum="2">
-
-                        <ImageView
-                            android:id="@+id/imageAboutUs"
-                            android:layout_width="match_parent"
-                            android:layout_height="0dp"
-                            android:layout_gravity="center"
-                            android:layout_weight="1.6"
-                            android:src="@drawable/aboutus" />
-
-                        <android.support.v7.widget.AppCompatButton
+                    <android.support.v7.widget.AppCompatButton
                             android:id="@+id/btn_aboutus"
                             android:layout_width="match_parent"
-                            android:layout_height="0dp"
+                        android:layout_height="match_parent"
                             android:layout_gravity="center"
                             android:layout_marginTop="0dp"
-                            android:layout_weight="0.4"
-                            android:background="@color/primary_text"
-                            android:text="About Us"
+                        android:layout_weight="1"
+                        android:background="@drawable/aboutus"
+
                             android:textColor="@color/white"
                             android:textSize="15dp" />
-                    </LinearLayout>
+
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
-                    android:id="@+id/sliderlayout5"
+                    android:id="@+id/cardAchievers"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_alignParentStart="true"
@@ -153,32 +138,23 @@
                     app:cardElevation="8dp"
                     app:cardPreventCornerOverlap="false">
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical"
-                        android:weightSum="2">
-
-                        <ImageView
-                            android:id="@+id/imageAchiever"
-                            android:layout_width="match_parent"
-                            android:layout_height="100dp"
-                            android:layout_gravity="center"
-                            android:layout_weight="1.2"
-                            android:src="@drawable/achiever" />
-
+                    <!--  <LinearLayout
+                          android:layout_width="match_parent"
+                          android:layout_height="match_parent"
+                          android:orientation="vertical"
+                          android:weightSum="2">-->
                         <android.support.v7.widget.AppCompatButton
                             android:id="@+id/btn_achiever"
                             android:layout_width="match_parent"
-                            android:layout_height="0dp"
+                            android:layout_height="match_parent"
                             android:layout_gravity="center"
                             android:layout_marginTop="0dp"
-                            android:layout_weight="0.8"
-                            android:background="@color/primary_text"
-                            android:text="Our Achievers"
+                            android:layout_weight="1"
+                            android:background="@drawable/our_achivers"
+
                             android:textColor="@color/white"
                             android:textSize="15dp" />
-                    </LinearLayout>
+
                 </android.support.v7.widget.CardView>
 
             </LinearLayout>
@@ -193,7 +169,7 @@
                 android:orientation="horizontal">
 
                 <android.support.v7.widget.CardView
-                    android:id="@+id/sliderlayout7"
+                    android:id="@+id/cardStaff"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_alignParentStart="true"
@@ -208,36 +184,22 @@
                     app:cardElevation="8dp"
                     app:cardPreventCornerOverlap="false">
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical"
-                        android:weightSum="2">
-
-                        <ImageView
-                            android:id="@+id/imageStaff"
-                            android:layout_width="match_parent"
-                            android:layout_height="0dp"
-                            android:layout_gravity="center"
-                            android:layout_weight="1.6"
-                            android:src="@drawable/staff" />
 
                         <android.support.v7.widget.AppCompatButton
                             android:id="@+id/btn_Staff"
                             android:layout_width="match_parent"
-                            android:layout_height="0dp"
+                            android:layout_height="match_parent"
                             android:layout_gravity="center"
                             android:layout_marginTop="0dp"
-                            android:layout_weight="0.4"
-                            android:background="@color/primary_text"
-                            android:text="Staff"
+                            android:layout_weight="1"
+                            android:background="@drawable/staff"
                             android:textColor="@color/white"
                             android:textSize="15dp" />
-                    </LinearLayout>
+
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
-                    android:id="@+id/sliderlayout8"
+                    android:id="@+id/cardContactUs"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_alignParentStart="true"
@@ -252,32 +214,19 @@
                     app:cardElevation="8dp"
                     app:cardPreventCornerOverlap="false">
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical"
-                        android:weightSum="2">
-
-                        <ImageView
-                            android:id="@+id/imageContactUs"
-                            android:layout_width="match_parent"
-                            android:layout_height="100dp"
-                            android:layout_gravity="center"
-                            android:layout_weight="1.2"
-                            android:src="@drawable/contact_us" />
-
-                        <android.support.v7.widget.AppCompatButton
+                    <android.support.v7.widget.AppCompatButton
                             android:id="@+id/btn_contactus"
                             android:layout_width="match_parent"
-                            android:layout_height="0dp"
+                        android:layout_height="match_parent"
                             android:layout_gravity="center"
                             android:layout_marginTop="0dp"
-                            android:layout_weight="0.8"
-                            android:background="@color/primary_text"
-                            android:text="Contact Us"
+                        android:layout_weight="1"
+                        android:background="@drawable/contact_us"
+
                             android:textColor="@color/white"
                             android:textSize="15dp" />
-                    </LinearLayout>
+
+
                 </android.support.v7.widget.CardView>
             </LinearLayout>
 
@@ -291,7 +240,7 @@
                 android:orientation="horizontal">
 
                 <android.support.v7.widget.CardView
-                    android:id="@+id/sliderlayout"
+                    android:id="@+id/cardCareer"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_alignParentStart="true"
@@ -307,36 +256,24 @@
                     app:cardElevation="8dp"
                     app:cardPreventCornerOverlap="false">
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical"
-                        android:weightSum="2">
-
-                        <ImageView
-                            android:id="@+id/imageCareerGuidence"
-                            android:layout_width="match_parent"
-                            android:layout_height="0dp"
-                            android:layout_gravity="center"
-                            android:layout_weight="1.6"
-                            android:src="@drawable/career" />
-
-                        <android.support.v7.widget.AppCompatButton
+                    <android.support.v7.widget.AppCompatButton
                             android:id="@+id/btn_career"
                             android:layout_width="match_parent"
-                            android:layout_height="0dp"
+                        android:layout_height="match_parent"
                             android:layout_gravity="center"
                             android:layout_marginTop="0dp"
-                            android:layout_weight="0.4"
-                            android:background="@color/primary_text"
-                            android:text="Career Guidance"
+                        android:layout_weight="1"
+                        android:background="@drawable/career"
+
                             android:textColor="@color/white"
                             android:textSize="15dp" />
-                    </LinearLayout>
+
+
+                    <!--      </LinearLayout>-->
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
-                    android:id="@+id/sliderlayout2"
+                    android:id="@+id/cardSuccess"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_alignParentStart="true"
@@ -351,32 +288,43 @@
                     app:cardElevation="8dp"
                     app:cardPreventCornerOverlap="false">
 
-                    <LinearLayout
+                    <!-- <LinearLayout
+                         android:layout_width="match_parent"
+                         android:layout_height="match_parent"
+                         android:orientation="vertical"
+                         android:weightSum="2">-->
+                    <android.support.v7.widget.AppCompatButton
+                        android:id="@+id/btn_success"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:orientation="vertical"
-                        android:weightSum="2">
+                        android:layout_gravity="center"
+                        android:layout_marginTop="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/success_stories"
 
-                        <ImageView
-                            android:id="@+id/imageSuccess"
-                            android:layout_width="match_parent"
-                            android:layout_height="100dp"
-                            android:layout_gravity="center"
-                            android:layout_weight="1.2"
-                            android:src="@drawable/success" />
+                        android:textColor="@color/white"
+                        android:textSize="15dp" />
 
-                        <android.support.v7.widget.AppCompatButton
-                            android:id="@+id/btn_success"
-                            android:layout_width="match_parent"
-                            android:layout_height="0dp"
-                            android:layout_gravity="center"
-                            android:layout_marginTop="0dp"
-                            android:layout_weight="0.8"
-                            android:background="@color/primary_text"
-                            android:text="Success Stories"
-                            android:textColor="@color/white"
-                            android:textSize="15dp" />
-                    </LinearLayout>
+                    <!-- <ImageView
+                         android:id="@+id/imageSuccess"
+                         android:layout_width="match_parent"
+                         android:layout_height="100dp"
+                         android:layout_gravity="center"
+                         android:layout_weight="1.2"
+                         android:src="@drawable/success" />
+
+                     <android.support.v7.widget.AppCompatButton
+                         android:id="@+id/btn_success"
+                         android:layout_width="match_parent"
+                         android:layout_height="0dp"
+                         android:layout_gravity="center"
+                         android:layout_marginTop="0dp"
+                         android:layout_weight="0.8"
+                         android:background="@color/primary_text"
+                         android:text="Success Stories"
+                         android:textColor="@color/white"
+                         android:textSize="15dp" />-->
+                    <!-- </LinearLayout>-->
                 </android.support.v7.widget.CardView>
             </LinearLayout>
 
@@ -386,11 +334,9 @@
                 android:layout_height="200dp"
                 android:layout_margin="5dp"
                 android:layout_weight="2"
-
                 android:orientation="horizontal">
-
                 <android.support.v7.widget.CardView
-                    android:id="@+id/sliderlayout3"
+                    android:id="@+id/cardDirectorDesk"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_alignParentStart="true"
@@ -411,14 +357,14 @@
                         android:orientation="vertical"
                         android:weightSum="2">
 
-                        <ImageView
+                        <TextView
                             android:id="@+id/imageDirectorDesk"
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:layout_marginLeft="20dp"
                             android:layout_marginRight="20dp"
                             android:layout_weight="1.6"
-                            android:background="@drawable/style" />
+                            android:text="@string/director" />
 
                         <android.support.v7.widget.AppCompatButton
                             android:id="@+id/btn_director"
@@ -426,9 +372,9 @@
                             android:layout_height="0dp"
                             android:layout_gravity="center"
                             android:layout_marginTop="0dp"
-                            android:layout_weight="0.8"
+                            android:layout_weight="0.4"
                             android:background="@color/primary_text"
-                            android:text=""
+                            android:text="From Director's Desk"
                             android:textColor="@color/white"
                             android:textSize="15dp" />
                     </LinearLayout>

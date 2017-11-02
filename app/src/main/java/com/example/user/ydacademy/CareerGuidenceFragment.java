@@ -1,10 +1,13 @@
 package com.example.user.ydacademy;
 
 
+import android.annotation.TargetApi;
 import android.content.Intent;
 import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -28,6 +31,7 @@ public class CareerGuidenceFragment extends Fragment implements AdapterView.OnIt
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_career_guidence, container, false);
         view.setBackgroundColor(Color.WHITE);
+        actionBarSetup();
         spinner1 = view.findViewById(R.id.spinner1);
         spinner2 = view.findViewById(R.id.spinner2);
         flag = false;
@@ -88,7 +92,6 @@ public class CareerGuidenceFragment extends Fragment implements AdapterView.OnIt
             if (!flag) {
                 flag = true;
             } else {
-
                 Intent intent = new Intent(getActivity(), CareerDetailsActivity.class);
                 intent.putExtra("Name", adapterView.getItemAtPosition(i).toString());
                 startActivity(intent);
@@ -100,5 +103,13 @@ public class CareerGuidenceFragment extends Fragment implements AdapterView.OnIt
     public void onNothingSelected(AdapterView<?> adapterView) {
     }
 
+    @TargetApi(Build.VERSION_CODES.HONEYCOMB)
+    private void actionBarSetup() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+            android.support.v7.app.ActionBar ab = ((AppCompatActivity) getActivity()).getSupportActionBar();
+            ab.setTitle("Yashodeep Academy");
+            ab.setSubtitle("Test/");
+        }
+    }
 }
 

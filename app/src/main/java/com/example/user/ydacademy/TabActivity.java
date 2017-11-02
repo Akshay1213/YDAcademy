@@ -1,5 +1,6 @@
 package com.example.user.ydacademy;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -22,7 +23,6 @@ public class TabActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tab);
-
         viewPager = (ViewPager) findViewById(R.id.viewpager);
         setupViewPager(viewPager);
         tabLayout = (TabLayout) findViewById(R.id.tabs);
@@ -36,12 +36,12 @@ public class TabActivity extends AppCompatActivity {
         adapter.addFragment(new SyllabusFragment(), "Syllabus");
         adapter.addFragment(new CareerGuidenceFragment(), "Career");
         viewPager.setAdapter(adapter);
-        viewPager.setCurrentItem(1);
+        viewPager.setCurrentItem(0);
     }
 
     @Override
     public void onBackPressed() {
-        super.onBackPressed();
+        startActivity(new Intent(this, MainActivity.class));
     }
 
     class ViewPagerAdapter extends FragmentPagerAdapter {
@@ -66,11 +66,9 @@ public class TabActivity extends AppCompatActivity {
             mFragmentList.add(fragment);
             mFragmentTitleList.add(title);
         }
-
         @Override
         public CharSequence getPageTitle(int position) {
             return mFragmentTitleList.get(position);
         }
-
     }
 }

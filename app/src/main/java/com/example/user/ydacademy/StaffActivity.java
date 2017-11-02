@@ -1,5 +1,7 @@
 package com.example.user.ydacademy;
 
+import android.annotation.TargetApi;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
@@ -31,6 +33,7 @@ public class StaffActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_staff);
         ButterKnife.inject(this);
+        actionBarSetup();
         final List<DataStaff> data = new ArrayList<>();
         urlRequest = UrlRequest.getObject();
         urlRequest.setContext(StaffActivity.this);
@@ -50,7 +53,6 @@ public class StaffActivity extends AppCompatActivity {
                                                staffData.exp = jsonObject.getString("experience");
                                                staffData.description = jsonObject.getString("desription");
                                                data.add(staffData);
-
                                            }
                                            recyclerView = (RecyclerView) findViewById(R.id.Liststaff);
                                            recyclerView.setVisibility(View.VISIBLE);
@@ -58,7 +60,6 @@ public class StaffActivity extends AppCompatActivity {
                                            recyclerView.setAdapter(adapter);
 
                                            recyclerView.setLayoutManager(new GridLayoutManager(StaffActivity.this, 2));
-
                                            adapter.notifyDataSetChanged();
 
                                        } catch (JSONException e1) {
@@ -68,5 +69,14 @@ public class StaffActivity extends AppCompatActivity {
                                }
         );
 
+    }
+
+    @TargetApi(Build.VERSION_CODES.HONEYCOMB)
+    private void actionBarSetup() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+            android.support.v7.app.ActionBar ab = getSupportActionBar();
+            ab.setTitle("Yashodeep Academy");
+            ab.setSubtitle("Staff");
+        }
     }
 }

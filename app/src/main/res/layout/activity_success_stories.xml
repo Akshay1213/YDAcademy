@@ -5,8 +5,10 @@
     android:layout_height="match_parent"
     tools:context="com.example.user.ydacademy.SuccessStories">
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/recyclerSuccessStories"
+    <TextView
+        android:id="@+id/txtSuccess"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+        android:layout_height="match_parent"
+        android:text="YASHODEEP Academy has been surging ahead on the success track and has distinguished itself by setting up a new standard in the world of competitive education since 2014. It is an Institution of knowledge under the guidance for imparting the quality education for the students of IX, X ,XI and XII both State Board Syllabus and CBSE Board Syllabus. Our qualified and experienced teachers conduct coaching classes, at convenient timings."
+        android:textSize="17dp" />
 </RelativeLayout>

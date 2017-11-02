@@ -20,6 +20,8 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -37,6 +39,12 @@ public class MainActivity extends AppCompatActivity
     public FragmentManager fragmentManager;
     @InjectView(R.id.slider)
     SliderLayout sliderShow;
+    /*  @InjectView(R.id.cardAboutUs)CardView cardAboutUs;
+      @InjectView(R.id.cardAchievers)CardView cardAchievers;
+      @InjectView(R.id.cardStaff)CardView cardStaff;
+      @InjectView(R.id.cardContactUs)CardView cardContactUs;
+      @InjectView(R.id.cardCareer)CardView cardCareer;
+      @InjectView(R.id.cardSuccess)CardView cardSuccess;*/
     /* @InjectView(R.id.btn_login)AppCompatButton btn_login;*/
     @InjectView(R.id.btn_career)
     AppCompatButton btn_career;
@@ -58,6 +66,7 @@ public class MainActivity extends AppCompatActivity
     MenuItem menuItem;
     String itemname;
     Intent intent;
+    Animation animation;
     private Toast toast;
     private long back_pressed = 0;
     private CareerGuidenceFragment fragment;
@@ -73,6 +82,8 @@ public class MainActivity extends AppCompatActivity
             textSliderView.image("http://yashodeepacademy.co.in/slider/" + i + ".jpg");
             //  textSliderView.image("http://orientalbirdimages.org/images/data/striated_laughingthrush_0001.jpg");
             sliderShow.addSlider(textSliderView);
+            animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.grow);
+
         }
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -134,32 +145,18 @@ public class MainActivity extends AppCompatActivity
     }
 
 
-
-    @OnClick({/*R.id.btn_login,*/R.id.imageClassroom, R.id.btn_career, R.id.btn_Staff, R.id.btn_success, R.id.btn_contactus, R.id.btn_aboutus, R.id.btn_achiever})
+    @OnClick({R.id.imageClassroom, R.id.btn_career, R.id.btn_Staff, R.id.btn_success, R.id.btn_contactus, R.id.btn_aboutus, R.id.btn_achiever})
 
     public void onClick(View view) {
 
         switch (view.getId()) {
-           /* case R.id.btn_login:
-                if(btn_login.getText().toString().equals("Login")) {
-                    Intent intent = new Intent(MainActivity.this, LoginActivity.class);
-                    startActivity(intent);
-                }
-                else
-                {
-                    SharedPreferences sp = getSharedPreferences("YourSharedPreference", Activity.MODE_PRIVATE);
-                    SharedPreferences.Editor editor = sp.edit();
-                    editor.putString("USERNAME", null);
-                    editor.putString("ID", null);
-                    editor.putString("CLASS",null);
-                    editor.commit();
-                }
-                break;*/
+
+
             case R.id.imageClassroom:
+
                 SharedPreferences sp = getSharedPreferences("YourSharedPreference", Activity.MODE_PRIVATE);
                 MenuItem item = menu1.findItem(R.id.action_login);
                 if (item.getTitle().equals("Login")) {
-
                     Log.d("am i null", "onClick: " + (item == null ? "am null" : "not null"));
                     onOptionsItemSelected(item);
                 } else if (sp.getString("CLASS", null).equals("10"))
@@ -169,45 +166,46 @@ public class MainActivity extends AppCompatActivity
 
                 break;
             case R.id.btn_career:
+                //btn_career.startAnimation(animation);
                 fragment = new CareerGuidenceFragment();
                 fragmentManager.beginTransaction()
                         .add(R.id.drawer_layout, fragment).addToBackStack(null).commit();
-
                 break;
             case R.id.btn_Staff:
+//                btnStaff.startAnimation(animation);
                 intent = new Intent(MainActivity.this, StaffActivity.class);
                 startActivity(intent);
+
                 break;
             case R.id.btn_success:
-
+//                btnsuccess.startAnimation(animation);
                 intent = new Intent(MainActivity.this, SuccessStories.class);
                 startActivity(intent);
                 break;
             case R.id.btn_contactus:
+//                btnContactUs.startAnimation(animation);
                 intent = new Intent(MainActivity.this, ContactUs.class);
                 startActivity(intent);
                 break;
             case R.id.btn_aboutus:
+//                btnAboutUs.startAnimation(animation);
                 intent = new Intent(MainActivity.this, AboutUs.class);
                 startActivity(intent);
 
                 break;
             case R.id.btn_achiever:
+//                btnAchiever.startAnimation(animation);
                 Intent intent = new Intent(MainActivity.this, OurAchievers.class);
                 startActivity(intent);
-
                 break;
         }
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
-
         menu1 = menu;
-
         return true;
     }
 
@@ -277,11 +275,11 @@ public class MainActivity extends AppCompatActivity
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == 100 && resultCode == RESULT_OK) {
-
             if (data.getBooleanExtra("data", false)) {
                 menuItem.setTitle("Logout");
                 Log.d("****", "Item**** ");
             }
         }
     }
+
 }

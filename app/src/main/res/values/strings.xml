@@ -19,9 +19,30 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="course_prompt">Choose a course</string>
     <string name="version">V1.0.0</string>
-    <string name="aboutus">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula.</string>
+    <string name="sample">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula.</string>
+    <string name="aboutus">YASHODEEP Academy is structured on the principle of consistency and hard work and believes in scientific approach based on perfect planning and proper guidance. Student’s overall development and splendid success is our prime concern.
+The limited strength of students in each class, its unique working schedule, pre-planning of complete syllabus, and its strict implementation, personal attention to every student, perfect working pattern, sincere and devout teachers, regular Unit-Tests, Board Pattern-wise preparation of every question paper, etc. has produced altogether a number of merit holders in 10th and 12th Maharashtra State Board exams and in other competitive exam at Yashodeep Academy.
+We are achieving great success in the year 2015-2016 and 2016-2017.Many of our students are perusing their degree in reputed institute like MIT, D.Y .Patil etc.
+In upcoming year we are trying our best, we give our sincere effort to students so that they can get admission in IIT, NIT and MBBS College in India.
+
+</string>
+    <string name="mission">
+Our mission is to provide quality education to the students of YD Academy and to help them to excel in their studies.
+The motto of our classes “Education for Excellence” inspires us to achieve, create conducive atmosphere for the students to learn their lessons well. In addition, through our classroom teaching services, students develop a deeper love of learning and gain more self-confidence.//</string>
+    <string name="vision">
+Our Vision is to instill confidence in students and assist them in becoming independent learner who they rely on their strength and abilities .Provide career planning ,guidance and development resource to make their dream come true through high quality teaching ,technology enables  system and commitment.</string>
+    <string name="director">
+        Director Yogesh Sir( Mtech (Etx) (Maths)) "\n" In this sacred city Alandi, we have started YASHODEEP ACADEMY in 2014 with the blessings of Saint Dnyaneshwar Mauli In this competitive world, we are trying to make students capable to face mental, physical as well as academic challenges. As parents shows reliability in our academy, we are trying to be worthy of it. We have nourished more than thousands of students 
+       Name that has become synonymous with expanding the frontiers of quality education and taking it to untouched horizons of  excellence. Prof.Yogesh Darekar The Director of YASHODEEP Academy from Alandi. He completed his degree(BE) in Electronics from MIT.  His passion for teaching led him to found YD Academy.Prof.Yogesh Darekar has 7 years of teaching experience and has worked with more than 1000 students.
+Prof.VIKAS .N. SHINDE(Physics)
+As a part of YASHODEEP family,I have been working since the beginning. As we know 10th and 12th are the turning point of students career ,we are very fortunate to have them at this crucial point.
+Our aim is not just teaching because we think that Teacher makes the difference, not the classroom. We conduct more activities than teaching to comprehend more knowledge in them. We regularly practice MEDITATION  in our academy and it has shown tremendous improvement in their academic performance. "\n"
+Vikas N.Shinde.(BE EnTC) "\n"
+Trupti Sagar Virkar
+Ex-Assistant Professor at RJSPM Dudulgaon
+With the zeal to gain and spread knowledge she joined RSPM College of Pharmacy in 2012 as an Assistant Professor.
+With 100% results in all the three batches guided by her, she also got a chance to become academic In-charge of Pharmacy Department in 2015.  She has started her teaching career after achieving Bachelor degree in Pharmacy with Distinction. Since then her Passionate and determined approach towards teaching have not only helped Students to achieve success in their exams but also to achieve great heights in there carriers.  Use of Latest Technology and Social Networking apps for making students get a deep drive in the topics helps them to understand content thoroughly. She had actively participated in various National and International Conferences which had helped her to sharpen her Teaching Skills</string>
     <string-array name="courses1">
-        <!--  <item>Career After 10th</item>-->
         <item>Art Teacher Diploma</item>
         <item>Commercial Art Diploma</item>
         <item>Diploma in Beauty culture and Hair dressing</item>

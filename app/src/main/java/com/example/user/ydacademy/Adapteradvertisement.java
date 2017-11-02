@@ -16,7 +16,6 @@ public class Adapteradvertisement extends RecyclerView.Adapter<Adapteradvertisem
 
     Context context;
 
-
     public Adapteradvertisement(Context context) {
         this.context = context;
     }
