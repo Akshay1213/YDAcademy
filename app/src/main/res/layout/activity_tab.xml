@@ -7,6 +7,7 @@
     tools:context="com.example.user.ydacademy.TabActivity">
 
     <android.support.design.widget.AppBarLayout
+        android:id="@+id/tabs1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -26,6 +27,7 @@
         android:id="@+id/viewpager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_below="@+id/tabs1"
         app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
 </RelativeLayout>

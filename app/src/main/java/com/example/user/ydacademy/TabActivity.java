@@ -2,7 +2,6 @@ package com.example.user.ydacademy;
 
 import android.content.Intent;
 import android.graphics.Color;
-import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -63,7 +62,7 @@ public class TabActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        startActivity(new Intent(this, MainActivity.class));
+        startActivity(new Intent(getApplicationContext(), MainActivity.class));
     }
 
     class ViewPagerAdapter extends FragmentPagerAdapter {
