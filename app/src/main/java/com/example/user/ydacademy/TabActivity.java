@@ -29,12 +29,13 @@ public class TabActivity extends AppCompatActivity {
         tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setSelectedTabIndicatorHeight(5);
         tabLayout.setupWithViewPager(viewPager);
-        tabLayout.setTabTextColors(Color.parseColor("#727272"), Color.parseColor("#ffffff"));
+        tabLayout.setTabTextColors(Color.parseColor("#000000"), Color.parseColor("#ffffff"));
         tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
                 // tab.getIcon().setColorFilter(Color.WHITE, PorterDuff.Mode.SRC_IN);
-                tabLayout.setTabTextColors(Color.parseColor("#727272"), Color.parseColor("#ffffff"));
+
+                tabLayout.setTabTextColors(Color.parseColor("#000000"), Color.parseColor("#ffffff"));
 
             }
 
@@ -42,6 +43,7 @@ public class TabActivity extends AppCompatActivity {
             public void onTabUnselected(TabLayout.Tab tab) {
                // tab.getIcon().setColorFilter(Color.parseColor("#808080"), PorterDuff.Mode.SRC_IN);
                 //tabLayout.setTabTextColors(Color.parseColor("#727272"), Color.parseColor("#ffffff"));
+                tabLayout.setTabTextColors(Color.parseColor("#000000"), Color.parseColor("#ffffff"));
             }
 
             @Override
