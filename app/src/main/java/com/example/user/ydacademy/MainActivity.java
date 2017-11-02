@@ -23,6 +23,7 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.daimajia.slider.library.SliderLayout;
@@ -50,7 +51,7 @@ public class MainActivity extends AppCompatActivity
     AppCompatButton btn_career;
     @InjectView(R.id.imageClassroom)
     ImageView imageClassroom;
-    Menu menu1;
+    Menu menu1, navbar_menu;
     @InjectView(R.id.btn_Staff)
     AppCompatButton btnStaff;
     @InjectView(R.id.btn_success)
@@ -205,6 +206,7 @@ public class MainActivity extends AppCompatActivity
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
+//        getMenuInflater().inflate(R.menu.activity_main_drawer, menu);
         menu1 = menu;
         return true;
     }
@@ -231,6 +233,9 @@ public class MainActivity extends AppCompatActivity
                 editor.putString("CLASS", null);
                 editor.commit();
                 menuItem.setTitle("Login");
+                NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+                Menu menu = navigationView.getMenu();
+                menu.getItem(R.id.nav_login).setTitle("Login");
             }
             return true;
         }
@@ -240,22 +245,27 @@ public class MainActivity extends AppCompatActivity
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
-    public boolean onNavigationItemSelected(MenuItem item) {
+    public boolean onNavigationItemSelected(MenuItem item1) {
         // Handle navigation view item clicks here.
-        int id = item.getItemId();
-
-        if (id == R.id.nav_camera) {
-            // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
-
-        } else if (id == R.id.nav_slideshow) {
-
-        } else if (id == R.id.nav_manage) {
-
+        int id = item1.getItemId();
+        if (id == R.id.nav_login) {
+            MenuItem item = menu1.findItem(R.id.action_login);
+            onOptionsItemSelected(item);
+        } else if (id == R.id.nav_classroom) {
+            (findViewById(R.id.imageClassroom)).performClick();
+        } else if (id == R.id.nav_staff) {
+            (findViewById(R.id.btn_Staff)).performClick();
+        } else if (id == R.id.nav_careerguidance) {
+            (findViewById(R.id.btn_career)).performClick();
+        } else if (id == R.id.nav_contactus) {
+            (findViewById(R.id.btn_contactus)).performClick();
         } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
-
+            Intent sendIntent = new Intent();
+            sendIntent.setAction(Intent.ACTION_SEND);
+            sendIntent.putExtra(Intent.EXTRA_TEXT,
+                    "Hey check out my app at: https://play.google.com/store/apps/details?id=com.xoxytech.ostello");
+            sendIntent.setType("text/plain");
+            startActivity(sendIntent);
         }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
@@ -277,6 +287,12 @@ public class MainActivity extends AppCompatActivity
         if (requestCode == 100 && resultCode == RESULT_OK) {
             if (data.getBooleanExtra("data", false)) {
                 menuItem.setTitle("Logout");
+                NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+                SharedPreferences sp = getSharedPreferences("YourSharedPreference", Activity.MODE_PRIVATE);
+                ((TextView) (navigationView.getHeaderView(0).findViewById(R.id.username))).setText(sp.getString("USERNAME", null));
+                ((TextView) (navigationView.getHeaderView(0).findViewById(R.id.standard))).setText(sp.getString("CLASS", null));
+                Menu menu = navigationView.getMenu();
+                menu.getItem(0).setTitle("Logout");
                 Log.d("****", "Item**** ");
             }
         }
