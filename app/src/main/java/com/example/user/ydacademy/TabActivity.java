@@ -64,7 +64,7 @@ public class TabActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        startActivity(new Intent(getApplicationContext(), MainActivity.class));
+        startActivity(new Intent(this, MainActivity.class));
     }
 
     class ViewPagerAdapter extends FragmentPagerAdapter {

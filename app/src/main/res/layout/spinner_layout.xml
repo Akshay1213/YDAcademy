@@ -3,6 +3,10 @@
     android:id="@+id/txtSpinner"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:textSize="20dp">
+    android:layout_marginBottom="5dp"
+    android:background="@android:color/holo_blue_bright"
+    android:drawableLeft="@drawable/ic_arrow_forward_black_24dp"
+    android:textColor="@color/black"
+    android:textSize="17dp">
 
 </TextView>

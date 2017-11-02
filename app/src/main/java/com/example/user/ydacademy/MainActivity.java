@@ -8,7 +8,6 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -95,8 +94,7 @@ public class MainActivity extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                (findViewById(R.id.btn_contactus)).performClick();
             }
         });
 
@@ -124,7 +122,6 @@ public class MainActivity extends AppCompatActivity
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         }
-
         if (fragment != null) {
             fragment = null;
             fragmentManager.popBackStack();
@@ -151,15 +148,15 @@ public class MainActivity extends AppCompatActivity
     public void onClick(View view) {
 
         switch (view.getId()) {
-
-
             case R.id.imageClassroom:
 
                 SharedPreferences sp = getSharedPreferences("YourSharedPreference", Activity.MODE_PRIVATE);
-                MenuItem item = menu1.findItem(R.id.action_login);
-                if (item.getTitle().equals("Login")) {
-                    Log.d("am i null", "onClick: " + (item == null ? "am null" : "not null"));
-                    onOptionsItemSelected(item);
+                menuItem = menu1.findItem(R.id.action_login);
+                if (menuItem.getTitle().equals("Login")) {
+                    Log.d("am i null", "onClick: " + (menuItem == null ? "am null" : "not null"));
+                   /* Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+                    startActivityForResult(intent, 100);*/
+                    onOptionsItemSelected(menuItem);
                 } else if (sp.getString("CLASS", null).equals("10"))
                     startActivity(new Intent(this, TenthActivity.class));
                 else
@@ -280,7 +277,6 @@ public class MainActivity extends AppCompatActivity
             ab.setSubtitle("Home");
         }
     }
-
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);

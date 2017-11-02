@@ -53,15 +53,14 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
         try {
-            File f = new File(
-                    "/data/data/com.xoxytech.ostello/shared_prefs/YourSharedPreference.xml");
+            File f = new File("/data/data/com.xoxytech.ostello/shared_prefs/YourSharedPreference.xml");
             if (f.exists()) {
                 Log.d("TAG", "SharedPreferences Name_of_your_preference : exist");
                 SharedPreferences sp = getSharedPreferences("YourSharedPreference", Activity.MODE_PRIVATE);
                 String username = sp.getString("USERNAME", null);
                 if (username != null)
+
                     startActivity(new Intent(LoginActivity.this, MainActivity.class));
             } else
                 Log.d("TAG", "Setup default preferences");
@@ -77,18 +76,6 @@ public class LoginActivity extends AppCompatActivity {
     @OnClick({R.id.btnLogin, R.id.txtForgotPassword,}) /* , R.id.fab*/
     public void onClick(View view) {
         switch (view.getId()) {
-           /* case R.id.fab:
-               getWindow().setExitTransition(null);
-                getWindow().setEnterTransition(null);
-
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                    ActivityOptions options =
-                            ActivityOptions.makeSceneTransitionAnimation(this, fab, fab.getTransitionName());
-                    startActivity(new Intent(this, RegisterActivity.class), options.toBundle());
-                } else {
-                    startActivity(new Intent(this, RegisterActivity.class));
-                }
-                break;*/
 
             case R.id.btnLogin:
 
@@ -131,26 +118,19 @@ public class LoginActivity extends AppCompatActivity {
                                                        finish();
                                                        return;
                                                    } else {
-                                                       //Toast.makeText(LoginActivity.this,"Invalid login",Toast.LENGTH_LONG).show();
                                                        Snackbar.make(relativeLayout, "Invalid Login", Snackbar.LENGTH_LONG).setAction("Action", null).show();
                                                        Log.d("Invalidlogin", "onSuccess: ");
                                                    }
                                                } catch (JSONException e) {
                                                    e.printStackTrace();
                                                }
-
                                                Log.d("Id", id);
                                                Log.d("Username", name);
                                                Log.d("Class***", class1);
-
-
                                            }
                                        }
                 );
 
-
-                // Intent i2 = new Intent(this,LoginSuccessActivity.class);
-                //startActivity(i2, oc2.toBundle());
                 break;
 
             case R.id.txtForgotPassword:
