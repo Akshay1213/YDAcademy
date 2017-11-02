@@ -149,7 +149,7 @@
                     android:layout_marginRight="10dp"
                     android:layout_marginTop="20dp"
                     android:minWidth="100dp"
-                    app:cardBackgroundColor="#8d6e63"
+                    app:cardBackgroundColor="@color/colorPrimaryDark"
                     app:text="View Description"
                     app:textColor="#FFFFFF"
                     app:textSize="15sp">

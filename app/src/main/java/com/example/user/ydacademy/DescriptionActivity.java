@@ -31,7 +31,7 @@ public class DescriptionActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_description);
-        actionBarSetup();
+
         ButterKnife.inject(this);
         List<DataResult> data = new ArrayList<>();
         sp = getSharedPreferences("YourSharedPreference", Activity.MODE_PRIVATE);
@@ -44,7 +44,7 @@ public class DescriptionActivity extends AppCompatActivity {
         Log.d("class**", class1);
         Log.d("ES**", es);
         Log.d("chapter**", chapter);
-
+        actionBarSetup();
         b = new Bundle();
         b = getIntent().getExtras();
         String name = b.getString("data");
