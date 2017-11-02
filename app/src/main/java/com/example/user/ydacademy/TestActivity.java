@@ -114,6 +114,7 @@ public class TestActivity extends AppCompatActivity {
                             intent.putExtra("ES", es);
                             intent.putExtra("Chapter",chapter);
                             startActivity(intent);
+                            finish();
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
