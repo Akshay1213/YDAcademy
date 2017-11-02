@@ -70,13 +70,16 @@ public class ResultActivity extends AppCompatActivity {
                 attained++;
             }
         }
-        //Toast.makeText(result.this,c+"",Toast.LENGTH_LONG).show();
 
         correct.setText(marks + "");
+        correct.setTextColor(Color.GREEN);
         incorrect.setText(attained - marks + "");
+        incorrect.setTextColor(Color.RED);
         answered.setText(attained + "");
+        answered.setTextColor(Color.GREEN);
         unanswered.setText(25 - attained + "");
-        //Toast.makeText(result.this,arr[0],Toast.LENGTH_LONG).show();
+        unanswered.setTextColor(Color.RED);
+
         if (marks <= 10)
         {
             message.setText("Poor performance");

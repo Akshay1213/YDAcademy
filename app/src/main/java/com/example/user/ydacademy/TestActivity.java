@@ -212,8 +212,6 @@ public class TestActivity extends AppCompatActivity {
 
         @Override
         public void onFinish() {
-
-
             check_result();
             if (count < 25)
                 load_image();

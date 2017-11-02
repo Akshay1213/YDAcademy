@@ -66,9 +66,10 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/imageview"
                 android:layout_centerInParent="true"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="100dp"
                 app:cardCornerRadius="5dp"
                 app:cardElevation="5dp"
+                app:cardBackgroundColor="#E4F1FE"
                 app:cardUseCompatPadding="true">
 
                 <RadioGroup
@@ -77,9 +78,9 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/imageview"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginBottom="5dp"
+                    android:layout_marginBottom="8dp"
                     android:layout_marginLeft="20dp"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="8dp"
                     android:focusable="true"
                     android:focusableInTouchMode="true"
                     android:orientation="horizontal"

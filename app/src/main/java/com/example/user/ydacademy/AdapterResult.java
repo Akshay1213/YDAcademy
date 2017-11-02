@@ -1,6 +1,8 @@
 package com.example.user.ydacademy;
 
+import android.app.ProgressDialog;
 import android.content.Context;
+import android.graphics.Bitmap;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.Gravity;
@@ -9,11 +11,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestListener;
+import com.bumptech.glide.request.target.Target;
 import com.phelat.fun.Control.FunControl;
 import com.phelat.fun.Layouts.Funny;
 import com.phelat.fun.Widget.FunnyButton;
@@ -32,6 +37,7 @@ public class AdapterResult extends RecyclerView.Adapter<RecyclerView.ViewHolder>
     MyHolder myHolder;
     private Context context;
     private LayoutInflater inflater;
+
 
     public AdapterResult(Context context, List<DataResult> data) {
         this.context = context;
@@ -144,12 +150,35 @@ public class AdapterResult extends RecyclerView.Adapter<RecyclerView.ViewHolder>
             }
 
         Glide.with(context).load(dataResult.imageURL).asBitmap().override(600, 600)
-                .placeholder(R.drawable.sorryimagenotavailable)
-                .error(R.drawable.sorryimagenotavailable)
-                .into(myHolder.ivresult);
+                .placeholder(null).listener(new RequestListener<String, Bitmap>() {
+            @Override
+            public boolean onException(Exception e, String model, Target<Bitmap> target, boolean isFirstResource) {
+                myHolder.progressBar.setVisibility(View.VISIBLE);
+                return false;
+            }
+
+            @Override
+            public boolean onResourceReady(Bitmap resource, String model, Target<Bitmap> target, boolean isFromMemoryCache, boolean isFirstResource) {
+                myHolder.progressBar.setVisibility(View.GONE);
+                return false;
+            }
+        }).error(null).into(myHolder.ivresult);
+
         Glide.with(context).load(dataResult.description_url).asBitmap().override(600, 600)
-                .placeholder(R.drawable.sorryimagenotavailable)
-                .error(R.drawable.sorryimagenotavailable)
+                .placeholder(null).listener(new RequestListener<String, Bitmap>() {
+            @Override
+            public boolean onException(Exception e, String model, Target<Bitmap> target, boolean isFirstResource) {
+                myHolder.progressBar.setVisibility(View.VISIBLE);
+                return false;
+            }
+
+            @Override
+            public boolean onResourceReady(Bitmap resource, String model, Target<Bitmap> target, boolean isFromMemoryCache, boolean isFirstResource) {
+                myHolder.progressBar.setVisibility(View.GONE);
+                return false;
+            }
+        })
+                .error(null)
                 .into(myHolder.ivdescription);
         myHolder.funnyButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -182,6 +211,7 @@ public class AdapterResult extends RecyclerView.Adapter<RecyclerView.ViewHolder>
     class MyHolder extends RecyclerView.ViewHolder {
         ImageView ivresult, iv_A, iv_B, iv_C, iv_D, ivdescription;
         TextView queNUmber;
+        ProgressBar progressBar;
         RadioGroup radiogroup;
         RadioButton optionA, optionB, optionC, optionD;
 
@@ -199,6 +229,7 @@ public class AdapterResult extends RecyclerView.Adapter<RecyclerView.ViewHolder>
             ivresult = itemView.findViewById(R.id.ivresult);
             ivdescription = itemView.findViewById(R.id.imageview_description);
             queNUmber = itemView.findViewById(R.id.txt_queNumber);
+            progressBar=itemView.findViewById(R.id.progress);
 
             iv_A = itemView.findViewById(R.id.imageview_A);
             iv_B = itemView.findViewById(R.id.imageview_B);

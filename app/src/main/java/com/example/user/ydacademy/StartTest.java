@@ -33,7 +33,7 @@ public class StartTest extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start_test);
         ButterKnife.inject(this);
-        actionBarSetup();
+
         exam = getIntent().getStringExtra("Exam");
         subject = getIntent().getStringExtra("Subject");
         class1 = getIntent().getStringExtra("Class");
@@ -42,6 +42,7 @@ public class StartTest extends AppCompatActivity {
         sp = getSharedPreferences("YourSharedPreference", Activity.MODE_PRIVATE);
         class1 = sp.getString("CLASS", null);
         id = sp.getString("ID", null);
+        actionBarSetup();
         Log.d("Class***", class1);
         Log.d("subject", subject);
         Log.d("ES*****", es);

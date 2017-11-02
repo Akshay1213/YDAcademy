@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_height="match_parent"
+       android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content">
@@ -139,17 +142,19 @@
             android:textStyle="bold|italic"
             android:textSize="30dp"/>
 
-        <Button
-            android:id="@+id/btn_viewdescription"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/txt_message"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="100dp"
-            android:text="view Description"
-            android:layout_alignParentBottom="true"
-            android:background="@drawable/style"
-            android:backgroundTint="#00e640"/>
 
     </RelativeLayout>
 </ScrollView>
+    <Button
+        android:id="@+id/btn_viewdescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:text="view Description"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/style"
+        android:backgroundTint="#00e640"/>
+
+</RelativeLayout>
