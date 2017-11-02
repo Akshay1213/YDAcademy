@@ -18,12 +18,11 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-
             <LinearLayout
                 android:id="@+id/LinearLayout_1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp"
+
                 android:layout_marginTop="0dp"
                 android:orientation="horizontal">
 
@@ -32,7 +31,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
                     android:layout_alignParentStart="true"
-                    android:layout_margin="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
                     android:background="?android:selectableItemBackground"
                     android:clickable="true"
                     android:clipChildren="false"
@@ -57,7 +58,7 @@
                 android:id="@+id/LinearLayout_31"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
-                android:layout_margin="5dp"
+
 
                 android:orientation="horizontal">
 
@@ -65,7 +66,9 @@
                     android:id="@+id/sliderlayout41"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_margin="5dp"
+                    android:layout_marginLeft="5dp"
+
+                    android:layout_marginRight="5dp"
                     android:background="?android:selectableItemBackground"
                     android:clickable="true"
                     android:clipChildren="false"
@@ -80,7 +83,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:cropToPadding="true"
-                        android:scaleType="centerCrop"
+                        android:scaleType="fitXY"
                         android:src="@drawable/myclassroom" />
                 </android.support.v7.widget.CardView>
 
@@ -90,8 +93,6 @@
                 android:id="@+id/LinearLayout_3"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
-                android:layout_margin="5dp"
-                android:layout_marginTop="-5dp"
                 android:layout_weight="2"
                 android:orientation="horizontal">
 
@@ -134,7 +135,9 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_alignParentStart="true"
-                    android:layout_margin="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
                     android:layout_weight="1"
                     android:background="?android:selectableItemBackground"
                     android:clickable="true"
@@ -162,7 +165,7 @@
                             android:layout_gravity="center"
                             android:layout_marginTop="0dp"
 
-                            android:background="@drawable/aboutus2"
+                            android:background="@drawable/achievers"
 
                             android:textColor="@color/white"
                             android:textSize="15dp" />
@@ -175,7 +178,7 @@
                 android:id="@+id/LinearLayout_6"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
-                android:layout_margin="5dp"
+
                 android:layout_weight="2"
 
                 android:orientation="horizontal">
@@ -185,7 +188,9 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_alignParentStart="true"
-                    android:layout_margin="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
                     android:layout_weight="1"
                     android:background="?android:selectableItemBackground"
                     android:clickable="true"
@@ -219,7 +224,9 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_alignParentStart="true"
-                    android:layout_margin="5dp"
+                    android:layout_marginBottom="5dp"
+
+                    android:layout_marginRight="5dp"
                     android:layout_weight="1"
                     android:background="?android:selectableItemBackground"
                     android:clickable="true"
@@ -241,7 +248,7 @@
                         android:layout_gravity="center"
                         android:layout_marginTop="0dp"
                         android:layout_weight="1"
-                        android:background="@drawable/contact_us"
+                        android:background="@drawable/contact"
 
                         android:textColor="@color/white"
                         android:textSize="15dp" />
@@ -254,7 +261,7 @@
                 android:id="@+id/LinearLayout_2"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
-                android:layout_margin="5dp"
+
                 android:layout_weight="2"
 
                 android:orientation="horizontal">
@@ -264,7 +271,9 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_alignParentStart="true"
-                    android:layout_margin="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
                     android:layout_weight="1"
                     android:background="?android:selectableItemBackground"
                     android:clickable="true"
@@ -301,7 +310,9 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_alignParentStart="true"
-                    android:layout_margin="5dp"
+                    android:layout_marginBottom="5dp"
+
+                    android:layout_marginRight="5dp"
                     android:layout_weight="1"
                     android:background="?android:selectableItemBackground"
                     android:clickable="true"
@@ -329,8 +340,7 @@
                             android:layout_gravity="center"
                             android:layout_marginTop="0dp"
                             android:layout_weight="1"
-                            android:background="@drawable/success_stories"
-
+                            android:background="@drawable/success"
                             android:textColor="@color/white"
                             android:textSize="15dp" />
                     </LinearLayout>
@@ -360,8 +370,8 @@
             <LinearLayout
                 android:id="@+id/LinearLayout3"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:layout_margin="5dp"
+                android:layout_height="250dp"
+
                 android:layout_weight="2"
                 android:orientation="horizontal">
 
@@ -370,7 +380,8 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_alignParentStart="true"
-                    android:layout_margin="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
                     android:layout_weight="1"
                     android:background="?android:selectableItemBackground"
                     android:clickable="true"
@@ -384,29 +395,37 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:background="@drawable/border"
                         android:orientation="vertical"
+
                         android:weightSum="2">
-
-                        <TextView
-                            android:id="@+id/imageDirectorDesk"
-                            android:layout_width="match_parent"
-                            android:layout_height="0dp"
-                            android:layout_marginLeft="20dp"
-                            android:layout_marginRight="20dp"
-                            android:layout_weight="1.6"
-                            android:text="@string/director" />
-
                         <android.support.v7.widget.AppCompatButton
                             android:id="@+id/btn_director"
                             android:layout_width="match_parent"
-                            android:layout_height="0dp"
+                            android:layout_height="wrap_content"
                             android:layout_gravity="center"
+                            android:layout_marginBottom="5dp"
                             android:layout_marginTop="0dp"
                             android:layout_weight="0.4"
                             android:background="@color/primary_text"
                             android:text="From Director's Desk"
                             android:textColor="@color/white"
                             android:textSize="15dp" />
+
+                        <android.support.v4.widget.NestedScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/imageDirectorDesk"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_weight="1.6"
+                                android:text="@string/director" />
+                        </android.support.v4.widget.NestedScrollView>
+
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
             </LinearLayout>
