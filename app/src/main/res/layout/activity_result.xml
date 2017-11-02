@@ -54,14 +54,19 @@
                     android:layout_column="1"
                     android:layout_marginLeft="5dp"
                     android:layout_marginTop="50dp"
+                    android:background="@drawable/shape"
+                    android:padding="5dp"
                     android:text="Correct questions"></TextView>
 
                 <TextView
                     android:id="@+id/txt_Correct"
-                    android:layout_width="wrap_content"
+                    android:layout_width="150dp"
                     android:layout_column="2"
                     android:layout_marginTop="50dp"
-                    android:paddingLeft="10dp"></TextView>
+                    android:background="@drawable/shape"
+                    android:padding="5dp"
+                    android:paddingLeft="10dp"
+                    android:gravity="center"></TextView>
             </TableRow>
 
             <TableRow>
@@ -69,15 +74,20 @@
                 <TextView
                     android:layout_column="1"
                     android:layout_marginLeft="5dp"
-                    android:layout_marginTop="3dp"
-                    android:text="Incorrect questions"></TextView>
+                    android:padding="5dp"
+                    android:background="@drawable/shape"
+                    android:text="Incorrect questions">
+
+                </TextView>
 
                 <TextView
                     android:id="@+id/txt_incorrect"
                     android:layout_width="wrap_content"
                     android:layout_column="2"
-                    android:layout_marginTop="3dp"
-                    android:paddingLeft="10dp"></TextView>
+                    android:padding="5dp"
+                    android:background="@drawable/shape"
+                    android:paddingLeft="10dp"
+                    android:gravity="center"></TextView>
             </TableRow>
 
             <TableRow>
@@ -85,15 +95,18 @@
                 <TextView
                     android:layout_column="1"
                     android:layout_marginLeft="5dp"
-                    android:layout_marginTop="3dp"
+                    android:background="@drawable/shape"
+                    android:padding="5dp"
                     android:text="Number of attended questions"></TextView>
 
                 <TextView
                     android:id="@+id/txt_answer"
                     android:layout_width="wrap_content"
                     android:layout_column="2"
-                    android:layout_marginTop="3dp"
-                    android:paddingLeft="10dp"></TextView>
+                    android:background="@drawable/shape"
+                    android:padding="5dp"
+                    android:paddingLeft="10dp"
+                    android:gravity="center"></TextView>
             </TableRow>
 
             <TableRow>
@@ -101,15 +114,18 @@
                 <TextView
                     android:layout_column="1"
                     android:layout_marginLeft="5dp"
-                    android:layout_marginTop="3dp"
+                    android:background="@drawable/shape"
+                    android:padding="5dp"
                     android:text="Number of unattended questions"></TextView>
 
                 <TextView
                     android:id="@+id/txt_unanswer"
                     android:layout_width="wrap_content"
                     android:layout_column="2"
-                    android:layout_marginTop="3dp"
-                    android:paddingLeft="10dp"></TextView>
+                    android:background="@drawable/shape"
+                    android:padding="5dp"
+                    android:paddingLeft="10dp"
+                    android:gravity="center"></TextView>
             </TableRow>
 
         </TableLayout>
@@ -119,16 +135,21 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="150dp" />
+            android:layout_marginTop="250dp"
+            android:textStyle="bold|italic"
+            android:textSize="30dp"/>
 
         <Button
             android:id="@+id/btn_viewdescription"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/txt_message"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="10dp"
-            android:text="view Description" />
+            android:layout_marginTop="100dp"
+            android:text="view Description"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/style"
+            android:backgroundTint="#00e640"/>
 
     </RelativeLayout>
 </ScrollView>

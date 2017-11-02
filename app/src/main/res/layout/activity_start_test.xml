@@ -33,7 +33,7 @@
                 android:layout_width="wrap_content"
                 android:layout_column="2"
                 android:layout_marginTop="5dp"
-                android:text="Total number of questions : 20"></TextView>
+                android:text="Total number of questions : 25"></TextView>
         </TableRow>
 
         <TableRow>
@@ -47,7 +47,7 @@
                 android:layout_width="wrap_content"
                 android:layout_column="2"
                 android:layout_marginTop="3dp"
-                android:text="Time alloted : 20 minutes"></TextView>
+                android:text="Time alloted : 30 seconds to each question."></TextView>
         </TableRow>
 
         <TableRow>
@@ -83,10 +83,12 @@
 
     <Button
         android:id="@+id/btn_startTest"
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="150dp"
-        android:text="start test" />
+        android:layout_marginTop="200dp"
+        android:text="start test"
+        android:background="@drawable/style"
+        android:backgroundTint="#00e640"/>
 
 </RelativeLayout>

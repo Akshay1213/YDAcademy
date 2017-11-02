@@ -4,6 +4,7 @@ import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -40,7 +41,7 @@ public class ResultActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
         ButterKnife.inject(this);
-        actionBarSetup();
+
         sp = getSharedPreferences("YourSharedPreference", Activity.MODE_PRIVATE);
         class1 = sp.getString("CLASS", null);
         exam = getIntent().getStringExtra("Exam");
@@ -54,6 +55,7 @@ public class ResultActivity extends AppCompatActivity {
         String arr[] = name.split(" ");
         userans = arr[0];
         result = arr[1];
+        actionBarSetup();
         Log.d("result", result.length() + "");
 
         for (int i = 0; i < result.length(); i++) {
@@ -76,15 +78,26 @@ public class ResultActivity extends AppCompatActivity {
         unanswered.setText(25 - attained + "");
         //Toast.makeText(result.this,arr[0],Toast.LENGTH_LONG).show();
         if (marks <= 10)
+        {
             message.setText("Poor performance");
+            message.setTextColor(Color.RED);
+        }
         else if (marks > 10 && marks <= 15)
+        {
             message.setText("Average performance");
+            message.setTextColor(Color.YELLOW);
+        }
         else if (marks > 15 && marks <= 20)
+        {
             message.setText("Good performance");
-        else if (marks > 21 && marks <= 24)
+            message.setTextColor(Color.MAGENTA);
+        }
+        else if (marks > 21 && marks <= 25)
+        {
             message.setText("Excellent performance");
-        else if (marks == 25)
-            message.setText("Congratulations,your all answers are right");
+            message.setTextColor(Color.GREEN);
+        }
+
 
         urlRequest = UrlRequest.getObject();
         urlRequest.setContext(ResultActivity.this);
