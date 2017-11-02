@@ -77,7 +77,6 @@ public class TabActivity extends AppCompatActivity {
             toast.show();
         }
         back_pressed = System.currentTimeMillis();
-
     }
 
     class ViewPagerAdapter extends FragmentPagerAdapter {
