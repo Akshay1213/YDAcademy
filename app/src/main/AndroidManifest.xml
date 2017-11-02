@@ -13,23 +13,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".TabActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-            </intent-filter>
         </activity>
         <activity android:name=".CareerDetailsActivity" />
         <activity android:name=".LoginActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-            </intent-filter>
         </activity>
         <activity android:name=".LoginSuccessActivity" />
         <activity android:name=".SyllabusActivity" />
-        <activity android:name=".Advertisement">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-            </intent-filter>
-        </activity>
         <activity android:name=".ChapterActivity" />
         <activity android:name=".TestActivity" />
         <activity android:name=".ResultActivity" />
@@ -49,7 +38,6 @@
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
