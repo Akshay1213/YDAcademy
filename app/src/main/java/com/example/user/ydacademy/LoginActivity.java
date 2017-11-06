@@ -8,7 +8,6 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.RequiresApi;
 import android.support.design.widget.Snackbar;
-import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
 import android.transition.Explode;
@@ -47,7 +46,7 @@ public class LoginActivity extends AppCompatActivity {
     UrlRequest urlRequest;
     String username, password, name, id, class1;
     SharedPreferences sp;
-
+    Intent intent;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,9 +57,11 @@ public class LoginActivity extends AppCompatActivity {
                 Log.d("TAG", "SharedPreferences Name_of_your_preference : exist");
                 SharedPreferences sp = getSharedPreferences("YourSharedPreference", Activity.MODE_PRIVATE);
                 String username = sp.getString("USERNAME", null);
-                if (username != null)
+                if (username != null) {
+                    // startActivity(new Intent(LoginActivity.this, MainActivity.class));
+                }
 
-                    startActivity(new Intent(LoginActivity.this, MainActivity.class));
+
             } else
                 Log.d("TAG", "Setup default preferences");
 
@@ -110,14 +111,13 @@ public class LoginActivity extends AppCompatActivity {
                                                        explode.setDuration(500);
                                                        getWindow().setExitTransition(explode);
                                                        getWindow().setEnterTransition(explode);
-                                                       ActivityOptionsCompat oc2 = ActivityOptionsCompat.makeSceneTransitionAnimation(LoginActivity.this);
-                                                       Intent intent = new Intent();
+                                                       // ActivityOptionsCompat oc2 = ActivityOptionsCompat.makeSceneTransitionAnimation(LoginActivity.this);
+                                                       intent = new Intent();
                                                        intent.putExtra("data", true);
                                                        setResult(RESULT_OK, intent);
                                                        finish();
                                                        return;
                                                    } else {
-
                                                        Snackbar.make(relativeLayout, "Invalid Login", Snackbar.LENGTH_LONG).setAction("Action", null).show();
                                                        Log.d("Invalidlogin", "onSuccess: ");
                                                    }
@@ -150,7 +150,7 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        Intent intent = new Intent();
+        intent = new Intent();
         intent.putExtra("data", false);
         setResult(RESULT_OK, intent);
         finish();

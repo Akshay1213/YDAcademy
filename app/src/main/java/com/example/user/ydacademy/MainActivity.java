@@ -150,16 +150,17 @@ public class MainActivity extends AppCompatActivity
         switch (view.getId()) {
             case R.id.imageClassroom:
 
-                SharedPreferences sp = getSharedPreferences("YourSharedPreference", Activity.MODE_PRIVATE);
+                sp = getSharedPreferences("YourSharedPreference", Activity.MODE_PRIVATE);
                 menuItem = menu1.findItem(R.id.action_login);
+
                 if (menuItem.getTitle().equals("Login")) {
                     Log.d("am i null", "onClick: " + (menuItem == null ? "am null" : "not null"));
                     onOptionsItemSelected(menuItem);
-                } else if (sp.getString("CLASS", null).equals("10"))
+                } else if (sp.getString("CLASS", null).equals("10")) {
                     startActivity(new Intent(this, TenthActivity.class));
-                else
+                    //onOptionsItemSelected(menuItem);
+                } else
                     startActivity(new Intent(this, TabActivity.class));
-
                 break;
             case R.id.btn_career:
                 //btn_career.startAnimation(animation);
@@ -221,16 +222,17 @@ public class MainActivity extends AppCompatActivity
                 intent = new Intent(MainActivity.this, LoginActivity.class);
                 startActivityForResult(intent, 100);
             } else {
+                menuItem.setTitle("Login");
+                NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+                Menu menu = navigationView.getMenu();
+                menu.getItem(R.id.nav_login).setTitle("Login");
                 SharedPreferences sp = getSharedPreferences("YourSharedPreference", Activity.MODE_PRIVATE);
                 SharedPreferences.Editor editor = sp.edit();
                 editor.putString("USERNAME", null);
                 editor.putString("ID", null);
                 editor.putString("CLASS", null);
                 editor.commit();
-                menuItem.setTitle("Login");
-                NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-                Menu menu = navigationView.getMenu();
-                menu.getItem(R.id.nav_login).setTitle("Login");
+
             }
             return true;
         }
