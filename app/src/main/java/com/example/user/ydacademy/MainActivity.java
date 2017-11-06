@@ -225,7 +225,7 @@ public class MainActivity extends AppCompatActivity
                 menuItem.setTitle("Login");
                 NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
                 Menu menu = navigationView.getMenu();
-                menu.getItem(R.id.nav_login).setTitle("Login");
+                menu.findItem(R.id.nav_login).setTitle("Login");
                 SharedPreferences sp = getSharedPreferences("YourSharedPreference", Activity.MODE_PRIVATE);
                 SharedPreferences.Editor editor = sp.edit();
                 editor.putString("USERNAME", null);
