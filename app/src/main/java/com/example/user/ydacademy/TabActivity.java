@@ -37,7 +37,6 @@ public class TabActivity extends AppCompatActivity {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
                 // tab.getIcon().setColorFilter(Color.WHITE, PorterDuff.Mode.SRC_IN);
-
                 tabLayout.setTabTextColors(Color.parseColor("#000000"), Color.parseColor("#ffffff"));
             }
             @Override
@@ -73,7 +72,7 @@ public class TabActivity extends AppCompatActivity {
 
         } else {
             // ask user to press back button one more time to close app
-            toast = Toast.makeText(getBaseContext(), "Press once again to exit!", Toast.LENGTH_SHORT);
+            toast = Toast.makeText(getBaseContext(), "Press once again to logout!", Toast.LENGTH_SHORT);
             toast.show();
         }
         back_pressed = System.currentTimeMillis();

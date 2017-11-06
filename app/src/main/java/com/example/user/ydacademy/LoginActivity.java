@@ -47,8 +47,6 @@ public class LoginActivity extends AppCompatActivity {
     UrlRequest urlRequest;
     String username, password, name, id, class1;
     SharedPreferences sp;
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -79,8 +77,8 @@ public class LoginActivity extends AppCompatActivity {
 
             case R.id.btnLogin:
 
-                username = edtUsername.getText().toString();
-                password = edtPassword.getText().toString();
+                username = edtUsername.getText().toString().trim();
+                password = edtPassword.getText().toString().trim();
                 sp = getSharedPreferences("YourSharedPreference", Activity.MODE_PRIVATE);
                 id = sp.getString("ID", null);
                 name = sp.getString("USERNAME", null);
@@ -118,6 +116,7 @@ public class LoginActivity extends AppCompatActivity {
                                                        finish();
                                                        return;
                                                    } else {
+
                                                        Snackbar.make(relativeLayout, "Invalid Login", Snackbar.LENGTH_LONG).setAction("Action", null).show();
                                                        Log.d("Invalidlogin", "onSuccess: ");
                                                    }

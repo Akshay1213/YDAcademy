@@ -22,7 +22,7 @@ public class TestFragment extends Fragment {
 
     String exam;
     String subject;
-    Intent intent;
+    Intent intent, intent1;
 
     @InjectView(R.id.section1)
     View section1;
@@ -77,6 +77,7 @@ public class TestFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_test, container, false);
         intent = new Intent(getActivity(), ChapterActivity.class);
+        intent1 = new Intent(getActivity(), ImpQuestions.class);
         ButterKnife.inject(this, view);
         return view;
     }
@@ -87,7 +88,6 @@ public class TestFragment extends Fragment {
         switch (view.getId()) {
 
             case R.id.header1:
-
                 exam = header1.getText().toString();
                 intent.putExtra("Exam", exam);
                 if (section1.getVisibility() == View.GONE) {
@@ -125,7 +125,7 @@ public class TestFragment extends Fragment {
                 break;
             case R.id.header4:
                 exam = header4.getText().toString();
-                intent.putExtra("Exam", exam);
+                intent1.putExtra("Exam", exam);
                 if (section4.getVisibility() == View.GONE) {
                     section2.setVisibility(View.GONE);
                     section3.setVisibility(View.GONE);
@@ -136,7 +136,6 @@ public class TestFragment extends Fragment {
                 }
                 break;
             case R.id.txtPhysics:
-
                 subject = txtPhysics.getText().toString();
                 intent.putExtra("Subject", subject);
                 startActivity(intent);
@@ -154,13 +153,12 @@ public class TestFragment extends Fragment {
                 break;
             case R.id.txtPhysics3:
                 subject = txtPhysics3.getText().toString();
-                intent = new Intent(getActivity(), ImpQuestions.class);
-                intent.putExtra("Subject", subject);
-                startActivity(intent);
+                intent1 = new Intent(getActivity(), ImpQuestions.class);
+                intent1.putExtra("Subject", subject);
+                startActivity(intent1);
                 break;
             case R.id.txtChemistry:
                 subject = txtChemistry.getText().toString();
-
                 intent.putExtra("Subject", subject);
                 startActivity(intent);
                 break;
@@ -176,9 +174,9 @@ public class TestFragment extends Fragment {
                 break;
             case R.id.txtChemistry3:
                 subject = txtChemistry3.getText().toString();
-                intent = new Intent(getActivity(), ImpQuestions.class);
-                intent.putExtra("Subject", subject);
-                startActivity(intent);
+                intent1 = new Intent(getActivity(), ImpQuestions.class);
+                intent1.putExtra("Subject", subject);
+                startActivity(intent1);
                 break;
             case R.id.txtBiology:
                 subject = txtBiology.getText().toString();
@@ -193,9 +191,9 @@ public class TestFragment extends Fragment {
 
             case R.id.txtBiology3:
                 subject = txtBiology3.getText().toString();
-                intent = new Intent(getActivity(), ImpQuestions.class);
-                intent.putExtra("Subject", subject);
-                startActivity(intent);
+                intent1 = new Intent(getActivity(), ImpQuestions.class);
+                intent1.putExtra("Subject", subject);
+                startActivity(intent1);
                 break;
 
             case R.id.txtMaths1:
@@ -210,9 +208,9 @@ public class TestFragment extends Fragment {
                 break;
             case R.id.txtMaths3:
                 subject = txtMaths3.getText().toString();
-                intent = new Intent(getActivity(), ImpQuestions.class);
-                intent.putExtra("Subject", subject);
-                startActivity(intent);
+                intent1 = new Intent(getActivity(), ImpQuestions.class);
+                intent1.putExtra("Subject", subject);
+                startActivity(intent1);
                 break;
         }
     }

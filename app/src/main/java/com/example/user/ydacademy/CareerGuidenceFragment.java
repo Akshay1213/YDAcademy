@@ -62,7 +62,6 @@ public class CareerGuidenceFragment extends Fragment implements AdapterView.OnIt
                 } else {
                     section1.setVisibility(View.GONE);
                     spinner1.setVisibility(View.GONE);
-
                 }
             }
         });

@@ -77,15 +77,8 @@ public class ImpQuestions extends AppCompatActivity {
         Log.d("***", position + "");
         String pdfname = (String) listImpQuestions.getItemAtPosition(position);
         Intent intent = new Intent(ImpQuestions.this, ListQuestions.class);
-        /*intent.putExtra("Subject",subject);
-        intent.putExtra("Class",class1);
-        intent.putExtra("Exam",exam);
-        intent.putExtra("ES",es);
-        intent.putExtra("position",(position+1)+"");*/
         intent.putExtra("pdfname", pdfname);
         intent.putExtra("Sub", s + "");
         startActivity(intent);
-
-        //Toast.makeText(ImpQuestions.this,fullname,Toast.LENGTH_LONG).show();
     }
 }

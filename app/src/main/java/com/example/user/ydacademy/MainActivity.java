@@ -129,7 +129,7 @@ public class MainActivity extends AppCompatActivity
             // need to cancel the toast here
             toast.cancel();
             // code for exit
-            Intent intent = new Intent(Intent.ACTION_MAIN);
+            intent = new Intent(Intent.ACTION_MAIN);
             intent.addCategory(Intent.CATEGORY_HOME);
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(intent);
@@ -154,8 +154,6 @@ public class MainActivity extends AppCompatActivity
                 menuItem = menu1.findItem(R.id.action_login);
                 if (menuItem.getTitle().equals("Login")) {
                     Log.d("am i null", "onClick: " + (menuItem == null ? "am null" : "not null"));
-                   /* Intent intent = new Intent(MainActivity.this, LoginActivity.class);
-                    startActivityForResult(intent, 100);*/
                     onOptionsItemSelected(menuItem);
                 } else if (sp.getString("CLASS", null).equals("10"))
                     startActivity(new Intent(this, TenthActivity.class));
@@ -220,7 +218,7 @@ public class MainActivity extends AppCompatActivity
             Log.d("ItemName", itemname);
 
             if (itemname.equals("Login")) {
-                Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+                intent = new Intent(MainActivity.this, LoginActivity.class);
                 startActivityForResult(intent, 100);
             } else {
                 SharedPreferences sp = getSharedPreferences("YourSharedPreference", Activity.MODE_PRIVATE);
@@ -259,8 +257,7 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_share) {
             Intent sendIntent = new Intent();
             sendIntent.setAction(Intent.ACTION_SEND);
-            sendIntent.putExtra(Intent.EXTRA_TEXT,
-                    "Hey check out my app at: https://play.google.com/store/apps/details?id=com.xoxytech.ostello");
+            sendIntent.putExtra(Intent.EXTRA_TEXT, "Hey check out my app at: https://play.google.com/store/apps/details?id=com.xoxytech.ostello");
             sendIntent.setType("text/plain");
             startActivity(sendIntent);
         }
@@ -293,5 +290,4 @@ public class MainActivity extends AppCompatActivity
             }
         }
     }
-
 }
