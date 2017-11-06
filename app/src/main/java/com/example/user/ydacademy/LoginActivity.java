@@ -47,6 +47,7 @@ public class LoginActivity extends AppCompatActivity {
     UrlRequest urlRequest;
     String username, password, name, id, class1;
     SharedPreferences sp;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
