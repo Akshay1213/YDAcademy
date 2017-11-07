@@ -74,7 +74,7 @@ public class DescriptionActivity extends AppCompatActivity {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
             android.support.v7.app.ActionBar ab = getSupportActionBar();
             ab.setTitle("Yashodeep Academy");
-            ab.setSubtitle("Description/" + exam + "/" + subject);
+            ab.setSubtitle("Home/" + exam + "/" + subject);
         }
     }
 }

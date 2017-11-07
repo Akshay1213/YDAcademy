@@ -1,18 +1,20 @@
 package com.example.user.ydacademy;
 
+import android.animation.ObjectAnimator;
+import android.animation.PropertyValuesHolder;
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
+
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.AppCompatButton;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -21,6 +23,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -32,7 +35,12 @@ import butterknife.ButterKnife;
 import butterknife.InjectView;
 import butterknife.OnClick;
 
-public class MainActivity extends AppCompatActivity
+import com.oguzdev.circularfloatingactionmenu.library.FloatingActionMenu;
+import com.oguzdev.circularfloatingactionmenu.library.SubActionButton;
+
+
+
+public class MainActivity extends ActionBarActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
 
@@ -88,15 +96,59 @@ public class MainActivity extends AppCompatActivity
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        final ImageView icon = new ImageView(this); // Create an icon
+        icon.setImageDrawable(getResources().getDrawable(R.drawable.acred));
+        com.oguzdev.circularfloatingactionmenu.library.FloatingActionButton actionButton = new com.oguzdev.circularfloatingactionmenu.library.FloatingActionButton.Builder(this)
+                .setContentView(icon)
+                .build();
+
+        SubActionButton.Builder itemBuilder = new SubActionButton.Builder(this);
+// repeat many times:
+        ImageView itemIcon1 = new ImageView(this);
+        ImageView itemIcon2 = new ImageView(this);
+        ImageView itemIcon3 = new ImageView(this);
+        ImageView itemIcon4 = new ImageView(this);
+        int subActionButtonSize = 120;
+        FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(subActionButtonSize, subActionButtonSize);
+        itemIcon1.setImageDrawable(getResources().getDrawable(R.drawable.facebook));
+        itemIcon2.setImageDrawable(getResources().getDrawable(R.drawable.twitter));
+        itemIcon3.setImageDrawable(getResources().getDrawable(R.drawable.google));
+        itemIcon4.setImageDrawable(getResources().getDrawable(R.drawable.linkedin));
+        SubActionButton button1 = itemBuilder.setContentView(itemIcon1).setLayoutParams(params).build();
+        SubActionButton button2 = itemBuilder.setContentView(itemIcon2).setLayoutParams(params).build();
+        SubActionButton button3 = itemBuilder.setContentView(itemIcon3).setLayoutParams(params).build();
+        SubActionButton button4 = itemBuilder.setContentView(itemIcon4).setLayoutParams(params).build();
 
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+
+        FloatingActionMenu actionMenu = new FloatingActionMenu.Builder(this)
+                .addSubActionView(button1)
+                .addSubActionView(button2)
+                .addSubActionView(button3)
+                .addSubActionView(button4)
+                .setRadius(250)
+                .attachTo(actionButton)
+                .build();
+        button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,Activity_fb.class);
+                finish();
+                startActivity(intent);
+
+            }
+        });
+
+
+
+
+       /* FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 (findViewById(R.id.btn_contactus)).performClick();
             }
-        });
+        });*/
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle

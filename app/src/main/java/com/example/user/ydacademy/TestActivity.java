@@ -75,7 +75,7 @@ public class TestActivity extends AppCompatActivity {
         switch (view.getId()) {
             case R.id.btn_submit:
 
-                if (count == 24 || flag == 0 || count == 25)
+                if (flag == 0 || count == 25)
                     check_result();
                 while (userans.length()<25)
                 {
@@ -113,8 +113,9 @@ public class TestActivity extends AppCompatActivity {
                             intent.putExtra("Exam", exam);
                             intent.putExtra("ES", es);
                             intent.putExtra("Chapter",chapter);
-                            startActivity(intent);
                             finish();
+                            startActivity(intent);
+
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
@@ -160,6 +161,7 @@ public class TestActivity extends AppCompatActivity {
                    progressBar.setVisibility(View.GONE);
                    text_queNumber.setText(count + 1 + ".");
                    countDownTimer.start();
+                   Toast.makeText(TestActivity.this,count+"",Toast.LENGTH_LONG).show();
                    count++;
                    return false;
                }
@@ -192,7 +194,7 @@ public class TestActivity extends AppCompatActivity {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
             android.support.v7.app.ActionBar ab = getSupportActionBar();
             ab.setTitle("Yashodeep Academy");
-            ab.setSubtitle("Test/" + exam + "/" + subject);
+            ab.setSubtitle("Home/" + exam + "/" + subject);
         }
     }
 

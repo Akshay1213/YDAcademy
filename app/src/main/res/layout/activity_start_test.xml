@@ -11,71 +11,78 @@
         android:layout_height="match_parent"
         tools:context="com.example.user.adapter_imageview.start_Test">
 
+       <TextView
+           android:layout_height="wrap_content"
+           android:layout_width="match_parent"
+           android:text="Rules"
+           android:textSize="30dp"/>
+
         <TableRow>
 
             <TextView
-                android:id="@+id/tex_rule"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_column="1"
                 android:layout_marginTop="20dp"
-                android:text="Rules"
-                android:textSize="20dp" />
+                android:text="\u25CF"
+                android:textSize="16dp"
+                android:layout_marginLeft="10dp"></TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_column="2"
+                android:layout_marginTop="20dp"
+                android:text="Total number of questions : 25"
+                android:textSize="16dp"></TextView>
         </TableRow>
 
         <TableRow>
 
             <TextView
                 android:layout_column="1"
-                android:layout_marginTop="5dp"
-                android:text="\u25CF"></TextView>
+                android:layout_marginTop="10dp"
+                android:text="\u25CF"
+                android:textSize="16dp"
+                android:layout_marginLeft="10dp"></TextView>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_column="2"
-                android:layout_marginTop="5dp"
-                android:text="Total number of questions : 25"></TextView>
+                android:layout_marginTop="10dp"
+                android:text="Time alloted : 30 seconds to each question."
+                android:textSize="16dp"></TextView>
         </TableRow>
 
         <TableRow>
 
             <TextView
                 android:layout_column="1"
-                android:layout_marginTop="3dp"
-                android:text="\u25CF"></TextView>
+                android:layout_marginTop="10dp"
+                android:text="\u25CF"
+                android:textSize="16dp"
+                android:layout_marginLeft="10dp"></TextView>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_column="2"
-                android:layout_marginTop="3dp"
-                android:text="Time alloted : 30 seconds to each question."></TextView>
+                android:layout_marginTop="10dp"
+                android:textSize="16dp"
+                android:text="Each question carry 2 mark, no negative marks."></TextView>
         </TableRow>
 
         <TableRow>
 
             <TextView
                 android:layout_column="1"
-                android:layout_marginTop="3dp"
-                android:text="\u25CF"></TextView>
+                android:layout_marginTop="10dp"
+                android:text="\u25CF"
+                android:textSize="16dp"
+                android:layout_marginLeft="10dp"></TextView>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_column="2"
-                android:layout_marginTop="3dp"
-                android:text="Each question carry 1 mark, no negative marks."></TextView>
-        </TableRow>
-
-        <TableRow>
-
-            <TextView
-                android:layout_column="1"
-                android:layout_marginTop="3dp"
-                android:text="\u25CF"></TextView>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_column="2"
-                android:layout_marginTop="3dp"
-                android:text="Best luck..!"></TextView>
+                android:layout_marginTop="10dp"
+                android:text="Best luck..!"
+                android:textSize="16dp"></TextView>
         </TableRow>
 
 
@@ -89,6 +96,6 @@
         android:layout_marginTop="200dp"
         android:text="start test"
         android:background="@drawable/style"
-        android:backgroundTint="#00e640"/>
+        android:backgroundTint="#aaf2eb"/>
 
 </RelativeLayout>

@@ -12,11 +12,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".TabActivity">
-        </activity>
+        <activity android:name=".TabActivity"></activity>
         <activity android:name=".CareerDetailsActivity" />
-        <activity android:name=".LoginActivity">
-        </activity>
+        <activity android:name=".LoginActivity"></activity>
         <activity android:name=".SyllabusActivity" />
         <activity android:name=".ChapterActivity" />
         <activity android:name=".TestActivity" />
@@ -37,6 +35,7 @@
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -46,7 +45,8 @@
         <activity android:name=".OurAchievers" />
         <activity android:name=".ImpQuestions" />
         <activity android:name=".ListQuestions" />
-        <activity android:name=".StaffActivity"></activity>
+        <activity android:name=".StaffActivity" />
+        <activity android:name=".Activity_fb"></activity>
     </application>
 
 </manifest>
