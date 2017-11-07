@@ -152,7 +152,6 @@ public class MainActivity extends AppCompatActivity
 
                 sp = getSharedPreferences("YourSharedPreference", Activity.MODE_PRIVATE);
                 menuItem = menu1.findItem(R.id.action_login);
-
                 if (menuItem.getTitle().equals("Login")) {
                     Log.d("am i null", "onClick: " + (menuItem == null ? "am null" : "not null"));
                     onOptionsItemSelected(menuItem);
@@ -163,10 +162,13 @@ public class MainActivity extends AppCompatActivity
                     startActivity(new Intent(this, TabActivity.class));
                 break;
             case R.id.btn_career:
+
+                intent = new Intent(MainActivity.this, CareerGuidance.class);
+                startActivity(intent);
                 //btn_career.startAnimation(animation);
-                fragment = new CareerGuidenceFragment();
+               /* fragment = new CareerGuidenceFragment();
                 fragmentManager.beginTransaction()
-                        .add(R.id.drawer_layout, fragment).addToBackStack(null).commit();
+                        .add(R.id.drawer_layout, fragment).addToBackStack(null).commit();*/
                 break;
             case R.id.btn_Staff:
 //                btnStaff.startAnimation(animation);
@@ -232,7 +234,6 @@ public class MainActivity extends AppCompatActivity
                 editor.putString("ID", null);
                 editor.putString("CLASS", null);
                 editor.commit();
-
             }
             return true;
         }

@@ -24,7 +24,7 @@ public class SyllabusActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_syllabus);
         ButterKnife.inject(this);
-        urlRequest = UrlRequest.getObject();
+      /*  urlRequest = UrlRequest.getObject();
         urlRequest.setContext(SyllabusActivity.this);
         urlRequest.setUrl("http://ostallo.com/ostello/fetchcities.php");
         urlRequest.getResponse(new ServerCallback() {
@@ -34,6 +34,7 @@ public class SyllabusActivity extends AppCompatActivity {
                                    }
                                }
         );
+*/
 
         webView1.getSettings().setJavaScriptEnabled(true);
         String exam = getIntent().getStringExtra("Exam");
@@ -44,7 +45,9 @@ public class SyllabusActivity extends AppCompatActivity {
         Log.d("subject", subject);
         sp = getSharedPreferences("YourSharedPreference", Activity.MODE_PRIVATE);
         String class1 = sp.getString("CLASS", null);
+        //  final ProgressDialog loading = ProgressDialog.show(this, "Verifying", "Please wait...", false, false);
         webView1.loadUrl("https://docs.google.com/gview?embedded=true&url=http://yashodeepacademy.co.in/syllabus/" + class1 + exam + subject + ".pdf");
+        // loading.dismiss();
         Log.d("PDF", "https://docs.google.com/gview?embedded=true&url=http://yashodeepacademy.co.in/syllabus/" + class1 + exam + subject + ".pdf");
     }
 }
