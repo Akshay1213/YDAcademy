@@ -1,6 +1,8 @@
 package com.example.user.ydacademy;
 
 import android.annotation.TargetApi;
+import android.app.Activity;
+import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -18,44 +20,50 @@ import java.util.List;
 
 import butterknife.ButterKnife;
 
-public class OurAchievers extends AppCompatActivity {
-
+public class Performance extends AppCompatActivity {
 
     UrlRequest urlRequest;
-    AdapterStudent adapter;
-    List<DataStudent> data;
+    AdapterPerformance adapter;
+    List<DataPerformance> data;
     RecyclerView recyclerView;
+    SharedPreferences sp;
+    String id;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_our_achievers);
+        setContentView(R.layout.activity_performance);
         ButterKnife.inject(this);
         actionBarSetup();
+        sp = getSharedPreferences("YourSharedPreference", Activity.MODE_PRIVATE);
+        id = sp.getString("ID", null);
+        Log.d("Id", id);
         urlRequest = UrlRequest.getObject();
-        urlRequest.setContext(OurAchievers.this);
+        urlRequest.setContext(Performance.this);
         urlRequest.setUrl("http://yashodeepacademy.co.in/fetchstudentacheivers.php");
         urlRequest.getResponse(new ServerCallback() {
                                    @Override
                                    public void onSuccess(String response) {
                                        Log.d("Response", response);
-                                       List<DataStudent> data = new ArrayList<>();
+                                       List<DataPerformance> data = new ArrayList<>();
                                        try {
                                            JSONArray jsonArray = new JSONArray(response);
                                            for (int i = 0; i < jsonArray.length(); i++) {
-                                               DataStudent studentData = new DataStudent();
+                                               DataPerformance dataPerformance = new DataPerformance();
                                                JSONObject jsonObject = jsonArray.getJSONObject(i);
-                                               studentData.name = jsonObject.getString("name");
-                                               studentData.id = jsonObject.getString("id");
-                                               studentData.description = jsonObject.getString("description");
-                                               data.add(studentData);
+                                               dataPerformance.exam = jsonObject.getString("exam");
+                                               dataPerformance.subject1 = jsonObject.getString("subject");
+                                               dataPerformance.chapter = jsonObject.getString("chapter");
+                                               dataPerformance.score = jsonObject.getString("score");
+                                               dataPerformance.performance = jsonObject.getString("performance");
+                                               data.add(dataPerformance);
                                            }
                                            Log.d("Size", data.size() + "");
-                                           recyclerView = (RecyclerView) findViewById(R.id.Liststudent);
+                                           recyclerView = (RecyclerView) findViewById(R.id.recyclePerformance);
                                            recyclerView.setVisibility(View.VISIBLE);
-                                           adapter = new AdapterStudent(OurAchievers.this, data);
+                                           adapter = new AdapterPerformance(Performance.this, data);
                                            recyclerView.setAdapter(adapter);
-                                           recyclerView.setLayoutManager(new GridLayoutManager(OurAchievers.this, 2));
+                                           recyclerView.setLayoutManager(new GridLayoutManager(Performance.this, 2));
                                            adapter.notifyDataSetChanged();
 
                                        } catch (JSONException e1) {
@@ -73,7 +81,7 @@ public class OurAchievers extends AppCompatActivity {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
             android.support.v7.app.ActionBar ab = getSupportActionBar();
             ab.setTitle("Yashodeep Academy");
-            ab.setSubtitle("Home/Our Achievers");
+            ab.setSubtitle("Home/Performance");
         }
     }
 }

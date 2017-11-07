@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.user.ydacademy.StaffActivity">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/Liststudent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="0dp" />
+
+</RelativeLayout><!--RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -19,4 +32,4 @@
  6.  Coaching at Yashodeep Academy is PRAISEWORTHY. It has excellent and competent faculty. It helped me a lot to gain very good success in my board and competitive  exams.   -Shivam Kumbhar
  7.  The teaching at YASHODEEP Academy is to the point and helpful. The environment is friendly… and the teachers are very co-operative. It is very ideal for the preparation of board exams. 	- Rutwik Dokar" />
 
-</RelativeLayout>
+</RelativeLayout>-->

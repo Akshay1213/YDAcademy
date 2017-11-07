@@ -22,16 +22,17 @@ import android.widget.Spinner;
 public class CareerGuidenceFragment extends Fragment implements AdapterView.OnItemSelectedListener {
 
     Spinner spinner1, spinner2;
-    View section1, section2;
+    View view, section1, section2;
     boolean flag;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_career_guidence, container, false);
-        view.setBackgroundColor(Color.WHITE);
+        view = inflater.inflate(R.layout.fragment_career_guidence, container, false);
         actionBarSetup();
+        view.setBackgroundColor(Color.WHITE);
+
         spinner1 = view.findViewById(R.id.spinner1);
         spinner2 = view.findViewById(R.id.spinner2);
         flag = false;
@@ -106,7 +107,7 @@ public class CareerGuidenceFragment extends Fragment implements AdapterView.OnIt
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
             android.support.v7.app.ActionBar ab = ((AppCompatActivity) getActivity()).getSupportActionBar();
             ab.setTitle("Yashodeep Academy");
-            ab.setSubtitle("Test/");
+            ab.setSubtitle("Career Guidance");
         }
     }
 }

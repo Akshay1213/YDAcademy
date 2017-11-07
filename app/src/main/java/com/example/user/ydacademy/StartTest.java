@@ -9,6 +9,8 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.Toast;
 
@@ -55,7 +57,8 @@ public class StartTest extends AppCompatActivity {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.btn_startTest:
-
+                Animation animation = AnimationUtils.loadAnimation(StartTest.this, R.anim.fadeout);
+                start_test.startAnimation(animation);
                 urlRequest = UrlRequest.getObject();
                 urlRequest.setContext(StartTest.this);
                 urlRequest.setUrl("http://yashodeepacademy.co.in/getexamcount.php?student_id=" + id + "&examcode=" + es + chapter + "&class=" + class1);

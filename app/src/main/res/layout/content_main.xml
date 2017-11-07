@@ -343,26 +343,7 @@
                             android:textColor="@color/white"
                             android:textSize="15dp" />
                     </LinearLayout>
-                    <!-- <ImageView
-                         android:id="@+id/imageSuccess"
-                         android:layout_width="match_parent"
-                         android:layout_height="100dp"
-                         android:layout_gravity="center"
-                         android:layout_weight="1.2"
-                         android:src="@drawable/success" />
 
-                     <android.support.v7.widget.AppCompatButton
-                         android:id="@+id/btn_success"
-                         android:layout_width="match_parent"
-                         android:layout_height="0dp"
-                         android:layout_gravity="center"
-                         android:layout_marginTop="0dp"
-                         android:layout_weight="0.8"
-                         android:background="@color/primary_text"
-                         android:text="Success Stories"
-                         android:textColor="@color/white"
-                         android:textSize="15dp" />-->
-                    <!-- </LinearLayout>-->
                 </android.support.v7.widget.CardView>
             </LinearLayout>
 
@@ -413,18 +394,31 @@
 
                         <android.support.v4.widget.NestedScrollView
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
+                            android:layout_height="match_parent">
 
-                            <TextView
-                                android:id="@+id/imageDirectorDesk"
+                            <LinearLayout
                                 android:layout_width="match_parent"
-                                android:layout_height="0dp"
-                                android:layout_marginLeft="20dp"
-                                android:layout_marginRight="20dp"
-                                android:layout_weight="1.6"
-                                android:text="@string/director" />
-                        </android.support.v4.widget.NestedScrollView>
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
 
+                                <ImageView
+                                    android:id="@+id/imageDirector"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1.5"
+                                    android:src="@mipmap/ic_launcher" />
+
+                                <TextView
+                                    android:id="@+id/txtDirectorDesk"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginRight="20dp"
+                                    android:layout_weight="1.5"
+                                    android:text="Director Yogesh Sir( Mtech (Etx) (Maths))" />
+                            </LinearLayout>
+
+                        </android.support.v4.widget.NestedScrollView>
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
             </LinearLayout>
