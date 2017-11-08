@@ -12,16 +12,17 @@ import android.webkit.WebViewClient;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 
-public class Activity_fb extends AppCompatActivity {
-    @InjectView(R.id.webView) WebView webView1;
-    private ProgressDialog loading;
+public class Activity_twitter extends AppCompatActivity {
 
+    @InjectView(R.id.webView)
+    WebView webView1;
+    private ProgressDialog loading;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_fb);
+        setContentView(R.layout.activity_twitter);
         ButterKnife.inject(this);
-        loading = new ProgressDialog(Activity_fb.this);
+        loading = new ProgressDialog(Activity_twitter.this);
         webView1.getSettings().setJavaScriptEnabled(true);
         webView1.setWebViewClient(new WebViewClient()
         {
@@ -42,17 +43,17 @@ public class Activity_fb extends AppCompatActivity {
 
         });
         webView1.getSettings().setJavaScriptEnabled(true);
-        webView1.loadUrl("https://www.facebook.com/xoxytech");
-        Log.d("PDF","https://www.facebook.com/xoxytech");
-
+        webView1.loadUrl("https://www.pinterest.com/xoxytech/");
+        Log.d("PDF","https://www.pinterest.com/xoxytech/");
     }
 
     @Override
     public void onBackPressed() {
         //super.onBackPressed();
-        Intent intent = new Intent(Activity_fb.this,MainActivity.class);
+        Intent intent = new Intent(Activity_twitter.this,MainActivity.class);
         finish();
         startActivity(intent);
 
     }
 }
+

@@ -73,16 +73,16 @@ public class ResultActivity extends AppCompatActivity {
             }
         }
 
-        correct.setText(marks + "");
+        correct.setText((marks/2) + "");
         correct.setTextColor(Color.GREEN);
-        incorrect.setText(attained - marks + "");
+        incorrect.setText(attained - (marks/2) + "");
         incorrect.setTextColor(Color.RED);
         answered.setText(attained + "");
         answered.setTextColor(Color.GREEN);
         unanswered.setText(25 - attained + "");
         unanswered.setTextColor(Color.RED);
 
-        if (marks>=0&&marks<=20)
+      if (marks>=0&&marks<=20)
         {
 
            performance.setImageDrawable(getResources().getDrawable(R.drawable.poor));
@@ -108,11 +108,9 @@ public class ResultActivity extends AppCompatActivity {
             text_performance.setTextColor(Color.GREEN);
         }
 
-
-
         urlRequest = UrlRequest.getObject();
         urlRequest.setContext(ResultActivity.this);
-        urlRequest.setUrl("http://yashodeepacademy.co.in/updatestudentresult.php?student_id=" + id + "&examcode=" + es + chapter + "&score=" + marks + "/25");
+        urlRequest.setUrl("http://yashodeepacademy.co.in/updatestudentresult.php?student_id=" + id + "&examcode=" + es + chapter + "&score=" + marks + "-25");
         urlRequest.getResponse(new ServerCallback() {
             @Override
             public void onSuccess(String response) {

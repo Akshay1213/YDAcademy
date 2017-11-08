@@ -1,18 +1,20 @@
 package com.example.user.ydacademy;
 
+import android.animation.ObjectAnimator;
+import android.animation.PropertyValuesHolder;
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
+
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.AppCompatButton;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -21,6 +23,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -32,14 +35,25 @@ import butterknife.ButterKnife;
 import butterknife.InjectView;
 import butterknife.OnClick;
 
-public class MainActivity extends AppCompatActivity
+import com.oguzdev.circularfloatingactionmenu.library.FloatingActionMenu;
+import com.oguzdev.circularfloatingactionmenu.library.SubActionButton;
+
+
+
+public class MainActivity extends ActionBarActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
 
     public FragmentManager fragmentManager;
     @InjectView(R.id.slider)
     SliderLayout sliderShow;
-
+    /*  @InjectView(R.id.cardAboutUs)CardView cardAboutUs;
+      @InjectView(R.id.cardAchievers)CardView cardAchievers;
+      @InjectView(R.id.cardStaff)CardView cardStaff;
+      @InjectView(R.id.cardContactUs)CardView cardContactUs;
+      @InjectView(R.id.cardCareer)CardView cardCareer;
+      @InjectView(R.id.cardSuccess)CardView cardSuccess;*/
+    /* @InjectView(R.id.btn_login)AppCompatButton btn_login;*/
     @InjectView(R.id.btn_career)
     AppCompatButton btn_career;
     @InjectView(R.id.imageClassroom)
@@ -74,21 +88,76 @@ public class MainActivity extends AppCompatActivity
         for (int i = 1; i <= 5; i++) {
             TextSliderView textSliderView = new TextSliderView(this);
             textSliderView.image("http://yashodeepacademy.co.in/slider/" + i + ".jpg");
-
-
+            //  textSliderView.image("http://orientalbirdimages.org/images/data/striated_laughingthrush_0001.jpg");
             sliderShow.addSlider(textSliderView);
             animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.grow);
+
         }
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        final ImageView icon = new ImageView(this); // Create an icon
+        icon.setImageDrawable(getResources().getDrawable(R.drawable.acred));
+        com.oguzdev.circularfloatingactionmenu.library.FloatingActionButton actionButton = new com.oguzdev.circularfloatingactionmenu.library.FloatingActionButton.Builder(this)
+                .setContentView(icon)
+                .build();
+
+        SubActionButton.Builder itemBuilder = new SubActionButton.Builder(this);
+// repeat many times:
+        ImageView itemIcon1 = new ImageView(this);
+        ImageView itemIcon2 = new ImageView(this);
+        ImageView itemIcon3 = new ImageView(this);
+        ImageView itemIcon4 = new ImageView(this);
+        int subActionButtonSize = 120;
+        FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(subActionButtonSize, subActionButtonSize);
+        itemIcon1.setImageDrawable(getResources().getDrawable(R.drawable.facebook));
+        itemIcon2.setImageDrawable(getResources().getDrawable(R.drawable.twitter));
+        itemIcon3.setImageDrawable(getResources().getDrawable(R.drawable.google));
+        itemIcon4.setImageDrawable(getResources().getDrawable(R.drawable.linkedin));
+        SubActionButton button1 = itemBuilder.setContentView(itemIcon1).setLayoutParams(params).build();
+        SubActionButton button2 = itemBuilder.setContentView(itemIcon2).setLayoutParams(params).build();
+        SubActionButton button3 = itemBuilder.setContentView(itemIcon3).setLayoutParams(params).build();
+        SubActionButton button4 = itemBuilder.setContentView(itemIcon4).setLayoutParams(params).build();
+
+
+
+        FloatingActionMenu actionMenu = new FloatingActionMenu.Builder(this)
+                .addSubActionView(button1)
+                .addSubActionView(button2)
+                .addSubActionView(button3)
+                .addSubActionView(button4)
+                .setRadius(250)
+                .attachTo(actionButton)
+                .build();
+        button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,Activity_fb.class);
+                //finish();
+                startActivity(intent);
+
+            }
+        });
+        button3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,Activity_googleP.class);
+                //finish();
+                startActivity(intent);
+
+            }
+        });
+
+
+
+
+       /* FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 (findViewById(R.id.btn_contactus)).performClick();
             }
-        });
+        });*/
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle
@@ -107,6 +176,8 @@ public class MainActivity extends AppCompatActivity
             }
         });
     }
+
+
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
@@ -155,32 +226,35 @@ public class MainActivity extends AppCompatActivity
 
                 intent = new Intent(MainActivity.this, CareerGuidance.class);
                 startActivity(intent);
-
+                //btn_career.startAnimation(animation);
+               /* fragment = new CareerGuidenceFragment();
+                fragmentManager.beginTransaction()
+                        .add(R.id.drawer_layout, fragment).addToBackStack(null).commit();*/
                 break;
             case R.id.btn_Staff:
-
+//                btnStaff.startAnimation(animation);
                 intent = new Intent(MainActivity.this, StaffActivity.class);
                 startActivity(intent);
 
                 break;
             case R.id.btn_success:
-
+//                btnsuccess.startAnimation(animation);
                 intent = new Intent(MainActivity.this, SuccessStories.class);
                 startActivity(intent);
                 break;
             case R.id.btn_contactus:
-
+//                btnContactUs.startAnimation(animation);
                 intent = new Intent(MainActivity.this, ContactUs.class);
                 startActivity(intent);
                 break;
             case R.id.btn_aboutus:
-
+//                btnAboutUs.startAnimation(animation);
                 intent = new Intent(MainActivity.this, AboutUs.class);
                 startActivity(intent);
 
                 break;
             case R.id.btn_achiever:
-
+//                btnAchiever.startAnimation(animation);
                 Intent intent = new Intent(MainActivity.this, OurAchievers.class);
                 startActivity(intent);
                 break;
@@ -191,14 +265,16 @@ public class MainActivity extends AppCompatActivity
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
-
+//        getMenuInflater().inflate(R.menu.activity_main_drawer, menu);
         menu1 = menu;
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
         menuItem = item;
         if (id == R.id.action_login) {
