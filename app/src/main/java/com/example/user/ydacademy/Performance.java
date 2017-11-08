@@ -123,6 +123,7 @@ public class Performance extends AppCompatActivity {
             android.support.v7.app.ActionBar ab = getSupportActionBar();
             ab.setTitle("Yashodeep Academy");
             ab.setSubtitle("Home/Performance");
+
         }
     }
 }
