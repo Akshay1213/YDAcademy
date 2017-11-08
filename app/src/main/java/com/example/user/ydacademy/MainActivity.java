@@ -138,10 +138,28 @@ public class MainActivity extends ActionBarActivity
 
             }
         });
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,Activity_twitter.class);
+                //finish();
+                startActivity(intent);
+
+            }
+        });
         button3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this,Activity_googleP.class);
+                //finish();
+                startActivity(intent);
+
+            }
+        });
+        button4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,Activity_linkedIn.class);
                 //finish();
                 startActivity(intent);
 

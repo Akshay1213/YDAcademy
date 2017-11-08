@@ -48,6 +48,10 @@
         <activity android:name=".StaffActivity" />
         <activity android:name=".DirectorDesk" />
         <activity android:name=".CareerGuidance" />
+        <activity android:name=".Activity_fb" />
+        <activity android:name=".Activity_linkedIn" />
+        <activity android:name=".Activity_googleP" />
+        <activity android:name=".Activity_twitter" />
         <activity android:name=".Performance">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
