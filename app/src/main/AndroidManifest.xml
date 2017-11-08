@@ -17,8 +17,10 @@
         <activity android:name=".LoginActivity" />
         <activity android:name=".SyllabusActivity" />
         <activity android:name=".ChapterActivity" />
-        <activity android:name=".TestActivity" />
-        <activity android:name=".ResultActivity" />
+        <activity android:name=".TestActivity"
+            android:launchMode="singleInstance"/>
+        <activity android:name=".ResultActivity"
+            android:launchMode="singleInstance"/>
         <activity android:name=".DescriptionActivity" />
         <activity android:name=".StartTest" />
         <!--

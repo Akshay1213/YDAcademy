@@ -74,11 +74,11 @@ public class ResultActivity extends AppCompatActivity {
         }
 
         correct.setText((marks/2) + "");
-        correct.setTextColor(Color.GREEN);
+        correct.setTextColor(Color.parseColor("#FF009DE6"));
         incorrect.setText(attained - (marks/2) + "");
         incorrect.setTextColor(Color.RED);
         answered.setText(attained + "");
-        answered.setTextColor(Color.GREEN);
+        answered.setTextColor(Color.parseColor("#FF009DE6"));
         unanswered.setText(25 - attained + "");
         unanswered.setTextColor(Color.RED);
 
