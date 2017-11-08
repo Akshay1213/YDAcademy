@@ -113,8 +113,9 @@ public class TestActivity extends AppCompatActivity {
                             intent.putExtra("Exam", exam);
                             intent.putExtra("ES", es);
                             intent.putExtra("Chapter",chapter);
-                            finish();
+                            TestActivity.this.finish();
                             startActivity(intent);
+
 
                         } catch (JSONException e) {
                             e.printStackTrace();
@@ -161,7 +162,6 @@ public class TestActivity extends AppCompatActivity {
                    progressBar.setVisibility(View.GONE);
                    text_queNumber.setText(count + 1 + ".");
                    countDownTimer.start();
-                   Toast.makeText(TestActivity.this,count+"",Toast.LENGTH_LONG).show();
                    count++;
                    return false;
                }
