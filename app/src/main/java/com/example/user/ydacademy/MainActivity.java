@@ -83,13 +83,10 @@ public class MainActivity extends AppCompatActivity
             //  textSliderView.image("http://orientalbirdimages.org/images/data/striated_laughingthrush_0001.jpg");
             sliderShow.addSlider(textSliderView);
             animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.grow);
-
         }
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -115,8 +112,6 @@ public class MainActivity extends AppCompatActivity
             }
         });
     }
-
-
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
@@ -165,10 +160,7 @@ public class MainActivity extends AppCompatActivity
 
                 intent = new Intent(MainActivity.this, CareerGuidance.class);
                 startActivity(intent);
-                //btn_career.startAnimation(animation);
-               /* fragment = new CareerGuidenceFragment();
-                fragmentManager.beginTransaction()
-                        .add(R.id.drawer_layout, fragment).addToBackStack(null).commit();*/
+
                 break;
             case R.id.btn_Staff:
 //                btnStaff.startAnimation(animation);

@@ -48,7 +48,11 @@
         <activity android:name=".StaffActivity" />
         <activity android:name=".DirectorDesk" />
         <activity android:name=".CareerGuidance" />
-        <activity android:name=".Performance"></activity>
+        <activity android:name=".Performance">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

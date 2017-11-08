@@ -18,7 +18,7 @@ public class AdapterPerformance extends RecyclerView.Adapter<RecyclerView.ViewHo
 
     List<DataPerformance> data = Collections.emptyList();
 
-    AdapterStaff.MyHolder myHolder;
+    AdapterPerformance.MyHolder myHolder;
     private Context context;
     private LayoutInflater inflater;
 
@@ -37,7 +37,7 @@ public class AdapterPerformance extends RecyclerView.Adapter<RecyclerView.ViewHo
     @Override
     public void onViewAttachedToWindow(RecyclerView.ViewHolder holder) {
         super.onViewAttachedToWindow(holder);
-        myHolder = (AdapterStaff.MyHolder) holder;
+        myHolder = (AdapterPerformance.MyHolder) holder;
     }
 
 
