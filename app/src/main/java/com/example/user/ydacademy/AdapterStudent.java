@@ -28,7 +28,6 @@ public class AdapterStudent extends RecyclerView.Adapter<RecyclerView.ViewHolder
     private Context context;
     private LayoutInflater inflater;
 
-    // create constructor to innitilize context and data sent frm MainActivity
     public AdapterStudent(Context context, List<DataStudent> data) {
         this.context = context;
         inflater = LayoutInflater.from(context);
@@ -45,8 +44,6 @@ public class AdapterStudent extends RecyclerView.Adapter<RecyclerView.ViewHolder
         super.onViewAttachedToWindow(holder);
         myHolder = (MyHolder) holder;
     }
-
-
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = inflater.inflate(R.layout.container_student, parent, false);
@@ -54,11 +51,8 @@ public class AdapterStudent extends RecyclerView.Adapter<RecyclerView.ViewHolder
         return holder;
     }
 
-
     @Override
     public void onBindViewHolder(final RecyclerView.ViewHolder holder, int position) {
-
-
         final MyHolder myHolder = (MyHolder) holder;
         final int pos = position;
         DataStudent dataStudent = data.get(position);
@@ -78,7 +72,7 @@ public class AdapterStudent extends RecyclerView.Adapter<RecyclerView.ViewHolder
                 return false;
             }
         }).error(R.drawable.sorryimagenotavailable)
-                .into(myHolder.ivstaff1);
+                .into(myHolder.imageStudent);
     }
 
     @Override
@@ -86,17 +80,15 @@ public class AdapterStudent extends RecyclerView.Adapter<RecyclerView.ViewHolder
         return data.size();
     }
 
-
     class MyHolder extends RecyclerView.ViewHolder {
-        ImageView ivstaff1;
+        ImageView imageStudent;
         TextView name, description;
 
         public MyHolder(View itemView) {
             super(itemView);
-            ivstaff1 = itemView.findViewById(R.id.ivstaff1);
+            imageStudent = itemView.findViewById(R.id.iimageStudent);
             name = itemView.findViewById(R.id.txt_name);
             description = itemView.findViewById(R.id.txt_description);
         }
     }
-
 }
