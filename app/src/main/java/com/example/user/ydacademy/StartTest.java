@@ -83,6 +83,7 @@ public class StartTest extends AppCompatActivity {
                                                        intent.putExtra("Exam", exam);
                                                        intent.putExtra("ES", es);
                                                        intent.putExtra("Chapter", chapter);
+                                                       finish();
                                                        startActivity(intent);
                                                    } else
                                                        Toast.makeText(StartTest.this, "Sorry,You can attemp test maximum 2 times", Toast.LENGTH_LONG).show();

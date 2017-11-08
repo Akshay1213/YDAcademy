@@ -11,6 +11,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import butterknife.ButterKnife;
@@ -28,8 +29,9 @@ public class ResultActivity extends AppCompatActivity {
     TextView answered;
     @InjectView(R.id.txt_unanswer)
     TextView unanswered;
-    @InjectView(R.id.txt_message)
-    TextView message;
+    @InjectView(R.id.txt_performance)
+    TextView text_performance;
+    @InjectView(R.id.iv_performance)ImageView performance;
     String name, userans, result, exam, subject, es, chapter, class1;
     int marks = 0, attained = 0;
     UrlRequest urlRequest;
@@ -61,7 +63,7 @@ public class ResultActivity extends AppCompatActivity {
         for (int i = 0; i < result.length(); i++) {
 
             if (userans.charAt(i) == result.charAt(i)) {
-                marks++;
+                marks+=2;
             }
         }
 
@@ -80,26 +82,32 @@ public class ResultActivity extends AppCompatActivity {
         unanswered.setText(25 - attained + "");
         unanswered.setTextColor(Color.RED);
 
-        if (marks <= 10)
+        if (marks>=0&&marks<=20)
         {
-            message.setText("Poor performance");
-            message.setTextColor(Color.RED);
+
+           performance.setImageDrawable(getResources().getDrawable(R.drawable.poor));
+           text_performance.setText("Poor performance");
+           text_performance.setTextColor(Color.RED);
         }
-        else if (marks > 10 && marks <= 15)
+        else if (marks > 20 && marks <= 30) {
+            performance.setImageDrawable(getResources().getDrawable(R.drawable.average));
+            text_performance.setText("Average performance");
+            text_performance.setTextColor(Color.parseColor("#FFA500"));
+        }
+
+        else if (marks > 30 && marks <= 40)
         {
-            message.setText("Average performance");
-            message.setTextColor(Color.YELLOW);
+            performance.setImageDrawable(getResources().getDrawable(R.drawable.good));
+            text_performance.setText("Good performance");
+            text_performance.setTextColor(Color.parseColor("#0BB5FF"));
         }
-        else if (marks > 15 && marks <= 20)
+        else if (marks > 40 && marks <=50)
         {
-            message.setText("Good performance");
-            message.setTextColor(Color.MAGENTA);
+            performance.setImageDrawable(getResources().getDrawable(R.drawable.excellent));
+            text_performance.setText("Excellent performance");
+            text_performance.setTextColor(Color.GREEN);
         }
-        else if (marks > 21 && marks <= 25)
-        {
-            message.setText("Excellent performance");
-            message.setTextColor(Color.GREEN);
-        }
+
 
 
         urlRequest = UrlRequest.getObject();
@@ -123,6 +131,7 @@ public class ResultActivity extends AppCompatActivity {
                 intent.putExtra("Exam", exam);
                 intent.putExtra("ES", es);
                 intent.putExtra("Chapter", chapter);
+                finish();
                 startActivity(intent);
             }
         });
@@ -140,7 +149,7 @@ public class ResultActivity extends AppCompatActivity {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
             android.support.v7.app.ActionBar ab = getSupportActionBar();
             ab.setTitle("Yashodeep Academy");
-            ab.setSubtitle("Result/" + exam + "/" + subject);
+            ab.setSubtitle("Home/" + exam + "/" + subject);
         }
     }
 }
