@@ -66,7 +66,6 @@ public class ResultActivity extends AppCompatActivity {
                 marks+=2;
             }
         }
-
         for (int i = 0; i < result.length(); i++) {
             if (userans.charAt(i) != 'E') {
                 attained++;

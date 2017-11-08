@@ -20,6 +20,7 @@ public class AdapterPerformance extends RecyclerView.Adapter<RecyclerView.ViewHo
 
     AdapterPerformance.MyHolder myHolder;
     private Context context;
+
     private LayoutInflater inflater;
 
     // create constructor to innitilize context and data sent frm MainActivity
@@ -55,13 +56,14 @@ public class AdapterPerformance extends RecyclerView.Adapter<RecyclerView.ViewHo
 
         final AdapterPerformance.MyHolder myHolder = (AdapterPerformance.MyHolder) holder;
         final int pos = position;
-        DataPerformance dataPerformance = data.get(position);
 
+        DataPerformance dataPerformance = data.get(position);
         myHolder.txtExam.setText(dataPerformance.exam);
         myHolder.txtSubject.setText(dataPerformance.subject1);
         myHolder.txtChapter.setText(dataPerformance.chapter);
         myHolder.txtScore.setText(dataPerformance.score);
         myHolder.txtPerformance.setText(dataPerformance.performance);
+        myHolder.txtSerialNo.setText((position + 1) + ".");
 
     }
 
@@ -72,16 +74,16 @@ public class AdapterPerformance extends RecyclerView.Adapter<RecyclerView.ViewHo
 
 
     class MyHolder extends RecyclerView.ViewHolder {
-
-        TextView txtExam, txtSubject, txtChapter, txtScore, txtPerformance;
+        TextView txtSerialNo, txtExam, txtSubject, txtChapter, txtScore, txtPerformance;
 
         public MyHolder(View itemView) {
             super(itemView);
+            txtSerialNo = itemView.findViewById(R.id.txtSerialno);
             txtExam = itemView.findViewById(R.id.txt_exam);
             txtSubject = itemView.findViewById(R.id.txt_subject);
             txtChapter = itemView.findViewById(R.id.txt_chapter);
-            txtScore = itemView.findViewById(R.id.txt_Score);
-            txtPerformance = itemView.findViewById(R.id.txt_perofrmance);
+            txtScore = itemView.findViewById(R.id.txt_score);
+            txtPerformance = itemView.findViewById(R.id.txt_performance);
         }
     }
 }
