@@ -100,7 +100,6 @@ public class Performance extends AppCompatActivity {
                                                Log.d("Performance", dataPerformance.performance);
 
                                                data.add(dataPerformance);
-
                                            }
                                            Log.d("Size***", data.size() + "");
                                            recyclerView = (RecyclerView) findViewById(R.id.recyclePerformance);
@@ -123,7 +122,6 @@ public class Performance extends AppCompatActivity {
             android.support.v7.app.ActionBar ab = getSupportActionBar();
             ab.setTitle("Yashodeep Academy");
             ab.setSubtitle("Home/Performance");
-
         }
     }
 }
