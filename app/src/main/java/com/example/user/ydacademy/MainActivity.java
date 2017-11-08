@@ -6,6 +6,7 @@ import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 
@@ -132,8 +133,7 @@ public class MainActivity extends ActionBarActivity
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this,Activity_fb.class);
-                //finish();
+                Intent intent = new Intent(Intent.ACTION_VIEW).setData(Uri.parse("https://www.facebook.com/xoxytech"));
                 startActivity(intent);
 
             }
@@ -141,8 +141,7 @@ public class MainActivity extends ActionBarActivity
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this,Activity_twitter.class);
-                //finish();
+                Intent intent = new Intent(Intent.ACTION_VIEW).setData(Uri.parse("https://twitter.com/xoxytech"));
                 startActivity(intent);
 
             }
@@ -150,8 +149,7 @@ public class MainActivity extends ActionBarActivity
         button3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this,Activity_googleP.class);
-                //finish();
+                Intent intent = new Intent(Intent.ACTION_VIEW).setData(Uri.parse("https://www.pinterest.com/xoxytech/"));
                 startActivity(intent);
 
             }
@@ -159,23 +157,12 @@ public class MainActivity extends ActionBarActivity
         button4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this,Activity_linkedIn.class);
-                //finish();
+                Intent intent = new Intent(Intent.ACTION_VIEW).setData(Uri.parse("https://www.linkedin.com/company/15238415/admin/updates/"));
                 startActivity(intent);
 
             }
         });
 
-
-
-
-       /* FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                (findViewById(R.id.btn_contactus)).performClick();
-            }
-        });*/
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle
