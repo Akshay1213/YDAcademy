@@ -39,13 +39,7 @@ public class MainActivity extends AppCompatActivity
     public FragmentManager fragmentManager;
     @InjectView(R.id.slider)
     SliderLayout sliderShow;
-    /*  @InjectView(R.id.cardAboutUs)CardView cardAboutUs;
-      @InjectView(R.id.cardAchievers)CardView cardAchievers;
-      @InjectView(R.id.cardStaff)CardView cardStaff;
-      @InjectView(R.id.cardContactUs)CardView cardContactUs;
-      @InjectView(R.id.cardCareer)CardView cardCareer;
-      @InjectView(R.id.cardSuccess)CardView cardSuccess;*/
-    /* @InjectView(R.id.btn_login)AppCompatButton btn_login;*/
+
     @InjectView(R.id.btn_career)
     AppCompatButton btn_career;
     @InjectView(R.id.imageClassroom)
@@ -80,7 +74,8 @@ public class MainActivity extends AppCompatActivity
         for (int i = 1; i <= 5; i++) {
             TextSliderView textSliderView = new TextSliderView(this);
             textSliderView.image("http://yashodeepacademy.co.in/slider/" + i + ".jpg");
-            //  textSliderView.image("http://orientalbirdimages.org/images/data/striated_laughingthrush_0001.jpg");
+
+
             sliderShow.addSlider(textSliderView);
             animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.grow);
         }
@@ -163,29 +158,29 @@ public class MainActivity extends AppCompatActivity
 
                 break;
             case R.id.btn_Staff:
-//                btnStaff.startAnimation(animation);
+
                 intent = new Intent(MainActivity.this, StaffActivity.class);
                 startActivity(intent);
 
                 break;
             case R.id.btn_success:
-//                btnsuccess.startAnimation(animation);
+
                 intent = new Intent(MainActivity.this, SuccessStories.class);
                 startActivity(intent);
                 break;
             case R.id.btn_contactus:
-//                btnContactUs.startAnimation(animation);
+
                 intent = new Intent(MainActivity.this, ContactUs.class);
                 startActivity(intent);
                 break;
             case R.id.btn_aboutus:
-//                btnAboutUs.startAnimation(animation);
+
                 intent = new Intent(MainActivity.this, AboutUs.class);
                 startActivity(intent);
 
                 break;
             case R.id.btn_achiever:
-//                btnAchiever.startAnimation(animation);
+
                 Intent intent = new Intent(MainActivity.this, OurAchievers.class);
                 startActivity(intent);
                 break;
@@ -196,16 +191,14 @@ public class MainActivity extends AppCompatActivity
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
-//        getMenuInflater().inflate(R.menu.activity_main_drawer, menu);
+
         menu1 = menu;
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
+
         int id = item.getItemId();
         menuItem = item;
         if (id == R.id.action_login) {
