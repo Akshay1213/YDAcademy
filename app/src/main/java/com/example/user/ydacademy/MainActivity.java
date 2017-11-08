@@ -1,14 +1,11 @@
 package com.example.user.ydacademy;
 
-import android.animation.ObjectAnimator;
-import android.animation.PropertyValuesHolder;
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
-
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.view.GravityCompat;
@@ -30,13 +27,12 @@ import android.widget.Toast;
 
 import com.daimajia.slider.library.SliderLayout;
 import com.daimajia.slider.library.SliderTypes.TextSliderView;
+import com.oguzdev.circularfloatingactionmenu.library.FloatingActionMenu;
+import com.oguzdev.circularfloatingactionmenu.library.SubActionButton;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 import butterknife.OnClick;
-
-import com.oguzdev.circularfloatingactionmenu.library.FloatingActionMenu;
-import com.oguzdev.circularfloatingactionmenu.library.SubActionButton;
 
 
 
@@ -47,13 +43,6 @@ public class MainActivity extends ActionBarActivity
     public FragmentManager fragmentManager;
     @InjectView(R.id.slider)
     SliderLayout sliderShow;
-    /*  @InjectView(R.id.cardAboutUs)CardView cardAboutUs;
-      @InjectView(R.id.cardAchievers)CardView cardAchievers;
-      @InjectView(R.id.cardStaff)CardView cardStaff;
-      @InjectView(R.id.cardContactUs)CardView cardContactUs;
-      @InjectView(R.id.cardCareer)CardView cardCareer;
-      @InjectView(R.id.cardSuccess)CardView cardSuccess;*/
-    /* @InjectView(R.id.btn_login)AppCompatButton btn_login;*/
     @InjectView(R.id.btn_career)
     AppCompatButton btn_career;
     @InjectView(R.id.imageClassroom)
@@ -70,7 +59,7 @@ public class MainActivity extends ActionBarActivity
     @InjectView(R.id.btn_achiever)
     AppCompatButton btnAchiever;
     SharedPreferences sp;
-    String username, id, class1;
+    String id, class1;
     MenuItem menuItem;
     String itemname;
     Intent intent;
@@ -103,7 +92,7 @@ public class MainActivity extends ActionBarActivity
                 .build();
 
         SubActionButton.Builder itemBuilder = new SubActionButton.Builder(this);
-// repeat many times:
+
         ImageView itemIcon1 = new ImageView(this);
         ImageView itemIcon2 = new ImageView(this);
         ImageView itemIcon3 = new ImageView(this);
@@ -138,18 +127,6 @@ public class MainActivity extends ActionBarActivity
 
             }
         });
-
-
-
-
-       /* FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                (findViewById(R.id.btn_contactus)).performClick();
-            }
-        });*/
-
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle
                 (
@@ -217,35 +194,31 @@ public class MainActivity extends ActionBarActivity
 
                 intent = new Intent(MainActivity.this, CareerGuidance.class);
                 startActivity(intent);
-                //btn_career.startAnimation(animation);
-               /* fragment = new CareerGuidenceFragment();
-                fragmentManager.beginTransaction()
-                        .add(R.id.drawer_layout, fragment).addToBackStack(null).commit();*/
                 break;
             case R.id.btn_Staff:
-//                btnStaff.startAnimation(animation);
+
                 intent = new Intent(MainActivity.this, StaffActivity.class);
                 startActivity(intent);
 
                 break;
             case R.id.btn_success:
-//                btnsuccess.startAnimation(animation);
+
                 intent = new Intent(MainActivity.this, SuccessStories.class);
                 startActivity(intent);
                 break;
             case R.id.btn_contactus:
-//                btnContactUs.startAnimation(animation);
+
                 intent = new Intent(MainActivity.this, ContactUs.class);
                 startActivity(intent);
                 break;
             case R.id.btn_aboutus:
-//                btnAboutUs.startAnimation(animation);
+
                 intent = new Intent(MainActivity.this, AboutUs.class);
                 startActivity(intent);
 
                 break;
             case R.id.btn_achiever:
-//                btnAchiever.startAnimation(animation);
+
                 Intent intent = new Intent(MainActivity.this, OurAchievers.class);
                 startActivity(intent);
                 break;
@@ -254,18 +227,14 @@ public class MainActivity extends ActionBarActivity
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
-//        getMenuInflater().inflate(R.menu.activity_main_drawer, menu);
         menu1 = menu;
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
+
         int id = item.getItemId();
         menuItem = item;
         if (id == R.id.action_login) {
