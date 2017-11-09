@@ -19,11 +19,9 @@ import butterknife.OnClick;
  */
 public class TestFragment extends Fragment {
 
-
     String exam;
     String subject;
     Intent intent, intent1;
-
     @InjectView(R.id.section1)
     View section1;
     @InjectView(R.id.section2)

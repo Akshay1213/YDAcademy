@@ -1,7 +1,5 @@
 package com.example.user.ydacademy;
 
-import android.animation.ObjectAnimator;
-import android.animation.PropertyValuesHolder;
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Intent;
@@ -9,7 +7,6 @@ import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.view.GravityCompat;
@@ -31,13 +28,12 @@ import android.widget.Toast;
 
 import com.daimajia.slider.library.SliderLayout;
 import com.daimajia.slider.library.SliderTypes.TextSliderView;
+import com.oguzdev.circularfloatingactionmenu.library.FloatingActionMenu;
+import com.oguzdev.circularfloatingactionmenu.library.SubActionButton;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 import butterknife.OnClick;
-
-import com.oguzdev.circularfloatingactionmenu.library.FloatingActionMenu;
-import com.oguzdev.circularfloatingactionmenu.library.SubActionButton;
 
 
 
@@ -57,6 +53,8 @@ public class MainActivity extends ActionBarActivity
     /* @InjectView(R.id.btn_login)AppCompatButton btn_login;*/
     @InjectView(R.id.btn_career)
     AppCompatButton btn_career;
+    @InjectView(R.id.btn_director)
+    AppCompatButton btn_director;
     @InjectView(R.id.imageClassroom)
     ImageView imageClassroom;
     Menu menu1, navbar_menu;
@@ -98,7 +96,7 @@ public class MainActivity extends ActionBarActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         final ImageView icon = new ImageView(this); // Create an icon
-        icon.setImageDrawable(getResources().getDrawable(R.drawable.shareicon));
+        // icon.setImageDrawable(getResources().getDrawable(R.drawable.shareicon));
         com.oguzdev.circularfloatingactionmenu.library.FloatingActionButton actionButton = new com.oguzdev.circularfloatingactionmenu.library.FloatingActionButton.Builder(this)
                 .setContentView(icon)
                 .build();
@@ -209,7 +207,7 @@ public class MainActivity extends ActionBarActivity
     }
 
 
-    @OnClick({R.id.imageClassroom, R.id.btn_career, R.id.btn_Staff, R.id.btn_success, R.id.btn_contactus, R.id.btn_aboutus, R.id.btn_achiever})
+    @OnClick({R.id.imageClassroom, R.id.btn_career, R.id.btn_Staff, R.id.btn_success, R.id.btn_contactus, R.id.btn_aboutus, R.id.btn_achiever, R.id.btn_director})
 
     public void onClick(View view) {
 
@@ -232,9 +230,7 @@ public class MainActivity extends ActionBarActivity
                 intent = new Intent(MainActivity.this, CareerGuidance.class);
                 startActivity(intent);
                 //btn_career.startAnimation(animation);
-               /* fragment = new CareerGuidenceFragment();
-                fragmentManager.beginTransaction()
-                        .add(R.id.drawer_layout, fragment).addToBackStack(null).commit();*/
+
                 break;
             case R.id.btn_Staff:
 //                btnStaff.startAnimation(animation);
@@ -260,7 +256,11 @@ public class MainActivity extends ActionBarActivity
                 break;
             case R.id.btn_achiever:
 //                btnAchiever.startAnimation(animation);
-                Intent intent = new Intent(MainActivity.this, OurAchievers.class);
+                intent = new Intent(MainActivity.this, OurAchievers.class);
+                startActivity(intent);
+                break;
+            case R.id.btn_director:
+                intent = new Intent(MainActivity.this, DirectorDesk.class);
                 startActivity(intent);
                 break;
         }
