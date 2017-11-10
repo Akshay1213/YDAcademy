@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.view.GravityCompat;
+import android.support.v4.view.ViewCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -96,7 +97,7 @@ public class MainActivity extends ActionBarActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         final ImageView icon = new ImageView(this); // Create an icon
-        // icon.setImageDrawable(getResources().getDrawable(R.drawable.shareicon));
+        icon.setImageDrawable(getResources().getDrawable(R.drawable.shareicon));
         com.oguzdev.circularfloatingactionmenu.library.FloatingActionButton actionButton = new com.oguzdev.circularfloatingactionmenu.library.FloatingActionButton.Builder(this)
                 .setContentView(icon)
                 .build();
@@ -118,7 +119,10 @@ public class MainActivity extends ActionBarActivity
         SubActionButton button3 = itemBuilder.setContentView(itemIcon3).setLayoutParams(params).build();
         SubActionButton button4 = itemBuilder.setContentView(itemIcon4).setLayoutParams(params).build();
 
-
+        ViewCompat.setElevation(button1, 4);
+        ViewCompat.setElevation(button2, 4);
+        ViewCompat.setElevation(button3, 4);
+        ViewCompat.setElevation(button4, 4);
 
         FloatingActionMenu actionMenu = new FloatingActionMenu.Builder(this)
                 .addSubActionView(button1)
