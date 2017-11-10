@@ -40,7 +40,6 @@
         <activity android:name=".ImpQuestions" />
         <activity android:name=".ListQuestions" />
         <activity android:name=".StaffActivity" />
-        <activity android:name=".DirectorDesk" />
         <activity android:name=".CareerGuidance" />
         <activity android:name=".Performance">
 
