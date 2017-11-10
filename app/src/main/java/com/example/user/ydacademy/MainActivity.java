@@ -4,6 +4,8 @@ import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
+import android.graphics.drawable.GradientDrawable;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -96,7 +98,7 @@ public class MainActivity extends ActionBarActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         final ImageView icon = new ImageView(this); // Create an icon
-        // icon.setImageDrawable(getResources().getDrawable(R.drawable.shareicon));
+        icon.setImageDrawable(getResources().getDrawable(R.drawable.shareicon));
         com.oguzdev.circularfloatingactionmenu.library.FloatingActionButton actionButton = new com.oguzdev.circularfloatingactionmenu.library.FloatingActionButton.Builder(this)
                 .setContentView(icon)
                 .build();
@@ -118,7 +120,13 @@ public class MainActivity extends ActionBarActivity
         SubActionButton button3 = itemBuilder.setContentView(itemIcon3).setLayoutParams(params).build();
         SubActionButton button4 = itemBuilder.setContentView(itemIcon4).setLayoutParams(params).build();
 
-
+        GradientDrawable gd = new GradientDrawable();
+        gd.setColor(Color.parseColor("#ffffff"));
+        gd.setShape(GradientDrawable.OVAL);
+        button1.setBackground(gd);
+        button2.setBackground(gd);
+        button3.setBackground(gd);
+        button4.setBackground(gd);
 
         FloatingActionMenu actionMenu = new FloatingActionMenu.Builder(this)
                 .addSubActionView(button1)
