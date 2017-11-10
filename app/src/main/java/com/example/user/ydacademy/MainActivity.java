@@ -4,13 +4,14 @@ import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
+import android.graphics.drawable.GradientDrawable;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.view.GravityCompat;
-import android.support.v4.view.ViewCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -119,10 +120,13 @@ public class MainActivity extends ActionBarActivity
         SubActionButton button3 = itemBuilder.setContentView(itemIcon3).setLayoutParams(params).build();
         SubActionButton button4 = itemBuilder.setContentView(itemIcon4).setLayoutParams(params).build();
 
-        ViewCompat.setElevation(button1, 4);
-        ViewCompat.setElevation(button2, 4);
-        ViewCompat.setElevation(button3, 4);
-        ViewCompat.setElevation(button4, 4);
+        GradientDrawable gd = new GradientDrawable();
+        gd.setColor(Color.parseColor("#ffffff"));
+        gd.setShape(GradientDrawable.OVAL);
+        button1.setBackground(gd);
+        button2.setBackground(gd);
+        button3.setBackground(gd);
+        button4.setBackground(gd);
 
         FloatingActionMenu actionMenu = new FloatingActionMenu.Builder(this)
                 .addSubActionView(button1)

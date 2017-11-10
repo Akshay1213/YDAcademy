@@ -58,10 +58,8 @@ public class LoginActivity extends AppCompatActivity {
                 SharedPreferences sp = getSharedPreferences("YourSharedPreference", Activity.MODE_PRIVATE);
                 String username = sp.getString("USERNAME", null);
                 if (username != null) {
-                    // startActivity(new Intent(LoginActivity.this, MainActivity.class));
+
                 }
-
-
             } else
                 Log.d("TAG", "Setup default preferences");
 
@@ -94,6 +92,7 @@ public class LoginActivity extends AppCompatActivity {
                                            public void onSuccess(String response) {
                                                try {
                                                    Log.d("Response", response);
+
                                                    if (!response.contains("Invalid phone number or password")) {
                                                        JSONArray jsonArray = new JSONArray(response);
                                                        for (int i = 0; i < jsonArray.length(); i++) {
@@ -111,11 +110,19 @@ public class LoginActivity extends AppCompatActivity {
                                                        explode.setDuration(500);
                                                        getWindow().setExitTransition(explode);
                                                        getWindow().setEnterTransition(explode);
+                                                       if (name.equalsIgnoreCase("Admin")) {
+                                                           intent = new Intent(LoginActivity.this, StudentStatforAdmin.class);
+                                                           startActivity(intent);
+                                                           onBackPressed();
+
+                                                       }
                                                        // ActivityOptionsCompat oc2 = ActivityOptionsCompat.makeSceneTransitionAnimation(LoginActivity.this);
-                                                       intent = new Intent();
-                                                       intent.putExtra("data", true);
-                                                       setResult(RESULT_OK, intent);
-                                                       finish();
+                                                       else {
+                                                           intent = new Intent();
+                                                           intent.putExtra("data", true);
+                                                           setResult(RESULT_OK, intent);
+                                                           finish();
+                                                       }
                                                        return;
                                                    } else {
                                                        Snackbar.make(relativeLayout, "Invalid Login", Snackbar.LENGTH_LONG).setAction("Action", null).show();

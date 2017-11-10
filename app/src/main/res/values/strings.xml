@@ -45,7 +45,7 @@ Ex-Assistant Professor at RJSPM Dudulgaon
 With the zeal to gain and spread knowledge she joined RSPM College of Pharmacy in 2012 as an Assistant Professor.
 With 100% results in all the three batches guided by her, she also got a chance to become academic In-charge of Pharmacy Department in 2015.  She has started her teaching career after achieving Bachelor degree in Pharmacy with Distinction. Since then her Passionate and determined approach towards teaching have not only helped Students to achieve success in their exams but also to achieve great heights in there carriers.  Use of Latest Technology and Social Networking apps for making students get a deep drive in the topics helps them to understand content thoroughly. She had actively participated in various National and International Conferences which had helped her to sharpen her Teaching Skills</string>
     <string-array name="courses1">
-        <!-- <item>Career after 10th</item>-->
+        <item>--Select class--</item>
         <item>Art Teacher Diploma</item>
         <item>Commercial Art Diploma</item>
         <item>Diploma in Beauty culture and Hair dressing</item>
@@ -55,8 +55,13 @@ With 100% results in all the three batches guided by her, she also got a chance 
         <item>Industrial Training Institutes</item>
         <item>Laboratory Technician Diploma</item>
     </string-array>
+    <string-array name="class1">
+        <item>--Select class--</item>
+        <item>11</item>
+        <item>12</item>
+    </string-array>
     <string-array name="courses2">
-        <!-- <item>Career After 12th</item>-->
+        <item>--Select class--</item>
         <item>B.Sc. in Hospitality and Hotel Administration</item>
         <item>Diploma in Dance and Music</item>
 
