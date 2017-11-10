@@ -8,11 +8,14 @@ import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.format.DateFormat;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import java.util.Date;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
@@ -32,7 +35,7 @@ public class ResultActivity extends AppCompatActivity {
     @InjectView(R.id.txt_performance)
     TextView text_performance;
     @InjectView(R.id.iv_performance)ImageView performance;
-    String name, userans, result, exam, subject, es, chapter, class1;
+    String name, userans, result, exam, subject, es, chapter, class1, date, time;
     int marks = 0, attained = 0;
     UrlRequest urlRequest;
     String id;
@@ -51,6 +54,8 @@ public class ResultActivity extends AppCompatActivity {
         es = getIntent().getStringExtra("ES");
         chapter = getIntent().getStringExtra("Chapter");
         id = sp.getString("ID", null);
+        date = getIntent().getStringExtra("Date");
+        time = getIntent().getStringExtra("Time");
         b = new Bundle();
         b = getIntent().getExtras();
         name = b.getString("data");
@@ -106,10 +111,12 @@ public class ResultActivity extends AppCompatActivity {
             text_performance.setText("Excellent performance");
             text_performance.setTextColor(Color.GREEN);
         }
-
+        Date d = new Date();
+        String arr1[] = DateFormat.format("yyyy-MM-dd hh:mm:ss", d.getTime()).toString().split(" ");
         urlRequest = UrlRequest.getObject();
         urlRequest.setContext(ResultActivity.this);
-        urlRequest.setUrl("http://yashodeepacademy.co.in/updatestudentresult.php?student_id=" + id + "&examcode=" + es + chapter + "&score=" + marks + "-25");
+        Log.d("URL", "http://yashodeepacademy.co.in/updatestudentresult.php?student_id=" + id + "&examcode=" + es + chapter + "&score=" + marks + "-25" + "&date=" + arr1[0] + "&time=" + arr1[1]);
+        urlRequest.setUrl("http://yashodeepacademy.co.in/updatestudentresult.php?student_id=" + id + "&examcode=" + es + chapter + "&score=" + marks + "-25" + "&date=" + arr1[0] + "&time=" + arr1[1]);
         urlRequest.getResponse(new ServerCallback() {
             @Override
             public void onSuccess(String response) {

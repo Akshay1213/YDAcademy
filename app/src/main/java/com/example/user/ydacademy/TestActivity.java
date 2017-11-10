@@ -8,6 +8,7 @@ import android.graphics.Bitmap;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
@@ -33,6 +34,7 @@ import butterknife.OnClick;
 
 public class TestActivity extends AppCompatActivity {
     static int i, flag = 0;
+
     @InjectView(R.id.btn_next) Button btn_next;
     @InjectView(R.id.btn_submit) Button btn_submit;
     @InjectView(R.id.imageview) ImageView imageview;
@@ -42,10 +44,13 @@ public class TestActivity extends AppCompatActivity {
     CountDownTimer countDownTimer;
     String answerKey, ans, data, userans, exam, subject, chapter, es, class1;
     ProgressBar progressBar ;
+    CharSequence s;
     int count;
     UrlRequest urlRequest;
     JSONObject json_data;
     SharedPreferences sp;
+   /* LocalDateTime now = null;
+    DateTimeFormatter dtf = null;*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,6 +75,7 @@ public class TestActivity extends AppCompatActivity {
         load_image();
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.O)
     @OnClick({R.id.btn_submit,R.id.btn_next})
     public void onClick(View view) {
         switch (view.getId()) {
@@ -77,22 +83,20 @@ public class TestActivity extends AppCompatActivity {
 
                 if (flag == 0 || count == 25)
                     check_result();
-                while (userans.length()<25)
-                {
+                while (userans.length()<25) {
                     userans+="E";
                 }
 
 
+                // Log.d("Date",)
                 urlRequest=UrlRequest.getObject();
                 urlRequest.setContext(TestActivity.this);
+                Log.d("URL***", "onClick: " + "http://yashodeepacademy.co.in/fetchanswerkeys.php?examcode=" + es + chapter);
                 urlRequest.setUrl("http://yashodeepacademy.co.in/fetchanswerkeys.php?examcode="+es+chapter+"&class="+class1);
-
-
                 urlRequest.getResponse(new ServerCallback() {
                     @Override
                     public void onSuccess(String response) {
                         Log.d("Response", response);
-
 
                         try {
 
@@ -113,6 +117,7 @@ public class TestActivity extends AppCompatActivity {
                             intent.putExtra("Exam", exam);
                             intent.putExtra("ES", es);
                             intent.putExtra("Chapter",chapter);
+
                             TestActivity.this.finish();
                             startActivity(intent);
 
