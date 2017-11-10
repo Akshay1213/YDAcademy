@@ -5,12 +5,12 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
-public class DirectorDesk extends AppCompatActivity {
+public class DirectorInfo extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_director_desk);
+        setContentView(R.layout.activity_director_info);
         actionBarSetup();
     }
 
@@ -19,8 +19,7 @@ public class DirectorDesk extends AppCompatActivity {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
             android.support.v7.app.ActionBar ab = getSupportActionBar();
             ab.setTitle("Yashodeep Academy");
-            ab.setSubtitle("Home/Director's Desk");
+            ab.setSubtitle("Director. ABC");
         }
     }
-
 }

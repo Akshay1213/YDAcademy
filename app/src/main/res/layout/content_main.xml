@@ -385,18 +385,7 @@
 
                         android:weightSum="2">
 
-                        <android.support.v7.widget.AppCompatButton
-                            android:id="@+id/btn_director"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_marginBottom="5dp"
-                            android:layout_marginTop="0dp"
-                            android:layout_weight="0.4"
-                            android:background="@color/primary_text"
-                            android:text="From Director's Desk"
-                            android:textColor="@color/white"
-                            android:textSize="15dp" />
+
 
                         <android.support.v4.widget.NestedScrollView
                             android:layout_width="match_parent"
@@ -410,18 +399,24 @@
                                 <ImageView
                                     android:id="@+id/imageDirector"
                                     android:layout_width="match_parent"
-                                    android:layout_height="0dp"
+                                    android:layout_height="match_parent"
                                     android:layout_weight="1.5"
                                     android:src="@mipmap/ic_launcher" />
 
-                                <TextView
-                                    android:id="@+id/txtDirectorDesk"
+                                <android.support.v7.widget.AppCompatButton
+                                    android:id="@+id/btn_director"
                                     android:layout_width="match_parent"
-                                    android:layout_height="0dp"
-                                    android:layout_marginLeft="20dp"
-                                    android:layout_marginRight="20dp"
-                                    android:layout_weight="1.5"
-                                    android:text="Director Yogesh Sir( Mtech (Etx) (Maths))" />
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginBottom="5dp"
+                                    android:layout_marginTop="0dp"
+                                    android:layout_weight="0.4"
+                                    android:background="@color/primary_text"
+                                    android:text="From Director's Desk"
+                                    android:textColor="@color/white"
+                                    android:textSize="15dp" />
+
+
                             </LinearLayout>
 
                         </android.support.v4.widget.NestedScrollView>

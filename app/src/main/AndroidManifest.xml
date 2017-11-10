@@ -24,6 +24,7 @@
         <activity android:name=".DescriptionActivity" />
         <activity android:name=".StartTest" />
         <activity android:name=".SuccessStories" />
+        <activity android:name=".DirectorInfo" />
         <activity
             android:name=".MainActivity"
             android:label="@string/title_activity_main"
@@ -42,6 +43,7 @@
         <activity android:name=".DirectorDesk" />
         <activity android:name=".CareerGuidance" />
         <activity android:name=".Performance">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>

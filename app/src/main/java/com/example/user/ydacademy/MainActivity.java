@@ -260,7 +260,7 @@ public class MainActivity extends ActionBarActivity
                 startActivity(intent);
                 break;
             case R.id.btn_director:
-                intent = new Intent(MainActivity.this, DirectorDesk.class);
+                intent = new Intent(MainActivity.this, DirectorInfo.class);
                 startActivity(intent);
                 break;
         }
