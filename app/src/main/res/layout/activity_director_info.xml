@@ -33,7 +33,7 @@
             android:layout_centerVertical="true"
             android:layout_marginTop="5dp"
             android:src="@drawable/directorimage"
-            app:border_color="#F50057"
+            app:border_color="#000000"
             app:border_width="3dp" />
         <!-- </android.support.v7.widget.CardView>-->
 
@@ -47,8 +47,10 @@
         android:layout_centerInParent="true"
         android:focusable="true"
         android:focusableInTouchMode="true"
+        android:padding="6dp"
         app:cardCornerRadius="2dp"
-        app:cardElevation="3dp"
+        app:cardElevation="6dp"
+        app:cardPreventCornerOverlap="true"
         app:cardUseCompatPadding="true">
 
         <LinearLayout
@@ -57,16 +59,17 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/linearlayoutone"
             android:layout_marginBottom="2dp"
-            android:layout_marginTop="1dp"
+            android:layout_marginTop="0dp"
             android:orientation="vertical">
 
             <TextView
                 android:layout_width="370dp"
-                android:layout_height="wrap_content"
+                android:layout_height="40dp"
                 android:layout_gravity="center"
-                android:background="#18FFFF"
+                android:background="@color/colorPrimaryDark"
                 android:gravity="center"
                 android:text="Personal Information"
+                android:textColor="@color/white"
                 android:textSize="20dp" />
 
             <TextView
@@ -75,13 +78,14 @@
                 android:layout_height="wrap_content"
                 android:paddingLeft="2dp"
                 android:text="Name"
+                android:textColor="@color/black"
                 android:textSize="20dp" />
 
             <TextView
                 android:id="@+id/name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="2dp"
+                android:layout_marginTop="0dp"
                 android:paddingLeft="2dp"
                 android:text="Mr. NINNNnnvjjv jgbvb"
                 android:textColor="@color/colorPrimaryDark" />
@@ -90,16 +94,17 @@
                 android:id="@+id/txt_adr"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="6dp"
                 android:paddingLeft="2dp"
                 android:text="Address"
+                android:textColor="@color/black"
                 android:textSize="20dp" />
 
             <TextView
                 android:id="@+id/address"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="2dp"
+                android:layout_marginTop="0dp"
                 android:paddingLeft="2dp"
                 android:text="ccbhbcbc cbchb cbhcb"
                 android:textColor="@color/colorPrimaryDark" />
@@ -109,16 +114,17 @@
                 android:id="@+id/txt_phone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="6dp"
                 android:paddingLeft="2dp"
                 android:text="Phone number"
+                android:textColor="@color/black"
                 android:textSize="20dp" />
 
             <TextView
                 android:id="@+id/phoneNumber"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="2dp"
+                android:layout_marginTop="0dp"
                 android:paddingLeft="2dp"
                 android:text="02597-987654"
                 android:textColor="@color/colorPrimaryDark" />
@@ -128,16 +134,17 @@
                 android:id="@+id/txt_mobile"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="6dp"
                 android:paddingLeft="2dp"
                 android:text="Mobile number"
+                android:textColor="@color/black"
                 android:textSize="20dp" />
 
             <TextView
                 android:id="@+id/mobileNumber"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="2dp"
+                android:layout_marginTop="0dp"
                 android:paddingLeft="2dp"
                 android:text="8765432678"
                 android:textColor="@color/colorPrimaryDark" />
@@ -147,16 +154,18 @@
                 android:id="@+id/txt_email"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="6dp"
                 android:paddingLeft="2dp"
                 android:text="Email-Id"
+                android:textColor="@color/black"
                 android:textSize="20dp" />
 
             <TextView
                 android:id="@+id/emailid"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="2dp"
+                android:layout_marginBottom="6dp"
+                android:layout_marginTop="0dp"
                 android:paddingLeft="2dp"
                 android:text="abc@gmail.com"
                 android:textColor="@color/colorPrimaryDark" />
@@ -173,24 +182,27 @@
         android:layout_centerInParent="true"
         android:focusable="true"
         android:focusableInTouchMode="true"
+        android:forceHasOverlappingRendering="false"
+        android:padding="6dp"
         app:cardCornerRadius="2dp"
-        app:cardElevation="3dp"
+        app:cardElevation="0dp"
+        app:cardPreventCornerOverlap="true"
         app:cardUseCompatPadding="true">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/cardviewinfo"
-            android:layout_marginTop="1dp"
             android:orientation="vertical">
 
             <TextView
                 android:layout_width="370dp"
-                android:layout_height="wrap_content"
+                android:layout_height="40dp"
                 android:layout_gravity="center"
-                android:background="#18FFFF"
+                android:background="@color/colorPrimaryDark"
                 android:gravity="center"
                 android:text="Director message"
+                android:textColor="@color/white"
                 android:textSize="20dp" />
 
             <TextView
