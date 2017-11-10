@@ -17,19 +17,21 @@
         <activity android:name=".LoginActivity" />
         <activity android:name=".SyllabusActivity" />
         <activity android:name=".ChapterActivity" />
-        <activity
-            android:name=".TestActivity"
-            android:launchMode="singleInstance" />
-        <activity
-            android:name=".ResultActivity"
-            android:launchMode="singleInstance" />
+        <activity android:name=".TestActivity"
+            android:launchMode="singleInstance"/>
+        <activity android:name=".ResultActivity"
+            android:launchMode="singleInstance"/>
         <activity android:name=".DescriptionActivity" />
         <activity android:name=".StartTest" />
         <activity android:name=".SuccessStories" />
         <activity
             android:name=".MainActivity"
             android:label="@string/title_activity_main"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
         <activity android:name=".TenthActivity" />
         <activity android:name=".AboutUs" />
         <activity android:name=".ContactUs" />
@@ -50,14 +52,12 @@
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.intent.action.SEARCH" />
                 <action android:name="android.intent.action.VIEW" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Admin" />
-        <activity android:name=".StudentStatforAdmin"></activity>
     </application>
-
 </manifest>

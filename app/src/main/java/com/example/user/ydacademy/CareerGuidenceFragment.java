@@ -39,13 +39,13 @@ public class CareerGuidenceFragment extends Fragment implements AdapterView.OnIt
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getActivity(),
                 R.array.courses1, R.layout.spinner_layout);
         adapter.setDropDownViewResource(R.layout.spinner_layout);
-//        spinner1.setAdapter(adapter);
+        spinner1.setAdapter(adapter);
         spinner1.setOnItemSelectedListener(this);
 
         ArrayAdapter<CharSequence> adapter1 = ArrayAdapter.createFromResource(getActivity(),
                 R.array.courses2, R.layout.spinner_layout);
         adapter.setDropDownViewResource(R.layout.spinner_layout);
-//        spinner2.setAdapter(adapter1);
+        spinner2.setAdapter(adapter1);
         spinner2.setOnItemSelectedListener(this);
 
         section1 = view.findViewById(R.id.section1);
@@ -88,12 +88,13 @@ public class CareerGuidenceFragment extends Fragment implements AdapterView.OnIt
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
         {
-            if (i > 0) {
+            if (!flag) {
+                flag = true;
+            } else {
                 Intent intent = new Intent(getActivity(), CareerDetailsActivity.class);
                 intent.putExtra("Name", adapterView.getItemAtPosition(i).toString());
                 startActivity(intent);
             }
-
         }
     }
 

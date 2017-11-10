@@ -20,14 +20,7 @@
             android:foregroundGravity="center"
             android:paddingBottom="15dp"
             android:paddingTop="15dp"
-            android:src="@drawable/aboutus" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingLeft="20dp"
-            android:text="@string/version"
-            android:textColor="@android:color/darker_gray" />
+            android:src="@mipmap/ic_launcher" />
 
         <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -59,37 +52,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="15dp"
-                    android:text="@string/aboutus"
+                    android:text="@string/director"
                     android:textColor="@android:color/darker_gray"
                     android:textSize="15dp" />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:text="Our Mission" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="15dp"
-                    android:text="@string/mission"
-                    android:textColor="@android:color/darker_gray"
-                    android:textSize="15dp" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:text="Our Vision" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="15dp"
-                    android:text="@string/vision"
-                    android:textColor="@android:color/darker_gray"
-                    android:textSize="15dp" />
             </LinearLayout>
 
         </android.support.v7.widget.CardView>

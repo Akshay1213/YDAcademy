@@ -19,8 +19,7 @@ public class Splash extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
         iv = (ImageView) findViewById(R.id.imageView4);
-        Animation anim = AnimationUtils.loadAnimation(this, R.anim.grow);
-        ImageView imageView = (ImageView) findViewById(R.id.imageView);
+        Animation anim = AnimationUtils.loadAnimation(this, R.anim.shrink);
         iv.setAnimation(anim);
         new Handler().postDelayed(new Runnable() {
 

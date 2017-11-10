@@ -58,7 +58,6 @@ public class StaffActivity extends AppCompatActivity {
                                            recyclerView.setVisibility(View.VISIBLE);
                                            adapter = new AdapterStaff(StaffActivity.this, data);
                                            recyclerView.setAdapter(adapter);
-
                                            recyclerView.setLayoutManager(new GridLayoutManager(StaffActivity.this, 2));
                                            adapter.notifyDataSetChanged();
 
@@ -70,7 +69,6 @@ public class StaffActivity extends AppCompatActivity {
         );
 
     }
-
     @TargetApi(Build.VERSION_CODES.HONEYCOMB)
     private void actionBarSetup() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {

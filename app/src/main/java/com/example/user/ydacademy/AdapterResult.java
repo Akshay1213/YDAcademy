@@ -1,6 +1,5 @@
 package com.example.user.ydacademy;
 
-import android.app.ProgressDialog;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.support.v7.widget.RecyclerView;
@@ -71,7 +70,6 @@ public class AdapterResult extends RecyclerView.Adapter<RecyclerView.ViewHolder>
 
         final MyHolder myHolder = (MyHolder) holder;
         DataResult dataResult = data.get(position);
-
         Log.d("Yeee.", dataResult.userans + " " + dataResult.result + " " + "position" + position);
         myHolder.queNUmber.setText((position + 1) + ".");
         myHolder.optionA.setChecked(false);
