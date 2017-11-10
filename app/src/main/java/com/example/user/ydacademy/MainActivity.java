@@ -247,9 +247,9 @@ public class MainActivity extends ActionBarActivity
 
                 break;
             case R.id.btn_success:
-//                btnsuccess.startAnimation(animation);
-                intent = new Intent(MainActivity.this, SuccessStories.class);
-                startActivity(intent);
+                NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+                Menu menu = navigationView.getMenu();
+                onNavigationItemSelected(menu.getItem(3));
                 break;
             case R.id.btn_contactus:
 //                btnContactUs.startAnimation(animation);
@@ -325,6 +325,14 @@ public class MainActivity extends ActionBarActivity
             onOptionsItemSelected(item);
         } else if (id == R.id.nav_classroom) {
             (findViewById(R.id.imageClassroom)).performClick();
+        } else if (id == R.id.nav_Stat) {
+            sp = getSharedPreferences("YourSharedPreference", Activity.MODE_PRIVATE);
+            if (sp.getString("ID1", null) == null)
+                Toast.makeText(getBaseContext(), "Please Login once to Activate", Toast.LENGTH_SHORT).show();
+            else {
+                intent = new Intent(MainActivity.this, Performance.class);
+                startActivity(intent);
+            }
         } else if (id == R.id.nav_staff) {
             (findViewById(R.id.btn_Staff)).performClick();
         } else if (id == R.id.nav_careerguidance) {

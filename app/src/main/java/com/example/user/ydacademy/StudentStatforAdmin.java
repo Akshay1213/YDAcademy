@@ -146,9 +146,7 @@ public class StudentStatforAdmin extends AppCompatActivity {
                                            }
                     );
                 }
-            /*else {
-                Toast.makeText(StudentStatforAdmin.this,"Please select class",Toast.LENGTH_LONG).show();
-            }*/
+
             }
         });
     }
@@ -166,7 +164,7 @@ public class StudentStatforAdmin extends AppCompatActivity {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
             android.support.v7.app.ActionBar ab = getSupportActionBar();
             ab.setTitle("Yashodeep Academy");
-            ab.setSubtitle("Home/Performance");
+            ab.setSubtitle("Home/Student Stat");
         }
     }
 

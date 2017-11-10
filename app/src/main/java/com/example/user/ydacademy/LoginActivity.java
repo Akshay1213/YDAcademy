@@ -102,6 +102,10 @@ public class LoginActivity extends AppCompatActivity {
                                                            name = jsonObject.getString("name");
                                                        }
                                                        SharedPreferences.Editor editor = sp.edit();
+                                                       if (!(class1.equals("10"))) {
+                                                           editor.putString("ID1", id);
+                                                           editor.putString("CLASS1", class1);
+                                                       }
                                                        editor.putString("ID", id);
                                                        editor.putString("CLASS", class1);
                                                        editor.putString("USERNAME", name);

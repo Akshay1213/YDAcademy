@@ -35,11 +35,13 @@ public class Performance extends AppCompatActivity {
         ButterKnife.inject(this);
         actionBarSetup();
         sp = getSharedPreferences("YourSharedPreference", Activity.MODE_PRIVATE);
-        id = sp.getString("ID", null);
-        class1 = sp.getString("CLASS", null);
+        id = sp.getString("ID1", null);
+        class1 = sp.getString("CLASS1", null);
         Log.d("Id", id);
         Log.d("Class", class1);
+
         urlRequest = UrlRequest.getObject();
+
         urlRequest.setContext(Performance.this);
         urlRequest.setUrl("http://yashodeepacademy.co.in/fetchexamstat.php?student_id=" + id + "&class=" + class1);
         urlRequest.getResponse(new ServerCallback() {
