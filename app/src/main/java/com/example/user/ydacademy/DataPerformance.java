@@ -5,5 +5,5 @@ package com.example.user.ydacademy;
  */
 
 public class DataPerformance {
-    String exam, subject1, chapter, score, performance;
+    String exam, subject1, chapter, score, performance, date, time;
 }

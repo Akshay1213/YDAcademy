@@ -1,30 +1,28 @@
 package com.example.user.ydacademy;
 
 
+import android.annotation.TargetApi;
 import android.content.Intent;
 import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Spinner;
-
-import java.util.List;
 
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class CareerGuidenceFragment extends Fragment
-        implements AdapterView.OnItemSelectedListener {
-    List<DataCareer> list;
-    Spinner spinner1, spinner2;
-    DataCareer dataCareer;
-    AdapterCareer adapterCareer;
-    View view, section1, section2;
+public class CareerGuidenceFragment extends Fragment implements AdapterView.OnItemSelectedListener {
 
+    Spinner spinner1, spinner2;
+    View view, section1, section2;
     boolean flag;
 
     @Override
@@ -32,14 +30,22 @@ public class CareerGuidenceFragment extends Fragment
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_career_guidence, container, false);
-        // ButterKnife.inject(getActivity());
+        actionBarSetup();
         view.setBackgroundColor(Color.WHITE);
 
         spinner1 = view.findViewById(R.id.spinner1);
         spinner2 = view.findViewById(R.id.spinner2);
         flag = false;
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getActivity(),
+                R.array.courses1, R.layout.spinner_layout);
+        adapter.setDropDownViewResource(R.layout.spinner_layout);
+        spinner1.setAdapter(adapter);
         spinner1.setOnItemSelectedListener(this);
 
+        ArrayAdapter<CharSequence> adapter1 = ArrayAdapter.createFromResource(getActivity(),
+                R.array.courses2, R.layout.spinner_layout);
+        adapter.setDropDownViewResource(R.layout.spinner_layout);
+        spinner2.setAdapter(adapter1);
         spinner2.setOnItemSelectedListener(this);
 
         section1 = view.findViewById(R.id.section1);
@@ -70,9 +76,8 @@ public class CareerGuidenceFragment extends Fragment
                     spinner2.setVisibility(View.VISIBLE);
                     spinner2.performClick();
                 } else {
-                    section2.setVisibility(View.GONE);
                     spinner2.setVisibility(View.GONE);
-
+                    section2.setVisibility(View.GONE);
                 }
             }
         });
@@ -80,11 +85,12 @@ public class CareerGuidenceFragment extends Fragment
         return view;
     }
 
-
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
         {
-            if (i > 0) {
+            if (!flag) {
+                flag = true;
+            } else {
                 Intent intent = new Intent(getActivity(), CareerDetailsActivity.class);
                 intent.putExtra("Name", adapterView.getItemAtPosition(i).toString());
                 startActivity(intent);
@@ -94,6 +100,15 @@ public class CareerGuidenceFragment extends Fragment
 
     @Override
     public void onNothingSelected(AdapterView<?> adapterView) {
+    }
+
+    @TargetApi(Build.VERSION_CODES.HONEYCOMB)
+    private void actionBarSetup() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+            android.support.v7.app.ActionBar ab = ((AppCompatActivity) getActivity()).getSupportActionBar();
+            ab.setTitle("Yashodeep Academy");
+            ab.setSubtitle("Career Guidance");
+        }
     }
 }
 

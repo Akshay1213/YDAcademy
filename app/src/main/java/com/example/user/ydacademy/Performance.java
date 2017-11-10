@@ -31,7 +31,6 @@ public class Performance extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_performance);
         ButterKnife.inject(this);
         actionBarSetup();
         sp = getSharedPreferences("YourSharedPreference", Activity.MODE_PRIVATE);
@@ -83,6 +82,8 @@ public class Performance extends AppCompatActivity {
 
                                                dataPerformance.chapter = jsonObject.getString("name");
                                                dataPerformance.score = jsonObject.getString("score");
+                                               dataPerformance.date = jsonObject.getString("date");
+                                               dataPerformance.time = jsonObject.getString("time");
                                                Log.d("Exam", dataPerformance.exam);
                                                Log.d("Subject", dataPerformance.subject1);
                                                Log.d("Chapter", dataPerformance.chapter);

@@ -63,6 +63,8 @@ public class AdapterPerformance extends RecyclerView.Adapter<RecyclerView.ViewHo
         myHolder.txtChapter.setText(dataPerformance.chapter);
         myHolder.txtScore.setText(dataPerformance.score);
         myHolder.txtPerformance.setText(dataPerformance.performance);
+        myHolder.txttime.setText(dataPerformance.time);
+        myHolder.txtdate.setText(dataPerformance.date);
         myHolder.txtSerialNo.setText((position + 1) + ".");
 
     }
@@ -74,7 +76,7 @@ public class AdapterPerformance extends RecyclerView.Adapter<RecyclerView.ViewHo
 
 
     class MyHolder extends RecyclerView.ViewHolder {
-        TextView txtSerialNo, txtExam, txtSubject, txtChapter, txtScore, txtPerformance;
+        TextView txtSerialNo, txtExam, txtSubject, txtChapter, txtScore, txtPerformance, txtdate, txttime;
 
         public MyHolder(View itemView) {
             super(itemView);
@@ -84,6 +86,8 @@ public class AdapterPerformance extends RecyclerView.Adapter<RecyclerView.ViewHo
             txtChapter = itemView.findViewById(R.id.txt_chapter);
             txtScore = itemView.findViewById(R.id.txt_score);
             txtPerformance = itemView.findViewById(R.id.txt_performance);
+            txtdate = itemView.findViewById(R.id.txt_date);
+            txttime = itemView.findViewById(R.id.txt_time);
         }
     }
 }
