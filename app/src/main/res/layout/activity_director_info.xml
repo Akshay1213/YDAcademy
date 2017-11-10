@@ -68,18 +68,6 @@
                 android:layout_marginTop="25dp"
                 android:text="Mr. NINNNnnvjjv jgbvb"
                 android:textColor="@color/colorPrimaryDark" />
-        </android.support.v7.widget.CardView>
-
-        <android.support.v7.widget.CardView
-            android:id="@+id/cardviewaddress"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:focusable="true"
-            android:focusableInTouchMode="true"
-            app:cardCornerRadius="2dp"
-            app:cardElevation="3dp"
-            app:cardUseCompatPadding="true">
 
             <TextView
                 android:id="@+id/txt_adr"
@@ -96,18 +84,7 @@
                 android:layout_marginTop="25dp"
                 android:text="ccbhbcbc cbchb cbhcb"
                 android:textColor="@color/colorPrimaryDark" />
-        </android.support.v7.widget.CardView>
 
-        <android.support.v7.widget.CardView
-            android:id="@+id/cardviewphone"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:focusable="true"
-            android:focusableInTouchMode="true"
-            app:cardCornerRadius="2dp"
-            app:cardElevation="3dp"
-            app:cardUseCompatPadding="true">
 
             <TextView
                 android:id="@+id/txt_phone"
@@ -124,18 +101,7 @@
                 android:layout_marginTop="25dp"
                 android:text="02597-987654"
                 android:textColor="@color/colorPrimaryDark" />
-        </android.support.v7.widget.CardView>
 
-        <android.support.v7.widget.CardView
-            android:id="@+id/cardviewmobile"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:focusable="true"
-            android:focusableInTouchMode="true"
-            app:cardCornerRadius="2dp"
-            app:cardElevation="3dp"
-            app:cardUseCompatPadding="true">
 
             <TextView
                 android:id="@+id/txt_mobile"
@@ -152,18 +118,7 @@
                 android:layout_marginTop="25dp"
                 android:text="8765432678"
                 android:textColor="@color/colorPrimaryDark" />
-        </android.support.v7.widget.CardView>
 
-        <android.support.v7.widget.CardView
-            android:id="@+id/cardviewemailId"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:focusable="true"
-            android:focusableInTouchMode="true"
-            app:cardCornerRadius="2dp"
-            app:cardElevation="3dp"
-            app:cardUseCompatPadding="true">
 
             <TextView
                 android:id="@+id/txt_email"
