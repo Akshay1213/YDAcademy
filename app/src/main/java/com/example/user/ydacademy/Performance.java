@@ -31,6 +31,7 @@ public class Performance extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_performance);
         ButterKnife.inject(this);
         actionBarSetup();
         sp = getSharedPreferences("YourSharedPreference", Activity.MODE_PRIVATE);
@@ -88,6 +89,7 @@ public class Performance extends AppCompatActivity {
                                                Log.d("Subject", dataPerformance.subject1);
                                                Log.d("Chapter", dataPerformance.chapter);
                                                Log.d("Score", dataPerformance.score);
+                                               Log.d("Date****", dataPerformance.date);
                                                int score = Integer.parseInt(dataPerformance.score.split("-")[0]);
                                                if (score <= 10) {
                                                    dataPerformance.performance = "Poor";
@@ -116,7 +118,6 @@ public class Performance extends AppCompatActivity {
                                }
         );
     }
-
     @TargetApi(Build.VERSION_CODES.HONEYCOMB)
     private void actionBarSetup() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {

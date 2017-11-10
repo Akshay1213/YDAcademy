@@ -12,7 +12,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
 
@@ -36,16 +35,16 @@ public class CareerGuidenceFragment extends Fragment implements AdapterView.OnIt
         spinner1 = view.findViewById(R.id.spinner1);
         spinner2 = view.findViewById(R.id.spinner2);
         flag = false;
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getActivity(),
+       /* ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getActivity(),
                 R.array.courses1, R.layout.spinner_layout);
         adapter.setDropDownViewResource(R.layout.spinner_layout);
-        spinner1.setAdapter(adapter);
+        spinner1.setAdapter(adapter);*/
         spinner1.setOnItemSelectedListener(this);
 
-        ArrayAdapter<CharSequence> adapter1 = ArrayAdapter.createFromResource(getActivity(),
+        /*ArrayAdapter<CharSequence> adapter1 = ArrayAdapter.createFromResource(getActivity(),
                 R.array.courses2, R.layout.spinner_layout);
         adapter.setDropDownViewResource(R.layout.spinner_layout);
-        spinner2.setAdapter(adapter1);
+        spinner2.setAdapter(adapter1);*/
         spinner2.setOnItemSelectedListener(this);
 
         section1 = view.findViewById(R.id.section1);
@@ -88,9 +87,7 @@ public class CareerGuidenceFragment extends Fragment implements AdapterView.OnIt
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
         {
-            if (!flag) {
-                flag = true;
-            } else {
+            if (i > 0) {
                 Intent intent = new Intent(getActivity(), CareerDetailsActivity.class);
                 intent.putExtra("Name", adapterView.getItemAtPosition(i).toString());
                 startActivity(intent);
