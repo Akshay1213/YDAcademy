@@ -25,7 +25,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
-                    android:background="@color/hint"
+                    android:background="@color/black"
                     android:gravity="left"
                     android:text="Title"
 
@@ -37,9 +37,11 @@
                     android:id="@+id/txtName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="21dp"
-                    android:layout_marginTop="5dp"
-                    android:textSize="21dp" />
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="17dp" />
             </LinearLayout>
         </android.support.v7.widget.CardView>
 
@@ -52,6 +54,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:orientation="vertical">
 
                 <TextView
@@ -59,7 +62,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="left"
                     android:layout_marginTop="5dp"
-                    android:background="@color/hint"
+                    android:background="@color/black"
                     android:text="Description"
                     android:textColor="@color/white"
                     android:textSize="25dp"
@@ -69,8 +72,11 @@
                     android:id="@+id/txtDesc"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="21dp"
-                    android:textSize="21dp" />
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="18dp" />
             </LinearLayout>
         </android.support.v7.widget.CardView>
 
@@ -84,6 +90,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:orientation="vertical">
 
                 <TextView
@@ -91,7 +98,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="left"
                     android:layout_marginTop="10dp"
-                    android:background="@color/hint"
+                    android:background="@color/black"
                     android:text="Job Scope"
                     android:textColor="@color/white"
                     android:textSize="25dp"
@@ -101,9 +108,11 @@
                     android:id="@+id/txtScope"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"
-                    android:layout_marginLeft="21dp"
-                    android:textSize="21dp" />
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="18dp" />
             </LinearLayout>
         </android.support.v7.widget.CardView>
 
@@ -124,7 +133,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="left"
-            android:background="@color/hint"
+            android:background="@color/black"
             android:text="Relevant courses"
             android:textColor="@color/white"
             android:textSize="25dp"
@@ -134,9 +143,11 @@
             android:id="@+id/txtRelevantCourses"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="21dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:layout_marginTop="10dp"
-            android:textSize="21dp" />
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="18dp" />
             </LinearLayout>
         </android.support.v7.widget.CardView>
 

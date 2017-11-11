@@ -1,7 +1,9 @@
 package com.example.user.ydacademy;
 
+import android.annotation.TargetApi;
 import android.content.Intent;
 import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -27,6 +29,7 @@ public class TabActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tab);
+        actionBarSetup();
         viewPager = (ViewPager) findViewById(R.id.viewpager);
         setupViewPager(viewPager);
         tabLayout = (TabLayout) findViewById(R.id.tabs);
@@ -41,8 +44,7 @@ public class TabActivity extends AppCompatActivity {
             }
             @Override
             public void onTabUnselected(TabLayout.Tab tab) {
-               // tab.getIcon().setColorFilter(Color.parseColor("#808080"), PorterDuff.Mode.SRC_IN);
-                //tabLayout.setTabTextColors(Color.parseColor("#727272"), Color.parseColor("#ffffff"));
+
                 tabLayout.setTabTextColors(Color.parseColor("#000000"), Color.parseColor("#ffffff"));
             }
 
@@ -71,11 +73,20 @@ public class TabActivity extends AppCompatActivity {
             startActivity(new Intent(this, MainActivity.class));
 
         } else {
-            // ask user to press back button one more time to close app
+
             toast = Toast.makeText(getBaseContext(), "Press once again to logout!", Toast.LENGTH_SHORT);
             toast.show();
         }
         back_pressed = System.currentTimeMillis();
+    }
+
+    @TargetApi(Build.VERSION_CODES.HONEYCOMB)
+    private void actionBarSetup() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+            android.support.v7.app.ActionBar ab = getSupportActionBar();
+            ab.setTitle("Yashodeep Academy");
+            ab.setSubtitle("Home/TabActivity");
+        }
     }
 
     class ViewPagerAdapter extends FragmentPagerAdapter {
