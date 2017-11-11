@@ -45,6 +45,7 @@ public class LoginActivity extends AppCompatActivity {
     RelativeLayout relativeLayout;
     UrlRequest urlRequest;
     String username, password, name, id, class1;
+
     SharedPreferences sp;
     Intent intent;
     @Override

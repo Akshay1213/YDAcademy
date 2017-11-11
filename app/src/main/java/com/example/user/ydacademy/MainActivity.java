@@ -9,6 +9,7 @@ import android.graphics.drawable.GradientDrawable;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.RequiresApi;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.view.GravityCompat;
@@ -21,10 +22,13 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
+import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -80,6 +84,18 @@ public class MainActivity extends ActionBarActivity
     private long back_pressed = 0;
     private CareerGuidenceFragment fragment;
 
+    private static void setViewAndChildrenEnabled(View view, boolean enabled) {
+        view.setEnabled(enabled);
+        if (view instanceof ViewGroup) {
+            ViewGroup viewGroup = (ViewGroup) view;
+            for (int i = 0; i < viewGroup.getChildCount(); i++) {
+                View child = viewGroup.getChildAt(i);
+                setViewAndChildrenEnabled(child, enabled);
+            }
+        }
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -136,6 +152,29 @@ public class MainActivity extends ActionBarActivity
                 .setRadius(250)
                 .attachTo(actionButton)
                 .build();
+        actionMenu.setStateChangeListener(new FloatingActionMenu.MenuStateChangeListener() {
+            @Override
+            public void onMenuOpened(FloatingActionMenu floatingActionMenu) {
+
+                AlphaAnimation alpha = new AlphaAnimation(0.2F, 0.2F);
+                alpha.setDuration(0); // Make animation instant
+                alpha.setFillAfter(true);
+                findViewById(R.id.container).startAnimation(alpha);
+                LinearLayout layout = (LinearLayout) findViewById(R.id.container1);
+                setViewAndChildrenEnabled(layout, false);
+            }
+
+            @Override
+            public void onMenuClosed(FloatingActionMenu floatingActionMenu) {
+                AlphaAnimation alpha = new AlphaAnimation(1.0F, 1.0F);
+                alpha.setDuration(0); // Make animation instant
+                alpha.setFillAfter(true);
+                findViewById(R.id.container).startAnimation(alpha);
+                LinearLayout layout = (LinearLayout) findViewById(R.id.container1);
+                setViewAndChildrenEnabled(layout, true);
+            }
+        });
+
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -187,7 +226,6 @@ public class MainActivity extends ActionBarActivity
             }
         });
     }
-
 
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
