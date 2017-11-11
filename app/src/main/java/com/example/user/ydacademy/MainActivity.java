@@ -120,7 +120,6 @@ public class MainActivity extends ActionBarActivity
                 .build();
 
         SubActionButton.Builder itemBuilder = new SubActionButton.Builder(this);
-// repeat many times:
         ImageView itemIcon1 = new ImageView(this);
         ImageView itemIcon2 = new ImageView(this);
         ImageView itemIcon3 = new ImageView(this);
