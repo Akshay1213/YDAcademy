@@ -199,6 +199,7 @@ public class TestFragment extends Fragment {
                 intent.putExtra("Subject", subject);
                 startActivity(intent);
                 break;
+
             case R.id.txtMaths2:
                 subject = txtMaths2.getText().toString();
                 intent.putExtra("Subject", subject);

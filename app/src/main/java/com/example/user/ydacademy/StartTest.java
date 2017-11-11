@@ -94,8 +94,6 @@ public class StartTest extends AppCompatActivity {
                                            }
                                        }
                 );
-
-
                 break;
         }
     }

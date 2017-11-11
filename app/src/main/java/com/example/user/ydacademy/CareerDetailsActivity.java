@@ -1,6 +1,8 @@
 package com.example.user.ydacademy;
 
+import android.annotation.TargetApi;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
@@ -12,6 +14,7 @@ public class CareerDetailsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_career_details);
+        actionBarSetup();
         txtName = (TextView) findViewById(R.id.txtName);
         txtDesc = (TextView) findViewById(R.id.txtDesc);
         txtScope = (TextView) findViewById(R.id.txtScope);
@@ -153,7 +156,14 @@ public class CareerDetailsActivity extends AppCompatActivity {
             txtScope.setText(R.string.scope29);
             txtRelevantCourses.setText(R.string.relevant_courses29);
         }
+    }
 
-
+    @TargetApi(Build.VERSION_CODES.HONEYCOMB)
+    private void actionBarSetup() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+            android.support.v7.app.ActionBar ab = getSupportActionBar();
+            ab.setTitle("Yashodeep Academy");
+            ab.setSubtitle("Home/Career Details");
+        }
     }
 }

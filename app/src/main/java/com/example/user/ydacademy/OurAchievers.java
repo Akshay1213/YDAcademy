@@ -65,7 +65,6 @@ public class OurAchievers extends AppCompatActivity {
                                }
         );
 
-
     }
 
     @TargetApi(Build.VERSION_CODES.HONEYCOMB)

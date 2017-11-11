@@ -111,6 +111,7 @@ public class ResultActivity extends AppCompatActivity {
             text_performance.setText("Excellent performance");
             text_performance.setTextColor(Color.GREEN);
         }
+
         Date d = new Date();
         String arr1[] = DateFormat.format("yyyy-MM-dd hh:mm:ss", d.getTime()).toString().split(" ");
         urlRequest = UrlRequest.getObject();
