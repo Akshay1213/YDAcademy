@@ -16,7 +16,7 @@
             android:title="Staff" />
         <item
             android:id="@+id/nav_Stat"
-            android:icon="@drawable/ic_supervisor_account_black_24dp"
+            android:icon="@drawable/ic_assignment_black_24dp"
             android:title="Student Stat" />
         <item
             android:id="@+id/nav_careerguidance"
