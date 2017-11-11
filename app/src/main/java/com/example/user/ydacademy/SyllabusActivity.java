@@ -1,9 +1,11 @@
 package com.example.user.ydacademy;
 
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -28,6 +30,7 @@ public class SyllabusActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_syllabus);
         ButterKnife.inject(this);
+        actionBarSetup();
         loading = new ProgressDialog(SyllabusActivity.this);
 
         urlRequest = UrlRequest.getObject();
@@ -73,6 +76,15 @@ public class SyllabusActivity extends AppCompatActivity {
         webView1.loadUrl("https://docs.google.com/gview?embedded=true&url=http://yashodeepacademy.co.in/syllabus/" + class1 + exam + subject + ".pdf");
         loading.dismiss();
         Log.d("PDF", "https://docs.google.com/gview?embedded=true&url=http://yashodeepacademy.co.in/syllabus/" + class1 + exam + subject + ".pdf");
+    }
+
+    @TargetApi(Build.VERSION_CODES.HONEYCOMB)
+    private void actionBarSetup() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+            android.support.v7.app.ActionBar ab = getSupportActionBar();
+            ab.setTitle("Yashodeep Academy");
+            ab.setSubtitle("Home/Syllabus");
+        }
     }
 
 

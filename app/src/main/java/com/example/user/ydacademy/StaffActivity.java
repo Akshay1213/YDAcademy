@@ -74,7 +74,7 @@ public class StaffActivity extends AppCompatActivity {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
             android.support.v7.app.ActionBar ab = getSupportActionBar();
             ab.setTitle("Yashodeep Academy");
-            ab.setSubtitle("Staff");
+            ab.setSubtitle("Home/Staff");
         }
     }
 }

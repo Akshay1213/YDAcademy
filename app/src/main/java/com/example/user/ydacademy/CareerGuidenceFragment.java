@@ -1,13 +1,10 @@
 package com.example.user.ydacademy;
 
 
-import android.annotation.TargetApi;
 import android.content.Intent;
 import android.graphics.Color;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -29,22 +26,16 @@ public class CareerGuidenceFragment extends Fragment implements AdapterView.OnIt
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_career_guidence, container, false);
-        actionBarSetup();
+
         view.setBackgroundColor(Color.WHITE);
 
         spinner1 = view.findViewById(R.id.spinner1);
         spinner2 = view.findViewById(R.id.spinner2);
         flag = false;
-       /* ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getActivity(),
-                R.array.courses1, R.layout.spinner_layout);
-        adapter.setDropDownViewResource(R.layout.spinner_layout);
-        spinner1.setAdapter(adapter);*/
+
         spinner1.setOnItemSelectedListener(this);
 
-        /*ArrayAdapter<CharSequence> adapter1 = ArrayAdapter.createFromResource(getActivity(),
-                R.array.courses2, R.layout.spinner_layout);
-        adapter.setDropDownViewResource(R.layout.spinner_layout);
-        spinner2.setAdapter(adapter1);*/
+
         spinner2.setOnItemSelectedListener(this);
 
         section1 = view.findViewById(R.id.section1);
@@ -99,13 +90,6 @@ public class CareerGuidenceFragment extends Fragment implements AdapterView.OnIt
     public void onNothingSelected(AdapterView<?> adapterView) {
     }
 
-    @TargetApi(Build.VERSION_CODES.HONEYCOMB)
-    private void actionBarSetup() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
-            android.support.v7.app.ActionBar ab = ((AppCompatActivity) getActivity()).getSupportActionBar();
-            ab.setTitle("Yashodeep Academy");
-            ab.setSubtitle("Career Guidance");
-        }
-    }
+
 }
 
