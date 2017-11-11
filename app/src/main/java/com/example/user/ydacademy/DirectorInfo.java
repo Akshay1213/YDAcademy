@@ -28,6 +28,7 @@ public class DirectorInfo extends AppCompatActivity {
     TextView email;
     @InjectView(R.id.directorMsg)
     TextView directorMsg;
+
     UrlRequest urlRequest;
     JSONObject jsonObject;
     String message;
@@ -50,8 +51,8 @@ public class DirectorInfo extends AppCompatActivity {
                                            for (int i = 0; i < jsonArray.length(); i++) {
                                                jsonObject = jsonArray.getJSONObject(i);
                                                message = jsonObject.getString("directors_desk");
-
                                                directorMsg.setText(message);
+                                               directorMsg.setLetterSpacing(0.01f);
                                            }
                                        } catch (JSONException e1) {
                                            e1.printStackTrace();

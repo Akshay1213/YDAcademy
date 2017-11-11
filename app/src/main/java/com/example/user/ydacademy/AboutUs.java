@@ -6,15 +6,16 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.TextView;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
-import me.biubiubiu.justifytext.library.JustifyTextView;
+
 
 public class AboutUs extends AppCompatActivity {
 
     @InjectView(R.id.text)
-    JustifyTextView textView;
+    TextView textView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
