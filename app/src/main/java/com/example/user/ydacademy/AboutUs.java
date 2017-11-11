@@ -4,17 +4,18 @@ import android.annotation.TargetApi;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.CardView;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
+import me.biubiubiu.justifytext.library.JustifyTextView;
 
 public class AboutUs extends AppCompatActivity {
 
-    @InjectView(R.id.cardviewinfo)
-    CardView cardView;
+    @InjectView(R.id.text)
+    JustifyTextView textView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,10 +23,9 @@ public class AboutUs extends AppCompatActivity {
         actionBarSetup();
         ButterKnife.inject(this);
         Animation animation = AnimationUtils.loadAnimation(this, R.anim.move_up);
-        cardView.startAnimation(animation);
+        textView.startAnimation(animation);
 
     }
-
     @TargetApi(Build.VERSION_CODES.HONEYCOMB)
     private void actionBarSetup() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
