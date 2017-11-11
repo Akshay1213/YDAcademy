@@ -93,7 +93,7 @@ public class LoginActivity extends AppCompatActivity {
                                                try {
                                                    Log.d("Response", response);
 
-                                                   if (!response.contains("Invalid phone number or password")) {
+                                                   if (!response.contains("Invalid Username or password")) {
                                                        JSONArray jsonArray = new JSONArray(response);
                                                        for (int i = 0; i < jsonArray.length(); i++) {
                                                            JSONObject jsonObject = jsonArray.getJSONObject(i);
