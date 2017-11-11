@@ -30,7 +30,7 @@ public class Splash extends AppCompatActivity {
                 Intent i = new Intent(Splash.this, MainActivity.class);
                 startActivity(i);
                 // close this activity
-                finish();
+                //  finish();
             }
         }, SPLASH_TIME_OUT);
     }

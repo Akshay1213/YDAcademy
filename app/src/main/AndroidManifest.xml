@@ -17,10 +17,13 @@
         <activity android:name=".LoginActivity" />
         <activity android:name=".SyllabusActivity" />
         <activity android:name=".ChapterActivity" />
-        <activity android:name=".TestActivity"
-            android:launchMode="singleInstance"/>
-        <activity android:name=".ResultActivity"
-            android:launchMode="singleInstance"/>
+
+        <activity
+            android:name=".TestActivity"
+            android:launchMode="singleInstance" />
+        <activity
+            android:name=".ResultActivity"
+            android:launchMode="singleInstance" />
         <activity android:name=".DescriptionActivity" />
         <activity android:name=".StartTest" />
         <activity android:name=".SuccessStories" />
@@ -42,7 +45,6 @@
         <activity android:name=".StaffActivity" />
         <activity android:name=".CareerGuidance" />
         <activity android:name=".Performance">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
@@ -55,6 +57,7 @@
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.intent.action.SEARCH" />
                 <action android:name="android.intent.action.VIEW" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -62,7 +65,8 @@
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
-
         </activity>
+
     </application>
+
 </manifest>
