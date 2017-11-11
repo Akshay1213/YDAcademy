@@ -22,7 +22,7 @@ public class CareerGuidance extends AppCompatActivity {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
             android.support.v7.app.ActionBar ab = getSupportActionBar();
             ab.setTitle("Yashodeep Academy");
-            ab.setSubtitle("Home/Career Guidance");
+            ab.setSubtitle("Home/Career1 Guidance");
         }
     }
 }
