@@ -65,14 +65,14 @@ public class ChapterActivity extends AppCompatActivity {
     }
 
     public void getData() {
-//        loading = ProgressDialog.show(ChapterActivity.this, "Loading", "Please wait.....", false, false);
+        loading = ProgressDialog.show(ChapterActivity.this, "Loading", "Please wait.....", false, false);
         urlRequest = UrlRequest.getObject();
         urlRequest.setContext(ChapterActivity.this);
         urlRequest.setUrl("http://yashodeepacademy.co.in/fetchchaptername.php?subjectcode=" + es + "&class=" + class1);
         urlRequest.getResponse(new ServerCallback() {
                                    @Override
                                    public void onSuccess(String response) {
-//                                       loading.dismiss();
+
                                        Log.d("Response", response);
                                        try {
                                            JSONArray jsonArray = new JSONArray(response);
@@ -85,7 +85,7 @@ public class ChapterActivity extends AppCompatActivity {
                                        } catch (JSONException e1) {
                                            e1.printStackTrace();
                                        }
-
+                                       loading.dismiss();
                                        Log.d("Chapters", chapters.toString() + "");
                                        adapter = new ArrayAdapter(ChapterActivity.this, android.R.layout.simple_list_item_1, chapters);
                                        listChapters.setAdapter(adapter);
