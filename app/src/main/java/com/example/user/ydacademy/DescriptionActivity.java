@@ -2,6 +2,7 @@ package com.example.user.ydacademy;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
@@ -76,5 +77,13 @@ public class DescriptionActivity extends AppCompatActivity {
             ab.setTitle("Yashodeep Academy");
             ab.setSubtitle("Home/" + exam + "/" + subject);
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        //super.onBackPressed();
+
+        Intent intent = new Intent(DescriptionActivity.this, TabActivity.class);
+        startActivity(intent);
     }
 }
