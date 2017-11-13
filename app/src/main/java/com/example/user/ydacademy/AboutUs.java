@@ -21,10 +21,11 @@ public class AboutUs extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about_us);
-        actionBarSetup();
         ButterKnife.inject(this);
         Animation animation = AnimationUtils.loadAnimation(this, R.anim.move_up);
-        textView.startAnimation(animation);
+//        textView.startAnimation(animation);
+        textView.setAnimation(animation);
+        actionBarSetup();
 
     }
     @TargetApi(Build.VERSION_CODES.HONEYCOMB)
