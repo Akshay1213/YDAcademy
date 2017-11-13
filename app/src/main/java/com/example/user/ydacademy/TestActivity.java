@@ -158,7 +158,6 @@ public class TestActivity extends AppCompatActivity {
                    countDownTimer.cancel();
                    text_queNumber.setText(count + 1 + ".");
                    btn_next.performClick();
-
                    return false;
                }
 
@@ -219,6 +218,10 @@ public class TestActivity extends AppCompatActivity {
 
         @Override
         public void onFinish() {
+
+            if (count == 25)
+                btn_submit.performClick();
+
             check_result();
             if (count < 25)
                 load_image();

@@ -107,7 +107,7 @@ public class ResultActivity extends AppCompatActivity {
         }
         else if (marks > 40 && marks <=50)
         {
-            // performance.setImageDrawable(getResources().getDrawable(R.drawable.excellent));
+            performance.setImageDrawable(getResources().getDrawable(R.drawable.excellent));
             text_performance.setText("Excellent performance");
             text_performance.setTextColor(Color.GREEN);
         }
