@@ -25,10 +25,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
-                    android:background="@color/black"
+                    android:background="@android:color/holo_blue_bright"
                     android:gravity="left"
                     android:text="Title"
-
                     android:textColor="@color/white"
                     android:textSize="25dp"
                     android:textStyle="bold" />
@@ -40,7 +39,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:layout_marginTop="10dp"
-                    android:textColor="@color/colorPrimaryDark"
+                    android:textColor="@color/black"
                     android:textSize="17dp" />
             </LinearLayout>
         </android.support.v7.widget.CardView>
@@ -62,7 +61,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="left"
                     android:layout_marginTop="5dp"
-                    android:background="@color/black"
+                    android:background="@android:color/holo_blue_bright"
                     android:text="Description"
                     android:textColor="@color/white"
                     android:textSize="25dp"
@@ -75,7 +74,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:layout_marginTop="10dp"
-                    android:textColor="@color/colorPrimaryDark"
+                    android:textColor="@color/text"
                     android:textSize="18dp" />
             </LinearLayout>
         </android.support.v7.widget.CardView>
@@ -98,7 +97,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="left"
                     android:layout_marginTop="10dp"
-                    android:background="@color/black"
+                    android:background="@android:color/holo_blue_bright"
                     android:text="Job Scope"
                     android:textColor="@color/white"
                     android:textSize="25dp"
@@ -111,7 +110,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:layout_marginTop="10dp"
-                    android:textColor="@color/colorPrimaryDark"
+                    android:textColor="@color/text"
                     android:textSize="18dp" />
             </LinearLayout>
         </android.support.v7.widget.CardView>
@@ -133,7 +132,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="left"
-            android:background="@color/black"
+            android:background="@android:color/holo_blue_bright"
             android:text="Relevant courses"
             android:textColor="@color/white"
             android:textSize="25dp"
@@ -146,7 +145,7 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_marginTop="10dp"
-            android:textColor="@color/colorPrimaryDark"
+            android:textColor="@color/text"
             android:textSize="18dp" />
             </LinearLayout>
         </android.support.v7.widget.CardView>

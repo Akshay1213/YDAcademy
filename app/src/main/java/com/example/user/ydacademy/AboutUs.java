@@ -11,6 +11,8 @@ import android.widget.TextView;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 
+import static android.text.Layout.JUSTIFICATION_MODE_INTER_WORD;
+
 
 public class AboutUs extends AppCompatActivity {
 
@@ -25,6 +27,10 @@ public class AboutUs extends AppCompatActivity {
         Animation animation = AnimationUtils.loadAnimation(this, R.anim.move_up);
 //        textView.startAnimation(animation);
         textView.setAnimation(animation);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            textView.setJustificationMode(JUSTIFICATION_MODE_INTER_WORD);
+        }
+
         actionBarSetup();
 
     }

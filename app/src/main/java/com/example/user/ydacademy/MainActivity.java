@@ -107,7 +107,7 @@ public class MainActivity extends ActionBarActivity
             textSliderView.image("http://yashodeepacademy.co.in/slider/" + i + ".jpg");
             //  textSliderView.image("http://orientalbirdimages.org/images/data/striated_laughingthrush_0001.jpg");
             sliderShow.addSlider(textSliderView);
-            animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.grow);
+            animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.bounce);
 
         }
 
@@ -271,10 +271,10 @@ public class MainActivity extends ActionBarActivity
                     startActivity(new Intent(this, TabActivity.class));
                 break;
             case R.id.btn_career:
-
+                btn_career.startAnimation(animation);
                 intent = new Intent(MainActivity.this, CareerGuidance.class);
                 startActivity(intent);
-                //btn_career.startAnimation(animation);
+
 
                 break;
             case R.id.btn_Staff:

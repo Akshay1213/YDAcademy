@@ -10,6 +10,8 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -27,6 +29,7 @@ public class Performance extends AppCompatActivity {
     List<DataPerformance> data;
     RecyclerView recyclerView;
     SharedPreferences sp;
+    RelativeLayout relativeLayout;
     String id, class1, exam1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,73 +51,82 @@ public class Performance extends AppCompatActivity {
                                    @Override
                                    public void onSuccess(String response) {
                                        Log.d("Response", response);
-                                       List<DataPerformance> data = new ArrayList<>();
-                                       try {
-                                           JSONArray jsonArray = new JSONArray(response);
-                                           for (int i = 0; i < jsonArray.length(); i++) {
-                                               DataPerformance dataPerformance = new DataPerformance();
-                                               JSONObject jsonObject = jsonArray.getJSONObject(i);
-                                               exam1 = jsonObject.getString("examcode");
-                                               Log.d("Exam", exam1);
+                                       if (!response.contains("Invalid subject code")) {
 
-                                               switch (exam1.charAt(0)) {
-                                                   case 'n':
-                                                       dataPerformance.exam = "NEET";
-                                                       break;
-                                                   case 'c':
-                                                       dataPerformance.exam = "CET";
-                                                       break;
-                                                   case 'j':
-                                                       dataPerformance.exam = "JEE";
-                                                       break;
-                                               }
-                                               switch (exam1.charAt(1)) {
-                                                   case 'p':
-                                                       dataPerformance.subject1 = "Physics";
-                                                       break;
-                                                   case 'c':
-                                                       dataPerformance.subject1 = "Chemistry";
-                                                       break;
-                                                   case 'm':
-                                                       dataPerformance.subject1 = "Maths";
-                                                       break;
-                                                   case 'b':
-                                                       dataPerformance.subject1 = "Biology";
-                                                       break;
-                                               }
+                                           List<DataPerformance> data = new ArrayList<>();
+                                           try {
+                                               JSONArray jsonArray = new JSONArray(response);
+                                               for (int i = 0; i < jsonArray.length(); i++) {
+                                                   DataPerformance dataPerformance = new DataPerformance();
+                                                   JSONObject jsonObject = jsonArray.getJSONObject(i);
+                                                   exam1 = jsonObject.getString("examcode");
+                                                   Log.d("Exam", exam1);
 
-                                               dataPerformance.chapter = jsonObject.getString("name");
-                                               dataPerformance.score = jsonObject.getString("score");
-                                               dataPerformance.date = jsonObject.getString("date");
-                                               dataPerformance.time = jsonObject.getString("time");
-                                               Log.d("Exam", dataPerformance.exam);
-                                               Log.d("Subject", dataPerformance.subject1);
-                                               Log.d("Chapter", dataPerformance.chapter);
-                                               Log.d("Score", dataPerformance.score);
-                                               Log.d("Date****", dataPerformance.date);
-                                               int score = Integer.parseInt(dataPerformance.score.split("-")[0]);
-                                               if (score <= 10) {
-                                                   dataPerformance.performance = "Poor";
-                                               } else if (score > 10 && score <= 30) {
-                                                   dataPerformance.performance = "Average";
-                                               } else if (score > 30 && score <= 40) {
-                                                   dataPerformance.performance = "Good";
-                                               } else {
-                                                   dataPerformance.performance = "Excellent";
-                                               }
-                                               Log.d("Performance", dataPerformance.performance);
+                                                   switch (exam1.charAt(0)) {
+                                                       case 'n':
+                                                           dataPerformance.exam = "NEET";
+                                                           break;
+                                                       case 'c':
+                                                           dataPerformance.exam = "CET";
+                                                           break;
+                                                       case 'j':
+                                                           dataPerformance.exam = "JEE";
+                                                           break;
+                                                   }
+                                                   switch (exam1.charAt(1)) {
+                                                       case 'p':
+                                                           dataPerformance.subject1 = "Physics";
+                                                           break;
+                                                       case 'c':
+                                                           dataPerformance.subject1 = "Chemistry";
+                                                           break;
+                                                       case 'm':
+                                                           dataPerformance.subject1 = "Maths";
+                                                           break;
+                                                       case 'b':
+                                                           dataPerformance.subject1 = "Biology";
+                                                           break;
+                                                   }
 
-                                               data.add(dataPerformance);
+                                                   dataPerformance.chapter = jsonObject.getString("name");
+                                                   dataPerformance.score = jsonObject.getString("score");
+                                                   dataPerformance.date = jsonObject.getString("date");
+                                                   dataPerformance.time = jsonObject.getString("time");
+                                                   Log.d("Exam", dataPerformance.exam);
+                                                   Log.d("Subject", dataPerformance.subject1);
+                                                   Log.d("Chapter", dataPerformance.chapter);
+                                                   Log.d("Score", dataPerformance.score);
+                                                   Log.d("Date****", dataPerformance.date);
+                                                   int score = Integer.parseInt(dataPerformance.score.split("-")[0]);
+                                                   if (score <= 10) {
+                                                       dataPerformance.performance = "Poor";
+                                                   } else if (score > 10 && score <= 30) {
+                                                       dataPerformance.performance = "Average";
+                                                   } else if (score > 30 && score <= 40) {
+                                                       dataPerformance.performance = "Good";
+                                                   } else {
+                                                       dataPerformance.performance = "Excellent";
+                                                   }
+                                                   Log.d("Performance", dataPerformance.performance);
+
+                                                   data.add(dataPerformance);
+                                               }
+                                               Log.d("Size***", data.size() + "");
+                                               recyclerView = (RecyclerView) findViewById(R.id.recyclePerformance);
+                                               recyclerView.setVisibility(View.VISIBLE);
+                                               adapter = new AdapterPerformance(Performance.this, data);
+                                               recyclerView.setAdapter(adapter);
+                                               recyclerView.setLayoutManager(new LinearLayoutManager(Performance.this));
+                                               adapter.notifyDataSetChanged();
+                                           } catch (JSONException e1) {
+                                               e1.printStackTrace();
                                            }
-                                           Log.d("Size***", data.size() + "");
-                                           recyclerView = (RecyclerView) findViewById(R.id.recyclePerformance);
-                                           recyclerView.setVisibility(View.VISIBLE);
-                                           adapter = new AdapterPerformance(Performance.this, data);
-                                           recyclerView.setAdapter(adapter);
-                                           recyclerView.setLayoutManager(new LinearLayoutManager(Performance.this));
-                                           adapter.notifyDataSetChanged();
-                                       } catch (JSONException e1) {
-                                           e1.printStackTrace();
+                                       } else {
+                                           TextView textView = (TextView) findViewById(R.id.txtNoTest);
+                                           relativeLayout = (RelativeLayout) findViewById(R.id.relativePerformance);
+                                           relativeLayout.setVisibility(View.GONE);
+                                           textView.setVisibility(View.VISIBLE);
+                                           // Toast.makeText(Performance.this,"You have not attempted any test",Toast.LENGTH_LONG).show();
                                        }
                                    }
                                }
