@@ -5,6 +5,8 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import org.json.JSONArray;
@@ -28,7 +30,8 @@ public class DirectorInfo extends AppCompatActivity {
     TextView email;
     @InjectView(R.id.directorMsg)
     TextView directorMsg;
-
+    @InjectView(R.id.progress)
+    ProgressBar progressBar;
     UrlRequest urlRequest;
     JSONObject jsonObject;
     String message;
@@ -39,6 +42,7 @@ public class DirectorInfo extends AppCompatActivity {
         ButterKnife.inject(this);
         actionBarSetup();
         // directorMsg.setText("message");
+        progressBar.setVisibility(View.VISIBLE);
         urlRequest = UrlRequest.getObject();
         urlRequest.setContext(DirectorInfo.this);
         urlRequest.setUrl("http://yashodeepacademy.co.in/fetchinfo.php");
@@ -52,6 +56,7 @@ public class DirectorInfo extends AppCompatActivity {
                                                jsonObject = jsonArray.getJSONObject(i);
                                                message = jsonObject.getString("directors_desk");
                                                directorMsg.setText(message);
+                                               progressBar.setVisibility(View.GONE);
                                                directorMsg.setLetterSpacing(0.01f);
                                            }
                                        } catch (JSONException e1) {
@@ -70,7 +75,7 @@ public class DirectorInfo extends AppCompatActivity {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
             android.support.v7.app.ActionBar ab = getSupportActionBar();
             ab.setTitle("Yashodeep Academy");
-            ab.setSubtitle("Director. ABC");
+            ab.setSubtitle("Home/Director desk");
         }
     }
 }

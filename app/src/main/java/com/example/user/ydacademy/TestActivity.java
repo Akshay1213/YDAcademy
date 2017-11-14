@@ -119,7 +119,6 @@ public class TestActivity extends AppCompatActivity {
                             intent.putExtra("Chapter",chapter);
 
                             TestActivity.this.finish();
-                            startActivity(intent);
 
 
                         } catch (JSONException e) {

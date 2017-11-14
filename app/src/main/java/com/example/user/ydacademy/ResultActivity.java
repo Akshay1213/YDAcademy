@@ -78,11 +78,11 @@ public class ResultActivity extends AppCompatActivity {
         }
 
         correct.setText((marks/2) + "");
-        correct.setTextColor(Color.parseColor("#FF009DE6"));
+        correct.setTextColor(Color.parseColor("#00b0ff"));
         incorrect.setText(attained - (marks/2) + "");
         incorrect.setTextColor(Color.RED);
         answered.setText(attained + "");
-        answered.setTextColor(Color.parseColor("#FF009DE6"));
+        answered.setTextColor(Color.parseColor("#00b0ff"));
         unanswered.setText(25 - attained + "");
         unanswered.setTextColor(Color.RED);
 
@@ -103,7 +103,7 @@ public class ResultActivity extends AppCompatActivity {
         {
             performance.setImageDrawable(getResources().getDrawable(R.drawable.good));
             text_performance.setText("Good performance");
-            text_performance.setTextColor(Color.parseColor("#0BB5FF"));
+            text_performance.setTextColor(Color.parseColor("#f4511e"));
         }
         else if (marks > 40 && marks <=50)
         {
