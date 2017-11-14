@@ -1,5 +1,6 @@
 package com.example.user.ydacademy;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.support.v7.widget.RecyclerView;
@@ -7,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
@@ -55,23 +57,27 @@ public class AdapterStudent extends RecyclerView.Adapter<RecyclerView.ViewHolder
     public void onBindViewHolder(final RecyclerView.ViewHolder holder, int position) {
         final MyHolder myHolder = (MyHolder) holder;
         final int pos = position;
+        final ProgressDialog loading = new ProgressDialog(context);
+        loading.setProgress(5);
         DataStudent dataStudent = data.get(position);
-
         myHolder.name.setText(dataStudent.name);
         myHolder.description.setText(dataStudent.description);
         Glide.with(context).load("http://yashodeepacademy.co.in/studentacheivers/" + dataStudent.id + ".jpg").asBitmap().override(600, 600)
-                .placeholder(R.drawable.sorryimagenotavailable).listener(new RequestListener<String, Bitmap>() {
+                .placeholder(null).listener(new RequestListener<String, Bitmap>() {
             @Override
             public boolean onException(Exception e, String model, Target<Bitmap> target, boolean isFirstResource) {
                 onBindViewHolder(holder, pos);
+                myHolder.progressBar.setVisibility(View.VISIBLE);
                 return false;
             }
 
             @Override
             public boolean onResourceReady(Bitmap resource, String model, Target<Bitmap> target, boolean isFromMemoryCache, boolean isFirstResource) {
+                myHolder.progressBar.setVisibility(View.GONE);
                 return false;
+
             }
-        }).error(R.drawable.sorryimagenotavailable)
+        }).error(null)
                 .into(myHolder.imageStudent);
     }
 
@@ -83,12 +89,14 @@ public class AdapterStudent extends RecyclerView.Adapter<RecyclerView.ViewHolder
     class MyHolder extends RecyclerView.ViewHolder {
         ImageView imageStudent;
         TextView name, description;
+        ProgressBar progressBar;
 
         public MyHolder(View itemView) {
             super(itemView);
             imageStudent = itemView.findViewById(R.id.iimageStudent);
             name = itemView.findViewById(R.id.txt_name);
             description = itemView.findViewById(R.id.txt_description);
+            progressBar = itemView.findViewById(R.id.progress);
         }
     }
 }

@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
@@ -68,18 +69,20 @@ public class AdapterStaff extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
         myHolder.exp.setText(dataStaff.exp);
         myHolder.description.setText(dataStaff.description);
         Glide.with(context).load("http://yashodeepacademy.co.in/teachersimages/t" + dataStaff.id + ".jpg").asBitmap().override(600, 600)
-                .placeholder(R.drawable.sorryimagenotavailable).listener(new RequestListener<String, Bitmap>() {
+                .placeholder(null).listener(new RequestListener<String, Bitmap>() {
             @Override
             public boolean onException(Exception e, String model, Target<Bitmap> target, boolean isFirstResource) {
                 onBindViewHolder(holder, pos);
+                myHolder.progressBar.setVisibility(View.VISIBLE);
                 return false;
             }
 
             @Override
             public boolean onResourceReady(Bitmap resource, String model, Target<Bitmap> target, boolean isFromMemoryCache, boolean isFirstResource) {
+                myHolder.progressBar.setVisibility(View.GONE);
                 return false;
             }
-        }).error(R.drawable.sorryimagenotavailable)
+        }).error(null)
                 .into(myHolder.ivstaff1);
     }
 
@@ -92,9 +95,11 @@ public class AdapterStaff extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
     class MyHolder extends RecyclerView.ViewHolder {
         ImageView ivstaff1;
         TextView name, degree, exp, description;
+        ProgressBar progressBar;
 
         public MyHolder(View itemView) {
             super(itemView);
+            progressBar = itemView.findViewById(R.id.progress);
             ivstaff1 = itemView.findViewById(R.id.ivstaff1);
             name = itemView.findViewById(R.id.txt_name);
             degree = itemView.findViewById(R.id.txt_degree);

@@ -164,7 +164,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="100dp"
         android:background="@drawable/style"
-        android:backgroundTint="#00e640"
+        android:backgroundTint="#ff1744"
         android:text="view Description" />
 
 </RelativeLayout>

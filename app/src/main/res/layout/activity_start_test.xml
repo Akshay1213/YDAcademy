@@ -12,8 +12,8 @@
         tools:context="com.example.user.adapter_imageview.start_Test">
 
        <TextView
-           android:layout_height="wrap_content"
            android:layout_width="match_parent"
+           android:layout_height="wrap_content"
            android:text="Rules"
            android:textSize="30dp"/>
 
@@ -21,10 +21,10 @@
 
             <TextView
                 android:layout_column="1"
+                android:layout_marginLeft="10dp"
                 android:layout_marginTop="20dp"
                 android:text="\u25CF"
-                android:textSize="16dp"
-                android:layout_marginLeft="10dp"></TextView>
+                android:textSize="16dp"></TextView>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -38,10 +38,10 @@
 
             <TextView
                 android:layout_column="1"
+                android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
                 android:text="\u25CF"
-                android:textSize="16dp"
-                android:layout_marginLeft="10dp"></TextView>
+                android:textSize="16dp"></TextView>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -55,27 +55,27 @@
 
             <TextView
                 android:layout_column="1"
+                android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
                 android:text="\u25CF"
-                android:textSize="16dp"
-                android:layout_marginLeft="10dp"></TextView>
+                android:textSize="16dp"></TextView>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_column="2"
                 android:layout_marginTop="10dp"
-                android:textSize="16dp"
-                android:text="Each question carry 2 mark, no negative marks."></TextView>
+                android:text="Each question carry 2 mark, no negative marks."
+                android:textSize="16dp"></TextView>
         </TableRow>
 
         <TableRow>
 
             <TextView
                 android:layout_column="1"
+                android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
                 android:text="\u25CF"
-                android:textSize="16dp"
-                android:layout_marginLeft="10dp"></TextView>
+                android:textSize="16dp"></TextView>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -94,8 +94,8 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="200dp"
-        android:text="start test"
         android:background="@drawable/style"
-        android:backgroundTint="#aaf2eb"/>
+        android:backgroundTint="#00e5ff"
+        android:text="start test" />
 
 </RelativeLayout>
