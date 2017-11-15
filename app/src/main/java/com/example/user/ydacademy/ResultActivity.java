@@ -88,8 +88,7 @@ public class ResultActivity extends AppCompatActivity {
 
       if (marks>=0&&marks<=20)
         {
-
-           performance.setImageDrawable(getResources().getDrawable(R.drawable.poor));
+            performance.setImageDrawable(getResources().getDrawable(R.drawable.poor));
            text_performance.setText("Poor performance");
            text_performance.setTextColor(Color.RED);
         }

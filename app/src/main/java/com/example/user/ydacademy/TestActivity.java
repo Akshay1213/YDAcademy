@@ -87,7 +87,6 @@ public class TestActivity extends AppCompatActivity {
                     userans+="E";
                 }
 
-
                 // Log.d("Date",)
                 urlRequest=UrlRequest.getObject();
                 urlRequest.setContext(TestActivity.this);
@@ -117,9 +116,8 @@ public class TestActivity extends AppCompatActivity {
                             intent.putExtra("Exam", exam);
                             intent.putExtra("ES", es);
                             intent.putExtra("Chapter",chapter);
-
                             TestActivity.this.finish();
-
+                            startActivity(intent);
 
                         } catch (JSONException e) {
                             e.printStackTrace();
