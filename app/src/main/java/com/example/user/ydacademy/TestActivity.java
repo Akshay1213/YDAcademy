@@ -84,14 +84,14 @@ public class TestActivity extends AppCompatActivity {
                 if (flag == 0 || count == 50)
                     check_result();
                 while (userans.length() < 50) {
-                    userans += "E";
+                    userans+="E";
                 }
 
                 // Log.d("Date",)
-                urlRequest = UrlRequest.getObject();
+                urlRequest=UrlRequest.getObject();
                 urlRequest.setContext(TestActivity.this);
                 Log.d("URL***", "onClick: " + "http://yashodeepacademy.co.in/fetchanswerkeys.php?examcode=" + es + chapter);
-                urlRequest.setUrl("http://yashodeepacademy.co.in/fetchanswerkeys.php?examcode=" + es + chapter + "&class=" + class1);
+                urlRequest.setUrl("http://yashodeepacademy.co.in/fetchanswerkeys.php?examcode="+es+chapter+"&class="+class1);
                 urlRequest.getResponse(new ServerCallback() {
                     @Override
                     public void onSuccess(String response) {
@@ -100,33 +100,31 @@ public class TestActivity extends AppCompatActivity {
                         try {
 
                             JSONArray jArray = new JSONArray(response);
-                            answerKey = "";
-                            for (i = 0; i < jArray.length(); i++) {
+                            answerKey="";
+                            for(i = 0; i < jArray.length(); i++) {
                                 json_data = jArray.getJSONObject(i);
-                                Log.d("wth", "onSuccess: " + json_data.getString("ans"));
-                                answerKey += json_data.getString("ans");
+                                Log.d("wth", "onSuccess: "+json_data.getString("ans"));
+                                answerKey+=json_data.getString("ans");
                             }
-                            Log.d("answerkey***", answerKey);
+                            Log.d("answerkey***",answerKey);
 
-                            data = userans + " " + answerKey;
-                            Intent intent = new Intent(TestActivity.this, ResultActivity.class);
-                            intent.putExtra("data", data);
-                            intent.putExtra("Class", class1);
+                            data=userans+" "+answerKey;
+                            Intent intent=new Intent(TestActivity.this,ResultActivity.class);
+                            intent.putExtra("data",data);
+                            intent.putExtra("Class",class1);
                             intent.putExtra("Subject", subject);
                             intent.putExtra("Exam", exam);
                             intent.putExtra("ES", es);
-                            intent.putExtra("Chapter", chapter);
-                            startActivity(intent);
+                            intent.putExtra("Chapter",chapter);
                             TestActivity.this.finish();
+                            startActivity(intent);
 
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
+
                     }
-
-
                 });
-
 
                 break;
             case R.id.btn_next:
@@ -148,7 +146,8 @@ public class TestActivity extends AppCompatActivity {
     public void load_image()
     {
 
-        Glide.with(getApplicationContext()).load("http://yashodeepacademy.co.in/" + class1 + "/" + es + chapter + "/q" + (count + 1) + ".PNG").asBitmap().override(600, 600)
+
+           Glide.with(getApplicationContext()).load("http://yashodeepacademy.co.in/" + class1 + "/" + es + chapter + "/q" + (count + 1) + ".PNG").asBitmap().override(600, 600)
                    .placeholder(null).listener(new RequestListener<String, Bitmap>() {
                @Override
                public boolean onException(Exception e, String model, Target<Bitmap> target, boolean isFirstResource) {
@@ -220,10 +219,10 @@ public class TestActivity extends AppCompatActivity {
             if (count == 50)
                 btn_submit.performClick();
 
-            // check_result();
-            if (count < 50) {
+            check_result();
+            if (count < 50)
                 load_image();
-            }
+
         }
     }
 
