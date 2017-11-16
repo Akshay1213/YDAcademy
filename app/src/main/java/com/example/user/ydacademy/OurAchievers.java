@@ -51,6 +51,15 @@ public class OurAchievers extends AppCompatActivity {
                                            }
                                            Log.d("Size", data.size() + "");
                                            recyclerView = (RecyclerView) findViewById(R.id.Liststudent);
+
+                                           recyclerView.addOnItemTouchListener(new RecyclerItemClickListener(getApplicationContext(), new RecyclerItemClickListener.OnItemClickListener() {
+                                               @Override
+                                               public void onItemClick(View view, int position) {
+
+                                               }
+                                           }) {
+
+                                           });
                                            recyclerView.setVisibility(View.VISIBLE);
                                            adapter = new AdapterStudent(OurAchievers.this, data);
                                            recyclerView.setAdapter(adapter);
