@@ -15,7 +15,6 @@ import butterknife.InjectView;
 
 public class AchieversDescription extends AppCompatActivity {
 
-
     @InjectView(R.id.profile_image)
     ImageView imageProfile;
     @InjectView(R.id.txtId)
@@ -25,6 +24,7 @@ public class AchieversDescription extends AppCompatActivity {
     @InjectView(R.id.txtDescription)
     TextView txtDescription;
     String id, name, desc, url;
+    //  DataStudent arrayList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +33,7 @@ public class AchieversDescription extends AppCompatActivity {
         ButterKnife.inject(this);
         id = getIntent().getStringExtra("Id");
         name = getIntent().getStringExtra("Name");
-        desc = getIntent().getStringExtra("Description");
+        desc = getIntent().getStringExtra("Desc");
         url = getIntent().getStringExtra("Url");
         txtName.setText(name);
         txtId.setText(id);
@@ -57,6 +57,7 @@ public class AchieversDescription extends AppCompatActivity {
     }
 
 }
+
 
 
 

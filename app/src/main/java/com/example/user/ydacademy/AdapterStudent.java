@@ -2,7 +2,6 @@ package com.example.user.ydacademy;
 
 import android.app.ProgressDialog;
 import android.content.Context;
-import android.content.Intent;
 import android.graphics.Bitmap;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
@@ -86,7 +85,7 @@ public class AdapterStudent extends RecyclerView.Adapter<RecyclerView.ViewHolder
         }).error(null)
                 .into(myHolder.imageStudent);
 
-
+/*
         myHolder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -99,7 +98,7 @@ public class AdapterStudent extends RecyclerView.Adapter<RecyclerView.ViewHolder
                 intent.putExtra("Description", dataStudent.description);
                 context.startActivity(intent);
             }
-        });
+        });*/
     }
 
     @Override

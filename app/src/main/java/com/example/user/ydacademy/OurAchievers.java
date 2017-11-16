@@ -1,6 +1,7 @@
 package com.example.user.ydacademy;
 
 import android.annotation.TargetApi;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -38,7 +39,7 @@ public class OurAchievers extends AppCompatActivity {
                                    @Override
                                    public void onSuccess(String response) {
                                        Log.d("Response", response);
-                                       List<DataStudent> data = new ArrayList<>();
+                                       final List<DataStudent> data = new ArrayList<>();
                                        try {
                                            JSONArray jsonArray = new JSONArray(response);
                                            for (int i = 0; i < jsonArray.length(); i++) {
@@ -55,11 +56,17 @@ public class OurAchievers extends AppCompatActivity {
                                            recyclerView.addOnItemTouchListener(new RecyclerItemClickListener(getApplicationContext(), new RecyclerItemClickListener.OnItemClickListener() {
                                                @Override
                                                public void onItemClick(View view, int position) {
+                                                   // Toast.makeText(OurAchievers.this,"On"+data.get(position),Toast.LENGTH_LONG).show();
 
+                                                   Intent intent = new Intent(OurAchievers.this, AchieversDescription.class);
+                                                   intent.putExtra("Name", data.get(position).name);
+                                                   intent.putExtra("Id", data.get(position).id);
+                                                   intent.putExtra("Desc", data.get(position).description);
+                                                   intent.putExtra("Url", "http://yashodeepacademy.co.in/studentacheivers/" + data.get(position).id + ".jpg");
+                                                   startActivity(intent);
                                                }
-                                           }) {
-
-                                           });
+                                                   })
+                                           );
                                            recyclerView.setVisibility(View.VISIBLE);
                                            adapter = new AdapterStudent(OurAchievers.this, data);
                                            recyclerView.setAdapter(adapter);
