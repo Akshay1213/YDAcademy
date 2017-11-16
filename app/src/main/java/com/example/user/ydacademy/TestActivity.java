@@ -81,18 +81,17 @@ public class TestActivity extends AppCompatActivity {
         switch (view.getId()) {
             case R.id.btn_submit:
 
-                if (flag == 0 || count == 25)
+                if (flag == 0 || count == 50)
                     check_result();
-                while (userans.length()<25) {
-                    userans+="E";
+                while (userans.length() < 50) {
+                    userans += "E";
                 }
 
-
                 // Log.d("Date",)
-                urlRequest=UrlRequest.getObject();
+                urlRequest = UrlRequest.getObject();
                 urlRequest.setContext(TestActivity.this);
                 Log.d("URL***", "onClick: " + "http://yashodeepacademy.co.in/fetchanswerkeys.php?examcode=" + es + chapter);
-                urlRequest.setUrl("http://yashodeepacademy.co.in/fetchanswerkeys.php?examcode="+es+chapter+"&class="+class1);
+                urlRequest.setUrl("http://yashodeepacademy.co.in/fetchanswerkeys.php?examcode=" + es + chapter + "&class=" + class1);
                 urlRequest.getResponse(new ServerCallback() {
                     @Override
                     public void onSuccess(String response) {
@@ -101,32 +100,33 @@ public class TestActivity extends AppCompatActivity {
                         try {
 
                             JSONArray jArray = new JSONArray(response);
-                            answerKey="";
-                            for(i = 0; i < jArray.length(); i++) {
+                            answerKey = "";
+                            for (i = 0; i < jArray.length(); i++) {
                                 json_data = jArray.getJSONObject(i);
-                                Log.d("wth", "onSuccess: "+json_data.getString("ans"));
-                                answerKey+=json_data.getString("ans");
+                                Log.d("wth", "onSuccess: " + json_data.getString("ans"));
+                                answerKey += json_data.getString("ans");
                             }
-                            Log.d("answerkey***",answerKey);
+                            Log.d("answerkey***", answerKey);
 
-                            data=userans+" "+answerKey;
-                            Intent intent=new Intent(TestActivity.this,ResultActivity.class);
-                            intent.putExtra("data",data);
-                            intent.putExtra("Class",class1);
+                            data = userans + " " + answerKey;
+                            Intent intent = new Intent(TestActivity.this, ResultActivity.class);
+                            intent.putExtra("data", data);
+                            intent.putExtra("Class", class1);
                             intent.putExtra("Subject", subject);
                             intent.putExtra("Exam", exam);
                             intent.putExtra("ES", es);
-                            intent.putExtra("Chapter",chapter);
-
+                            intent.putExtra("Chapter", chapter);
+                            startActivity(intent);
                             TestActivity.this.finish();
-
 
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
-
                     }
+
+
                 });
+
 
                 break;
             case R.id.btn_next:
@@ -135,7 +135,7 @@ public class TestActivity extends AppCompatActivity {
 
                 load_image();
                 flag=0;
-                if(count==24) {
+                if (count == 49) {
 
                     view.setEnabled(false);
                 }
@@ -148,8 +148,7 @@ public class TestActivity extends AppCompatActivity {
     public void load_image()
     {
 
-
-           Glide.with(getApplicationContext()).load("http://yashodeepacademy.co.in/" + class1 + "/" + es + chapter + "/q" + (count + 1) + ".PNG").asBitmap().override(600, 600)
+        Glide.with(getApplicationContext()).load("http://yashodeepacademy.co.in/" + class1 + "/" + es + chapter + "/q" + (count + 1) + ".PNG").asBitmap().override(600, 600)
                    .placeholder(null).listener(new RequestListener<String, Bitmap>() {
                @Override
                public boolean onException(Exception e, String model, Target<Bitmap> target, boolean isFirstResource) {
@@ -181,7 +180,7 @@ public class TestActivity extends AppCompatActivity {
         }
         else
             userans+="E";
-         if(count<25)
+        if (count < 50)
         radioGroup.clearCheck();
 
 
@@ -218,13 +217,13 @@ public class TestActivity extends AppCompatActivity {
         @Override
         public void onFinish() {
 
-            if (count == 25)
+            if (count == 50)
                 btn_submit.performClick();
 
-            check_result();
-            if (count < 25)
+            // check_result();
+            if (count < 50) {
                 load_image();
-
+            }
         }
     }
 

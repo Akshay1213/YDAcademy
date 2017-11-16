@@ -18,14 +18,14 @@
         <TextView
             android:id="@+id/header1"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@android:color/holo_green_dark"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/neet"
             android:gravity="center_vertical"
             android:minHeight="?android:attr/listPreferredItemHeight"
-            android:padding="20dp"
+            android:padding="10dp"
             android:text="NEET"
-            android:textColor="@android:color/white"
-            android:textSize="28sp" />
+            android:textSize="1dp" />
         <LinearLayout
             android:id="@+id/section1"
             android:layout_width="match_parent"
@@ -80,14 +80,14 @@
         <TextView
             android:id="@+id/header2"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@android:color/holo_green_dark"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/cet"
             android:gravity="center_vertical"
             android:minHeight="?android:attr/listPreferredItemHeight"
-            android:padding="20dp"
+            android:padding="10dp"
             android:text="CET"
-            android:textColor="@android:color/white"
-            android:textSize="28sp" />
+            android:textSize="1dp" />
 
         <LinearLayout
             android:id="@+id/section2"
@@ -155,14 +155,14 @@
             <TextView
                 android:id="@+id/header3"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@android:color/holo_green_dark"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/jee"
                 android:gravity="center_vertical"
                 android:minHeight="?android:attr/listPreferredItemHeight"
-                android:padding="20dp"
+                android:padding="10dp"
                 android:text="JEE"
-                android:textColor="@android:color/white"
-                android:textSize="28sp" />
+                android:textSize="1dp" />
 
             <LinearLayout
                 android:id="@+id/section3"
@@ -231,14 +231,14 @@
             <TextView
                 android:id="@+id/header4"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@android:color/holo_green_dark"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/stateboard"
                 android:gravity="center_vertical"
                 android:minHeight="?android:attr/listPreferredItemHeight"
-                android:padding="20dp"
-                android:text="StateBoard(Imp Questions)"
-                android:textColor="@android:color/white"
-                android:textSize="28sp" />
+                android:padding="10dp"
+                android:text="Sate Board"
+                android:textSize="1dp" />
 
             <LinearLayout
                 android:id="@+id/section4"

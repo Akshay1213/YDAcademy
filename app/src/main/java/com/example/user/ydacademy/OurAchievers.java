@@ -16,21 +16,20 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.ButterKnife;
-
 public class OurAchievers extends AppCompatActivity {
 
 
     UrlRequest urlRequest;
     AdapterStudent adapter;
     List<DataStudent> data;
-    RecyclerView recyclerView;
+    DataStudent studentData;
+    /*  @InjectView(R.id.Liststudent)*/ RecyclerView recyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_our_achievers);
-        ButterKnife.inject(this);
+        //  ButterKnife.inject(this);
         actionBarSetup();
         urlRequest = UrlRequest.getObject();
         urlRequest.setContext(OurAchievers.this);
@@ -43,7 +42,7 @@ public class OurAchievers extends AppCompatActivity {
                                        try {
                                            JSONArray jsonArray = new JSONArray(response);
                                            for (int i = 0; i < jsonArray.length(); i++) {
-                                               DataStudent studentData = new DataStudent();
+                                               studentData = new DataStudent();
                                                JSONObject jsonObject = jsonArray.getJSONObject(i);
                                                studentData.name = jsonObject.getString("name");
                                                studentData.id = jsonObject.getString("id");
@@ -64,8 +63,30 @@ public class OurAchievers extends AppCompatActivity {
                                    }
                                }
         );
+       /* recyclerView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //data.get(position);
+                Intent intent = new Intent(OurAchievers.this, AchieversDescription.class);
+                intent.putExtra("Name",studentData.name);
+                intent.putExtra("Id",studentData.id);
+                intent.putExtra("Description",studentData.description);
+            }
+        });
+*/
 
     }
+
+   /* @OnItemClick(R.id.Liststudent)
+    public void onItemClick(int position)
+    {
+        data.get(position);
+       Intent intent = new Intent(OurAchievers.this, AchieversDescription.class);
+       intent.putExtra("Name",studentData.name);
+       intent.putExtra("Id",studentData.id);
+       intent.putExtra("Description",studentData.description);
+    }*/
+
 
     @TargetApi(Build.VERSION_CODES.HONEYCOMB)
     private void actionBarSetup() {

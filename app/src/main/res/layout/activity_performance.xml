@@ -25,7 +25,7 @@
         android:layout_gravity="center"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="80dp"
-        android:text="You hava not attempted any test yet!!!!"
+        android:text="You have not attempted any test yet!!!!"
         android:textSize="25dp"
         android:visibility="gone" />
 

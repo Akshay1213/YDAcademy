@@ -126,7 +126,6 @@ public class Performance extends AppCompatActivity {
                                            relativeLayout = (RelativeLayout) findViewById(R.id.relativePerformance);
                                            relativeLayout.setVisibility(View.GONE);
                                            textView.setVisibility(View.VISIBLE);
-                                           // Toast.makeText(Performance.this,"You have not attempted any test",Toast.LENGTH_LONG).show();
                                        }
                                    }
                                }
@@ -138,7 +137,6 @@ public class Performance extends AppCompatActivity {
             android.support.v7.app.ActionBar ab = getSupportActionBar();
             ab.setTitle("Yashodeep Academy");
             ab.setSubtitle("Home/Performance");
-
         }
     }
 }

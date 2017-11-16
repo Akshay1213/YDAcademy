@@ -83,13 +83,12 @@ public class ResultActivity extends AppCompatActivity {
         incorrect.setTextColor(Color.RED);
         answered.setText(attained + "");
         answered.setTextColor(Color.parseColor("#00b0ff"));
-        unanswered.setText(25 - attained + "");
+        unanswered.setText(50 - attained + "");
         unanswered.setTextColor(Color.RED);
 
       if (marks>=0&&marks<=20)
         {
-
-           performance.setImageDrawable(getResources().getDrawable(R.drawable.poor));
+            performance.setImageDrawable(getResources().getDrawable(R.drawable.poor));
            text_performance.setText("Poor performance");
            text_performance.setTextColor(Color.RED);
         }
@@ -97,15 +96,12 @@ public class ResultActivity extends AppCompatActivity {
             performance.setImageDrawable(getResources().getDrawable(R.drawable.average));
             text_performance.setText("Average performance");
             text_performance.setTextColor(Color.parseColor("#FFA500"));
-        }
-
-        else if (marks > 30 && marks <= 40)
+        } else if (marks > 30 && marks <= 45)
         {
             performance.setImageDrawable(getResources().getDrawable(R.drawable.good));
             text_performance.setText("Good performance");
             text_performance.setTextColor(Color.parseColor("#f4511e"));
-        }
-        else if (marks > 40 && marks <=50)
+        } else if (marks > 45 && marks <= 50)
         {
             performance.setImageDrawable(getResources().getDrawable(R.drawable.excellent));
             text_performance.setText("Excellent performance");

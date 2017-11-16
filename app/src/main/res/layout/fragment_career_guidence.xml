@@ -6,22 +6,19 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-
+        android:layout_height="match_parent"
         android:animateLayoutChanges="true"
         android:orientation="vertical">
 
         <TextView
             android:id="@+id/header1"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/holo_blue_bright"
+            android:layout_height="150dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/careerafter10"
             android:gravity="center_vertical"
             android:minHeight="?android:attr/listPreferredItemHeight"
-            android:padding="20dp"
-            android:text="Career After 10th"
-            android:textColor="@android:color/white"
-            android:textSize="28sp" />
+            android:padding="20dp" />
 
         <LinearLayout
             android:id="@+id/section1"
@@ -42,19 +39,20 @@
         <TextView
             android:id="@+id/header2"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/holo_blue_bright"
+            android:layout_height="150dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/careerafter12"
             android:gravity="center_vertical"
             android:minHeight="?android:attr/listPreferredItemHeight"
             android:padding="20dp"
-            android:text="Career After 12th"
+
             android:textColor="@android:color/white"
             android:textSize="28sp" />
 
         <LinearLayout
             android:id="@+id/section2"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical"
             android:visibility="gone">
 

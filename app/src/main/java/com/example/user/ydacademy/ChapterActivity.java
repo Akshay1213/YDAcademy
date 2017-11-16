@@ -27,6 +27,7 @@ public class ChapterActivity extends AppCompatActivity {
 
     @InjectView(R.id.listChapter)
     ListView listChapters;
+    /* @InjectView(R.id.txtListChapters)TextView txtListChapter;*/
     UrlRequest urlRequest;
     String exam;
     Intent intent;
@@ -35,6 +36,7 @@ public class ChapterActivity extends AppCompatActivity {
     List<String> chapters;
     ArrayAdapter adapter;
     ProgressDialog loading;
+    int pos;
     char e, s;
 
     @Override
@@ -61,7 +63,6 @@ public class ChapterActivity extends AppCompatActivity {
         Log.d("Class***", class1);
 
         getData();
-
     }
 
     public void getData() {
@@ -79,17 +80,19 @@ public class ChapterActivity extends AppCompatActivity {
                                            for (int i = 0; i < jsonArray.length(); i++) {
                                                JSONObject jsonObject = jsonArray.getJSONObject(i);
                                                chapter = jsonObject.getString("name");
-                                               chapters.add(chapter);
+                                               chapters.add("" + (i + 1) + ". " + chapter);
                                            }
 
                                        } catch (JSONException e1) {
                                            e1.printStackTrace();
                                        }
                                        loading.dismiss();
+
                                        Log.d("Chapters", chapters.toString() + "");
                                        adapter = new ArrayAdapter(ChapterActivity.this, android.R.layout.simple_list_item_1, chapters);
                                        listChapters.setAdapter(adapter);
                                        adapter.notifyDataSetChanged();
+
                                    }
 
                                }
@@ -99,6 +102,7 @@ public class ChapterActivity extends AppCompatActivity {
     @OnItemClick(R.id.listChapter)
     public void onItemClick(int position) {
         chapters.get(position);
+       /* pos=Integer.parseInt(chapters.get(position));*/
         Log.d("***", position + "");
         intent = new Intent(ChapterActivity.this, StartTest.class);
         intent.putExtra("Subject", subject);

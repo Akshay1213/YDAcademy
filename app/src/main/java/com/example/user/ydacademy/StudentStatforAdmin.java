@@ -58,7 +58,6 @@ public class StudentStatforAdmin extends AppCompatActivity {
             public void onClick(View v) {
 
                 name = edtUsername.getText().toString();
-
                 class1 = spinnerClass.getSelectedItem().toString();
                 Log.d("class", class1);
                 if (spinnerClass.getSelectedItem() != null && spinnerClass.getSelectedItem() != "--Select class--") {

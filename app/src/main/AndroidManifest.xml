@@ -17,7 +17,6 @@
         <activity android:name=".LoginActivity" />
         <activity android:name=".SyllabusActivity" />
         <activity android:name=".ChapterActivity" />
-
         <activity
             android:name=".TestActivity"
             android:launchMode="singleInstance" />
@@ -67,7 +66,7 @@
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-
+        <activity android:name=".AchieversDescription"></activity>
     </application>
 
 </manifest>

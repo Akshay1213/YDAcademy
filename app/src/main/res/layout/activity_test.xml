@@ -145,8 +145,10 @@
             android:layout_marginTop="20dp"
             android:layout_weight="1"
             android:background="@drawable/style"
-            android:backgroundTint="#5ceff9"
-            android:text="next Question" />
+            android:backgroundTint="#000000"
+            android:text="next Question"
+            android:textColor="@color/white"
+            android:textSize="17dp" />
 
         <Button
             android:id="@+id/btn_submit"
@@ -157,8 +159,10 @@
             android:layout_toRightOf="@+id/btn_next"
             android:layout_weight="1"
             android:background="@drawable/style"
-            android:backgroundTint="#ff53df"
-            android:text="submit test" />
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:text="submit test"
+            android:textColor="@color/white"
+            android:textSize="17dp" />
 
     </LinearLayout>
 

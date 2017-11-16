@@ -3,39 +3,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:orientation="horizontal"
     tools:context="com.example.user.ydacademy.ChapterActivity">
+
 
     <ListView
         android:id="@+id/listChapter"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"></ListView>
-    <!--<TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-       android:text="Chapter1"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/txtChapter1"
-        android:text="@string/chapter1"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Chapter2"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/txtChapter2"
-        android:text="@string/chapter1"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Chapter3"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/txtChapter3"
-        android:text="@string/chapter1"/>-->
+        android:layout_height="match_parent">
+
+    </ListView>
+
 
 </LinearLayout>

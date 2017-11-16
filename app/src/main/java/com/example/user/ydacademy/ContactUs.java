@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 public class ContactUs extends AppCompatActivity {
@@ -20,6 +21,7 @@ public class ContactUs extends AppCompatActivity {
     int flag = 0;
     String msg;
     private EditText e1;
+    private Spinner spinner;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,8 +40,12 @@ public class ContactUs extends AppCompatActivity {
                     e1.setError("Please enter name");
                     flag = 1;
                 } else {
-                    msg += e1.getText() + "\n";
+                    msg += "Name:" + e1.getText() + "\n";
                 }
+                Spinner spinnerClass = (Spinner) findViewById(R.id.spinner1);
+                msg = "Class:" + spinnerClass.getSelectedItem().toString() + "\n";
+                Log.d("Spinner", spinnerClass.getSelectedItem().toString());
+
                 e1 = (EditText) findViewById(R.id.email);
                 String mail = e1.getText().toString();
                 String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
@@ -47,7 +53,7 @@ public class ContactUs extends AppCompatActivity {
                     e1.setError("Invalid email");
                     flag = 1;
                 } else {
-                    msg += e1.getText() + "\n";
+                    msg += "Email:" + e1.getText() + "\n";
                 }
 
                 e1 = (EditText) findViewById(R.id.phone);
@@ -57,7 +63,7 @@ public class ContactUs extends AppCompatActivity {
                     e1.setError("Invalid number");
                     flag = 1;
                 } else {
-                    msg += e1.getText() + "\n";
+                    msg += "Phone No:" + e1.getText() + "\n";
                 }
 
                 e1 = (EditText) findViewById(R.id.description);
@@ -66,10 +72,9 @@ public class ContactUs extends AppCompatActivity {
                     e1.setError("Please enter comment");
                     flag = 1;
                 } else {
-                    msg += e1.getText() + "\n";
+                    msg += "Comment:" + e1.getText() + "\n";
                 }
                 if (flag == 0) {
-
                     String[] to = {"ostallohostels@gmail.com"};
                     Intent intent = new Intent(Intent.ACTION_SEND);
                     intent.setType("text/html");

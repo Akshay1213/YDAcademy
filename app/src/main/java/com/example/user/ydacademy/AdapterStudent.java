@@ -2,8 +2,10 @@ package com.example.user.ydacademy;
 
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -27,6 +29,7 @@ public class AdapterStudent extends RecyclerView.Adapter<RecyclerView.ViewHolder
     List<DataStudent> data = Collections.emptyList();
 
     MyHolder myHolder;
+    DataStudent dataStudent;
     private Context context;
     private LayoutInflater inflater;
 
@@ -59,9 +62,12 @@ public class AdapterStudent extends RecyclerView.Adapter<RecyclerView.ViewHolder
         final int pos = position;
         final ProgressDialog loading = new ProgressDialog(context);
         loading.setProgress(5);
-        DataStudent dataStudent = data.get(position);
+        dataStudent = data.get(position);
+
         myHolder.name.setText(dataStudent.name);
+        Log.d("name", dataStudent.name);
         myHolder.description.setText(dataStudent.description);
+
         Glide.with(context).load("http://yashodeepacademy.co.in/studentacheivers/" + dataStudent.id + ".jpg").asBitmap().override(600, 600)
                 .placeholder(null).listener(new RequestListener<String, Bitmap>() {
             @Override
@@ -79,6 +85,18 @@ public class AdapterStudent extends RecyclerView.Adapter<RecyclerView.ViewHolder
             }
         }).error(null)
                 .into(myHolder.imageStudent);
+        myHolder.imageStudent.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.d("Click Image", "Msg");
+                Intent intent = new Intent(context, AchieversDescription.class);
+                intent.putExtra("Url", "http://yashodeepacademy.co.in/studentacheivers/" + dataStudent.id + ".jpg");
+                intent.putExtra("Name", dataStudent.name);
+                intent.putExtra("Id", dataStudent.id);
+                intent.putExtra("Description", dataStudent.description);
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override
