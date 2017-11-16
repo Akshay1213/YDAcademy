@@ -63,12 +63,12 @@ public class ResultActivity extends AppCompatActivity {
         userans = arr[0];
         result = arr[1];
         actionBarSetup();
-        Log.d("result", result.length() + "");
+        Log.d("result", arr[0].length() + "");
 
         for (int i = 0; i < result.length(); i++) {
 
             if (userans.charAt(i) == result.charAt(i)) {
-                marks+=2;
+                marks++;
             }
         }
         for (int i = 0; i < result.length(); i++) {
@@ -77,12 +77,12 @@ public class ResultActivity extends AppCompatActivity {
             }
         }
 
-        correct.setText((marks) + "");
-        correct.setTextColor(Color.parseColor("#00b0ff"));
-        incorrect.setText(attained - (marks) + "");
+        correct.setText(marks + "");
+        correct.setTextColor(Color.BLACK);
+        incorrect.setText(attained - marks + "");
         incorrect.setTextColor(Color.RED);
         answered.setText(attained + "");
-        answered.setTextColor(Color.parseColor("#00b0ff"));
+        answered.setTextColor(Color.BLACK);
         unanswered.setText(50 - attained + "");
         unanswered.setTextColor(Color.RED);
 
@@ -96,7 +96,7 @@ public class ResultActivity extends AppCompatActivity {
             performance.setImageDrawable(getResources().getDrawable(R.drawable.average));
             text_performance.setText("Average performance");
             text_performance.setTextColor(Color.parseColor("#FFA500"));
-        } else if (marks > 30 && marks <= 45)
+      } else if (marks > 30 && marks <= 45)
         {
             performance.setImageDrawable(getResources().getDrawable(R.drawable.good));
             text_performance.setText("Good performance");

@@ -49,8 +49,6 @@ public class TestActivity extends AppCompatActivity {
     UrlRequest urlRequest;
     JSONObject json_data;
     SharedPreferences sp;
-   /* LocalDateTime now = null;
-    DateTimeFormatter dtf = null;*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,7 +59,7 @@ public class TestActivity extends AppCompatActivity {
         userans="";
         data="";
         ans=null;
-        countDownTimer=new Mycountdowntimer(30000,1000);
+        countDownTimer = new Mycountdowntimer(60000, 1000);
         exam=getIntent().getStringExtra("Exam");
         subject=getIntent().getStringExtra("Subject");
         es=getIntent().getStringExtra("ES");
@@ -106,7 +104,8 @@ public class TestActivity extends AppCompatActivity {
                                 Log.d("wth", "onSuccess: "+json_data.getString("ans"));
                                 answerKey+=json_data.getString("ans");
                             }
-                            Log.d("answerkey***",answerKey);
+                            Log.d("answerkey***", answerKey.length() + "");
+                            Log.d("userans***", userans);
 
                             data=userans+" "+answerKey;
                             Intent intent=new Intent(TestActivity.this,ResultActivity.class);
@@ -137,7 +136,6 @@ public class TestActivity extends AppCompatActivity {
 
                     view.setEnabled(false);
                 }
-
 
                 break;
         }

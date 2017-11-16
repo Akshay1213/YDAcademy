@@ -255,7 +255,6 @@ public class AdapterResult extends RecyclerView.Adapter<RecyclerView.ViewHolder>
                     .setAnimationDuration(400)
                     .setGravityToExpand(Gravity.CENTER)
                     .build();
-
         }
 
     }
