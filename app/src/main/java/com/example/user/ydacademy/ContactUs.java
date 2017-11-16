@@ -1,16 +1,12 @@
 package com.example.user.ydacademy;
 
 import android.annotation.TargetApi;
-import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
-import android.widget.Toast;
 
 public class ContactUs extends AppCompatActivity {
 
@@ -28,7 +24,7 @@ public class ContactUs extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contact_us);
         actionBarSetup();
-        b1 = (Button) findViewById(R.id.btnSubmit);
+     /*   b1 = (Button) findViewById(R.id.btnSubmit);
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -89,14 +85,14 @@ public class ContactUs extends AppCompatActivity {
                     } catch (android.content.ActivityNotFoundException ex) {
                         Toast.makeText(ContactUs.this, "Mail not sent", Toast.LENGTH_SHORT).show();
                     }
-                   /* finally {
+                   *//* finally {
                         finish();
-                    }*/
+                    }*//*
                 }
                 flag = 0;
 
             }
-        });
+        });*/
     }
 
     @TargetApi(Build.VERSION_CODES.HONEYCOMB)
