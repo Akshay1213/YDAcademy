@@ -71,6 +71,7 @@ public class TestActivity extends AppCompatActivity {
         actionBarSetup();
         progressBar=(ProgressBar)findViewById(R.id.progress);
         load_image();
+
     }
 
     @RequiresApi(api = Build.VERSION_CODES.O)
@@ -134,7 +135,7 @@ public class TestActivity extends AppCompatActivity {
                 flag=0;
                 if (count == 49) {
 
-                    view.setEnabled(false);
+                    btn_next.setEnabled(false);
                 }
 
                 break;
