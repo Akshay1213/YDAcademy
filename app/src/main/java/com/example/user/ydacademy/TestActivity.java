@@ -49,8 +49,6 @@ public class TestActivity extends AppCompatActivity {
     UrlRequest urlRequest;
     JSONObject json_data;
     SharedPreferences sp;
-   /* LocalDateTime now = null;
-    DateTimeFormatter dtf = null;*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,7 +59,7 @@ public class TestActivity extends AppCompatActivity {
         userans="";
         data="";
         ans=null;
-        countDownTimer=new Mycountdowntimer(30000,1000);
+        countDownTimer = new Mycountdowntimer(60000, 1000);
         exam=getIntent().getStringExtra("Exam");
         subject=getIntent().getStringExtra("Subject");
         es=getIntent().getStringExtra("ES");
@@ -81,9 +79,9 @@ public class TestActivity extends AppCompatActivity {
         switch (view.getId()) {
             case R.id.btn_submit:
 
-                if (flag == 0 || count == 25)
+                if (flag == 0 || count == 50)
                     check_result();
-                while (userans.length()<25) {
+                while (userans.length() < 50) {
                     userans+="E";
                 }
 
@@ -106,7 +104,8 @@ public class TestActivity extends AppCompatActivity {
                                 Log.d("wth", "onSuccess: "+json_data.getString("ans"));
                                 answerKey+=json_data.getString("ans");
                             }
-                            Log.d("answerkey***",answerKey);
+                            Log.d("answerkey***", answerKey.length() + "");
+                            Log.d("userans***", userans);
 
                             data=userans+" "+answerKey;
                             Intent intent=new Intent(TestActivity.this,ResultActivity.class);
@@ -133,11 +132,10 @@ public class TestActivity extends AppCompatActivity {
 
                 load_image();
                 flag=0;
-                if(count==24) {
+                if (count == 49) {
 
                     view.setEnabled(false);
                 }
-
 
                 break;
         }
@@ -179,7 +177,7 @@ public class TestActivity extends AppCompatActivity {
         }
         else
             userans+="E";
-         if(count<25)
+        if (count < 50)
         radioGroup.clearCheck();
 
 
@@ -216,11 +214,11 @@ public class TestActivity extends AppCompatActivity {
         @Override
         public void onFinish() {
 
-            if (count == 25)
+            if (count == 50)
                 btn_submit.performClick();
 
             check_result();
-            if (count < 25)
+            if (count < 50)
                 load_image();
 
         }

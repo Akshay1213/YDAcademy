@@ -1,101 +1,166 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativelayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context="com.example.user.ydacademy.StartTest">
 
-    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="5dp"
+        android:clickable="true"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="5.0px"
+        android:elevation="1dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="10dp"
+        app:cardPreventCornerOverlap="true">
+
+
+        <ImageView
+            android:id="@+id/iv_quiz"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@drawable/quiz" />
+    </android.support.v7.widget.CardView>
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/rules"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="220dp"
         tools:context="com.example.user.adapter_imageview.start_Test">
 
-       <TextView
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:text="Rules"
-           android:textSize="30dp"/>
-
-        <TableRow>
+        <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/layoutpersonalinfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="0dp"
+            android:clickable="true"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="5.0px"
+            android:elevation="1dp"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="10dp"
+            app:cardPreventCornerOverlap="true">
 
             <TextView
+                android:id="@+id/txt_rules"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Rules"
+                android:textSize="30dp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_column="1"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="50dp"
                 android:text="\u25CF"
                 android:textSize="16dp"></TextView>
 
             <TextView
                 android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_column="2"
-                android:layout_marginTop="20dp"
-                android:text="Total number of questions : 25"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="50dp"
+                android:text="Total number of questions : 50"
                 android:textSize="16dp"></TextView>
-        </TableRow>
 
-        <TableRow>
 
             <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_column="1"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="80dp"
                 android:text="\u25CF"
                 android:textSize="16dp"></TextView>
 
             <TextView
                 android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_column="2"
-                android:layout_marginTop="10dp"
-                android:text="Time alloted : 30 seconds to each question."
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="80dp"
+                android:text="Time alloted : 1 minute to each question."
                 android:textSize="16dp"></TextView>
-        </TableRow>
 
-        <TableRow>
 
             <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_column="1"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="110dp"
                 android:text="\u25CF"
                 android:textSize="16dp"></TextView>
 
             <TextView
                 android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_column="2"
-                android:layout_marginTop="10dp"
-                android:text="Each question carry 2 mark, no negative marks."
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="110dp"
+                android:text="Each question carry 1 mark, no negative marks."
                 android:textSize="16dp"></TextView>
-        </TableRow>
 
-        <TableRow>
 
             <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_column="1"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="140dp"
                 android:text="\u25CF"
                 android:textSize="16dp"></TextView>
 
             <TextView
                 android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_column="2"
-                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="140dp"
                 android:text="Best luck..!"
                 android:textSize="16dp"></TextView>
-        </TableRow>
 
-
-    </TableLayout>
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
 
     <Button
         android:id="@+id/btn_startTest"
-        android:layout_width="100dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="0dp"
         android:background="@drawable/style"
-        android:backgroundTint="#00e5ff"
-        android:text="start test" />
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:text="start test"
+        android:textColor="@color/white" />
 
 </RelativeLayout>
