@@ -77,13 +77,13 @@ public class ResultActivity extends AppCompatActivity {
             }
         }
 
-        correct.setText((marks/2) + "");
+        correct.setText((marks) + "");
         correct.setTextColor(Color.parseColor("#00b0ff"));
-        incorrect.setText(attained - (marks/2) + "");
+        incorrect.setText(attained - (marks) + "");
         incorrect.setTextColor(Color.RED);
         answered.setText(attained + "");
         answered.setTextColor(Color.parseColor("#00b0ff"));
-        unanswered.setText(25 - attained + "");
+        unanswered.setText(50 - attained + "");
         unanswered.setTextColor(Color.RED);
 
       if (marks>=0&&marks<=20)
@@ -96,15 +96,12 @@ public class ResultActivity extends AppCompatActivity {
             performance.setImageDrawable(getResources().getDrawable(R.drawable.average));
             text_performance.setText("Average performance");
             text_performance.setTextColor(Color.parseColor("#FFA500"));
-        }
-
-        else if (marks > 30 && marks <= 40)
+        } else if (marks > 30 && marks <= 45)
         {
             performance.setImageDrawable(getResources().getDrawable(R.drawable.good));
             text_performance.setText("Good performance");
             text_performance.setTextColor(Color.parseColor("#f4511e"));
-        }
-        else if (marks > 40 && marks <=50)
+        } else if (marks > 45 && marks <= 50)
         {
             performance.setImageDrawable(getResources().getDrawable(R.drawable.excellent));
             text_performance.setText("Excellent performance");
@@ -115,8 +112,8 @@ public class ResultActivity extends AppCompatActivity {
         String arr1[] = DateFormat.format("yyyy-MM-dd hh:mm:ss", d.getTime()).toString().split(" ");
         urlRequest = UrlRequest.getObject();
         urlRequest.setContext(ResultActivity.this);
-        Log.d("URL", "http://yashodeepacademy.co.in/updatestudentresult.php?student_id=" + id + "&examcode=" + es + chapter + "&score=" + marks + "-25" + "&date=" + arr1[0] + "&time=" + arr1[1]);
-        urlRequest.setUrl("http://yashodeepacademy.co.in/updatestudentresult.php?student_id=" + id + "&examcode=" + es + chapter + "&score=" + marks + "-25" + "&date=" + arr1[0] + "&time=" + arr1[1]);
+        Log.d("URL", "http://yashodeepacademy.co.in/updatestudentresult.php?student_id=" + id + "&examcode=" + es + chapter + "&score=" + marks + "-50" + "&date=" + arr1[0] + "&time=" + arr1[1]);
+        urlRequest.setUrl("http://yashodeepacademy.co.in/updatestudentresult.php?student_id=" + id + "&examcode=" + es + chapter + "&score=" + marks + "-50" + "&date=" + arr1[0] + "&time=" + arr1[1]);
         urlRequest.getResponse(new ServerCallback() {
             @Override
             public void onSuccess(String response) {

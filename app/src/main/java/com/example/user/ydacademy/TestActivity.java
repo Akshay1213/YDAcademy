@@ -81,9 +81,9 @@ public class TestActivity extends AppCompatActivity {
         switch (view.getId()) {
             case R.id.btn_submit:
 
-                if (flag == 0 || count == 25)
+                if (flag == 0 || count == 50)
                     check_result();
-                while (userans.length()<25) {
+                while (userans.length() < 50) {
                     userans+="E";
                 }
 
@@ -133,7 +133,7 @@ public class TestActivity extends AppCompatActivity {
 
                 load_image();
                 flag=0;
-                if(count==24) {
+                if (count == 49) {
 
                     view.setEnabled(false);
                 }
@@ -179,7 +179,7 @@ public class TestActivity extends AppCompatActivity {
         }
         else
             userans+="E";
-         if(count<25)
+        if (count < 50)
         radioGroup.clearCheck();
 
 
@@ -216,11 +216,11 @@ public class TestActivity extends AppCompatActivity {
         @Override
         public void onFinish() {
 
-            if (count == 25)
+            if (count == 50)
                 btn_submit.performClick();
 
             check_result();
-            if (count < 25)
+            if (count < 50)
                 load_image();
 
         }
