@@ -11,6 +11,8 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
@@ -40,6 +42,7 @@ public class StudentStatforAdmin extends AppCompatActivity {
     Spinner spinnerClass;
     @InjectView(R.id.cv)
     CardView cardView1;
+    Button submit;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,13 +53,14 @@ public class StudentStatforAdmin extends AppCompatActivity {
         recyclerView.setVisibility(View.GONE);
         sp = getSharedPreferences("YourSharedPreference", Activity.MODE_PRIVATE);
         id = sp.getString("ID", null);
-        Button submit = (Button) findViewById(R.id.btnSubmit);
+        submit = (Button) findViewById(R.id.btnSubmit);
 
         submit.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-
+                Animation animation = AnimationUtils.loadAnimation(StudentStatforAdmin.this, R.anim.bounce);
+                //  submit.setAnimation(animation);
                 name = edtUsername.getText().toString();
                 class1 = spinnerClass.getSelectedItem().toString();
                 Log.d("class", class1);
@@ -163,7 +167,7 @@ public class StudentStatforAdmin extends AppCompatActivity {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
             android.support.v7.app.ActionBar ab = getSupportActionBar();
             ab.setTitle("Yashodeep Academy");
-            ab.setSubtitle("Home/Student Stat");
+            ab.setSubtitle("Home/Admin Panel");
         }
     }
 

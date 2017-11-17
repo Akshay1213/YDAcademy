@@ -19,8 +19,8 @@ public class AchieversDescription extends AppCompatActivity {
 
     @InjectView(R.id.profile_image)
     ImageView imageProfile;
-    @InjectView(R.id.txtId)
-    TextView txtId;
+    /* @InjectView(R.id.txtId)
+     TextView txtId;*/
     @InjectView(R.id.txtName)
     TextView txtName;
     @InjectView(R.id.txtClass)
@@ -41,7 +41,7 @@ public class AchieversDescription extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_achievers_description);
         ButterKnife.inject(this);
-        id = getIntent().getStringExtra("Id");
+        // id = getIntent().getStringExtra("Id");
         name = getIntent().getStringExtra("Name");
         class1 = getIntent().getStringExtra("Class");
         desc = getIntent().getStringExtra("Desc");
@@ -50,7 +50,7 @@ public class AchieversDescription extends AppCompatActivity {
         desc2 = a[1];
         url = getIntent().getStringExtra("Url");
         txtName.setText(name);
-        txtId.setText(id);
+        // txtId.setText(id);
         txtClass.setText(class1);
         txtDescription.setText(desc1);
         txtDescription1.setText(desc2);
