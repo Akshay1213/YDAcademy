@@ -77,6 +77,7 @@ public class ResultActivity extends AppCompatActivity {
             }
         }
 
+
         correct.setText(marks + "");
         correct.setTextColor(Color.BLACK);
         incorrect.setText(attained - marks + "");

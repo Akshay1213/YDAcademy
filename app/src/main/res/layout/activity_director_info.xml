@@ -32,7 +32,7 @@
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:layout_marginTop="5dp"
-            android:src="@drawable/directorimage"
+            android:src="@drawable/director"
             app:border_color="#000000"
             app:border_width="3dp" />
         <!-- </android.support.v7.widget.CardView>-->
@@ -76,99 +76,115 @@
                 android:id="@+id/txt_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="5dp"
                 android:paddingLeft="2dp"
                 android:text="Name"
                 android:textColor="@color/black"
-                android:textSize="20dp" />
+                android:textSize="15dp" />
 
             <TextView
                 android:id="@+id/name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
                 android:layout_marginTop="0dp"
                 android:paddingLeft="2dp"
-                android:text="Mr. NINNNnnvjjv jgbvb"
-                android:textColor="@color/colorPrimaryDark" />
+                android:text="Mr. Yogesh darekar."
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="15dp" />
 
             <TextView
                 android:id="@+id/txt_adr"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
                 android:layout_marginTop="6dp"
                 android:paddingLeft="2dp"
                 android:text="Address"
                 android:textColor="@color/black"
-                android:textSize="20dp" />
+                android:textSize="15dp" />
 
             <TextView
                 android:id="@+id/address"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
                 android:layout_marginTop="0dp"
                 android:paddingLeft="2dp"
-                android:text="ccbhbcbc cbchb cbhcb"
-                android:textColor="@color/colorPrimaryDark" />
+                android:text="Opp.cosmos bank,near chaudhary hotel,dhurve complex,Alandi,Pune-412105"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="15dp" />
 
 
             <TextView
                 android:id="@+id/txt_phone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
                 android:layout_marginTop="6dp"
                 android:paddingLeft="2dp"
                 android:text="Phone number"
                 android:textColor="@color/black"
-                android:textSize="20dp" />
+                android:textSize="15dp" />
 
             <TextView
                 android:id="@+id/phoneNumber"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
                 android:layout_marginTop="0dp"
                 android:paddingLeft="2dp"
-                android:text="02597-987654"
-                android:textColor="@color/colorPrimaryDark" />
+                android:text="8793464548"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="15dp" />
 
 
             <TextView
                 android:id="@+id/txt_mobile"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
                 android:layout_marginTop="6dp"
                 android:paddingLeft="2dp"
                 android:text="Mobile number"
                 android:textColor="@color/black"
-                android:textSize="20dp" />
+                android:textSize="15dp" />
 
             <TextView
                 android:id="@+id/mobileNumber"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
                 android:layout_marginTop="0dp"
                 android:paddingLeft="2dp"
-                android:text="8765432678"
-                android:textColor="@color/colorPrimaryDark" />
+                android:text="9552827081"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="15dp" />
 
 
             <TextView
                 android:id="@+id/txt_email"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
                 android:layout_marginTop="6dp"
                 android:paddingLeft="2dp"
                 android:text="Email-Id"
                 android:textColor="@color/black"
-                android:textSize="20dp" />
+                android:textSize="15dp" />
 
             <TextView
                 android:id="@+id/emailid"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="6dp"
+                android:layout_marginLeft="3dp"
                 android:layout_marginTop="0dp"
                 android:paddingLeft="2dp"
-                android:text="abc@gmail.com"
-                android:textColor="@color/colorPrimaryDark" />
+                android:text="yogeshndarekar@gmail.com"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="15dp" />
 
 
         </LinearLayout>
@@ -211,33 +227,30 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1">
 
+                <android.support.v4.widget.NestedScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="fill_horizontal"
+                    android:layout_margin="10dp">
                 <me.biubiubiu.justifytext.library.JustifyTextView
                     android:id="@+id/directorMsg"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/logoimage"
+                    android:layout_centerHorizontal="true"
                     android:layout_centerInParent="true"
                     android:layout_centerVertical="true"
                     android:layout_gravity="fill_horizontal"
-                    android:layout_marginBottom="60dp"
-                    android:layout_marginLeft="30dp"
-                    android:layout_marginRight="30dp"
-                    android:layout_marginTop="30dp"
+                    android:layout_margin="10dp"
+                    android:layout_marginRight="0dp"
                     android:lineSpacingMultiplier="1.1"
-                    android:text="@string/aboutus" />
+                    android:paddingBottom="10dp" />
+                </android.support.v4.widget.NestedScrollView>
 
-                <ProgressBar
-                    android:id="@+id/progress"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:layout_marginLeft="120dp"
-                    android:layout_marginTop="60dp" />
             </FrameLayout>
-            <!--<TextView-->
-            <!--android:id="@+id/directorMsg"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:padding="5dp" />-->
+
         </LinearLayout>
     </android.support.v7.widget.CardView>
 </RelativeLayout>
