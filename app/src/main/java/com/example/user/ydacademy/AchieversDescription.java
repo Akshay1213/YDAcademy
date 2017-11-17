@@ -3,7 +3,9 @@ package com.example.user.ydacademy;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
@@ -23,6 +25,8 @@ public class AchieversDescription extends AppCompatActivity {
     TextView txtName;
     @InjectView(R.id.txtDescription)
     TextView txtDescription;
+    @InjectView(R.id.progress)
+    ProgressBar progressBar;
     String id, name, desc, url;
     //  DataStudent arrayList;
 
@@ -43,13 +47,13 @@ public class AchieversDescription extends AppCompatActivity {
             @Override
             public boolean onException(Exception e, String model, Target<Bitmap> target, boolean isFirstResource) {
 
-                //  progressBar.setVisibility(View.VISIBLE);
+                progressBar.setVisibility(View.VISIBLE);
                 return false;
             }
 
             @Override
             public boolean onResourceReady(Bitmap resource, String model, Target<Bitmap> target, boolean isFromMemoryCache, boolean isFirstResource) {
-                // progressBar.setVisibility(View.GONE);
+                progressBar.setVisibility(View.GONE);
                 return false;
             }
         }).error(null)

@@ -2,6 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context="com.example.user.ydacademy.TabActivity">
 
     <LinearLayout
@@ -9,6 +10,16 @@
         android:layout_height="match_parent"
         android:animateLayoutChanges="true"
         android:orientation="vertical">
+
+        <ImageView
+
+            android:id="@+id/iv"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@drawable/quote"
+            android:gravity="center_vertical"
+            android:minHeight="?android:attr/listPreferredItemHeight"
+            android:padding="20dp" />
 
         <TextView
             android:id="@+id/header1"
@@ -41,7 +52,7 @@
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:layout_marginTop="20dp"
-            android:background="@drawable/careerafter12"
+            android:background="@drawable/careerrafter12"
             android:gravity="center_vertical"
             android:minHeight="?android:attr/listPreferredItemHeight"
             android:padding="20dp"

@@ -1,6 +1,7 @@
 package com.example.user.ydacademy;
 
 import android.annotation.TargetApi;
+import android.app.ProgressDialog;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -27,6 +28,7 @@ public class StaffActivity extends AppCompatActivity {
     RecyclerView listStaff;
     List<DataStaff> data;
     RecyclerView recyclerView;
+    ProgressDialog loading;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +36,8 @@ public class StaffActivity extends AppCompatActivity {
         setContentView(R.layout.activity_staff);
         ButterKnife.inject(this);
         actionBarSetup();
+        loading = ProgressDialog.show(StaffActivity.this, "Loading", "Please wait.....", false, false);
+
         final List<DataStaff> data = new ArrayList<>();
         urlRequest = UrlRequest.getObject();
         urlRequest.setContext(StaffActivity.this);
@@ -60,6 +64,7 @@ public class StaffActivity extends AppCompatActivity {
                                            recyclerView.setAdapter(adapter);
                                            recyclerView.setLayoutManager(new GridLayoutManager(StaffActivity.this, 2));
                                            adapter.notifyDataSetChanged();
+                                           loading.dismiss();
 
                                        } catch (JSONException e1) {
                                            e1.printStackTrace();

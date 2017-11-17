@@ -57,7 +57,6 @@ public class OurAchievers extends AppCompatActivity {
                                                @Override
                                                public void onItemClick(View view, int position) {
                                                    // Toast.makeText(OurAchievers.this,"On"+data.get(position),Toast.LENGTH_LONG).show();
-
                                                    Intent intent = new Intent(OurAchievers.this, AchieversDescription.class);
                                                    intent.putExtra("Name", data.get(position).name);
                                                    intent.putExtra("Id", data.get(position).id);
@@ -79,31 +78,7 @@ public class OurAchievers extends AppCompatActivity {
                                    }
                                }
         );
-       /* recyclerView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //data.get(position);
-                Intent intent = new Intent(OurAchievers.this, AchieversDescription.class);
-                intent.putExtra("Name",studentData.name);
-                intent.putExtra("Id",studentData.id);
-                intent.putExtra("Description",studentData.description);
-            }
-        });
-*/
-
     }
-
-   /* @OnItemClick(R.id.Liststudent)
-    public void onItemClick(int position)
-    {
-        data.get(position);
-       Intent intent = new Intent(OurAchievers.this, AchieversDescription.class);
-       intent.putExtra("Name",studentData.name);
-       intent.putExtra("Id",studentData.id);
-       intent.putExtra("Description",studentData.description);
-    }*/
-
-
     @TargetApi(Build.VERSION_CODES.HONEYCOMB)
     private void actionBarSetup() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
