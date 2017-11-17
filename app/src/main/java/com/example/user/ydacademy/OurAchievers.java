@@ -1,6 +1,7 @@
 package com.example.user.ydacademy;
 
 import android.annotation.TargetApi;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
@@ -24,6 +25,7 @@ public class OurAchievers extends AppCompatActivity {
     AdapterStudent adapter;
     List<DataStudent> data;
     DataStudent studentData;
+    ProgressDialog loading;
     /*  @InjectView(R.id.Liststudent)*/ RecyclerView recyclerView;
 
     @Override
@@ -35,6 +37,8 @@ public class OurAchievers extends AppCompatActivity {
         urlRequest = UrlRequest.getObject();
         urlRequest.setContext(OurAchievers.this);
         urlRequest.setUrl("http://yashodeepacademy.co.in/fetchstudentacheivers.php");
+        loading = ProgressDialog.show(OurAchievers.this, "Loading", "Please wait.....", false, false);
+
         urlRequest.getResponse(new ServerCallback() {
                                    @Override
                                    public void onSuccess(String response) {
@@ -71,6 +75,7 @@ public class OurAchievers extends AppCompatActivity {
                                            recyclerView.setAdapter(adapter);
                                            recyclerView.setLayoutManager(new GridLayoutManager(OurAchievers.this, 2));
                                            adapter.notifyDataSetChanged();
+                                           loading.dismiss();
 
                                        } catch (JSONException e1) {
                                            e1.printStackTrace();

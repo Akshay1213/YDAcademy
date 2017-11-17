@@ -88,7 +88,7 @@
                 android:layout_marginLeft="3dp"
                 android:layout_marginTop="0dp"
                 android:paddingLeft="2dp"
-                android:text="Mr. Yogesh darekar."
+                android:text="Mr. Yogesh Darekar."
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="15dp" />
 

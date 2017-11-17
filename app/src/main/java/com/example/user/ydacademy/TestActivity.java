@@ -45,7 +45,7 @@ public class TestActivity extends AppCompatActivity {
     String answerKey, ans, data, userans, exam, subject, chapter, es, class1;
     ProgressBar progressBar ;
     CharSequence s;
-    int count;
+    int count, c;
     UrlRequest urlRequest;
     JSONObject json_data;
     SharedPreferences sp;
@@ -56,6 +56,7 @@ public class TestActivity extends AppCompatActivity {
         setContentView(R.layout.activity_test);
         ButterKnife.inject(this);
         count=0;
+        c = 0;
         userans="";
         data="";
         ans=null;
@@ -152,8 +153,16 @@ public class TestActivity extends AppCompatActivity {
                public boolean onException(Exception e, String model, Target<Bitmap> target, boolean isFirstResource) {
                    progressBar.setVisibility(View.VISIBLE);
                    countDownTimer.cancel();
+                   c++;
                    text_queNumber.setText(count + 1 + ".");
-                   btn_next.performClick();
+                   if (c == 2) {
+                       count++;
+                       c = 0;
+                   }
+                   if (count == 49)
+                       btn_submit.performClick();
+                   else
+                       btn_next.performClick();
                    return false;
                }
 
