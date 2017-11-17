@@ -14,6 +14,8 @@ import android.transition.Explode;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
@@ -78,6 +80,8 @@ public class LoginActivity extends AppCompatActivity {
         switch (view.getId()) {
 
             case R.id.btnLogin:
+                Animation animation = AnimationUtils.loadAnimation(LoginActivity.this, R.anim.bounce);
+                //  btnLogin.setAnimation(animation);
 
                 username = edtUsername.getText().toString().trim();
                 password = edtPassword.getText().toString().trim();

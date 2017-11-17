@@ -21,134 +21,49 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="130dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="200dp"
                     android:background="#00ffffff"
                     android:text="Our Branches"
-                    android:textSize="15dp"
+                    android:textSize="20dp"
                     android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
                     android:layout_marginTop="3dp"
                     android:background="#00ffffff"
                     android:text="Branch1:"
-                    android:textSize="15dp"
+                    android:textSize="17dp"
                     android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginLeft="20dp"
                     android:background="#00ffffff"
                     android:text="Opp. Cosmos Bank, Near Choudhary Hotel, Dhurve Complex, Alandi, Pune-412105."
-                    android:textSize="14dp"
+                    android:textSize="17dp"
                     android:textStyle="italic" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
                     android:layout_marginTop="3dp"
                     android:text="Branch2:"
-                    android:textSize="15dp"
+                    android:textSize="17dp"
                     android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginLeft="20dp"
                     android:text="Near MIT College, Dehu Phata, Alandi, Pune-412105."
-                    android:textSize="14dp"
+                    android:textSize="17dp"
                     android:textStyle="italic" />
             </LinearLayout>
 
-
-    <!--     &lt;!&ndash;
-                 <ImageView
-                     android:id="@+id/imageView6"
-                     android:layout_width="wrap_content"
-                     android:layout_height="150dp"
-                     android:layout_gravity="center_horizontal"
-                     app:srcCompat="@drawable/logowithoutshdw"/>&ndash;&gt;
-         <TextView
-             android:id="@+id/contact_form_title"
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:layout_gravity="center_horizontal"
-             android:layout_margin="10dp"
-             android:layout_marginBottom="16dp"
-             android:layout_marginTop="5dp"
-             android:focusableInTouchMode="true"
-             android:text="Contact Us"
-             android:textColor="#ce3232"
-             android:textSize="35sp"
-             android:typeface="serif" />
-
-         <EditText
-             android:id="@+id/name"
-             android:layout_width="fill_parent"
-             android:layout_height="wrap_content"
-             android:layout_margin="10dp"
-             android:backgroundTint="@color/colorPrimaryDark"
-             android:focusableInTouchMode="true"
-             android:hint="Name"
-             android:inputType="textPersonName" />
-
-         <Spinner
-             android:id="@+id/spinner1"
-             android:layout_marginTop="10dp"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent"
-             android:entries="@array/class1"/>
-
-         <EditText
-             android:id="@+id/email"
-             android:layout_width="fill_parent"
-             android:layout_height="wrap_content"
-             android:layout_margin="10dp"
-             android:layout_marginBottom="10dp"
-             android:layout_marginTop="10dp"
-             android:backgroundTint="@color/colorPrimaryDark"
-             android:hint="Email"
-             android:inputType="textEmailAddress" />
-
-         <EditText
-             android:id="@+id/phone"
-             android:layout_width="fill_parent"
-             android:layout_height="wrap_content"
-             android:layout_margin="10dp"
-             android:backgroundTint="@color/colorPrimaryDark"
-             android:hint="Phone"
-             android:inputType="phone"
-             android:maxLength="10" />
-
-         <EditText
-             android:id="@+id/description"
-             android:layout_width="fill_parent"
-             android:layout_height="150dp"
-             android:layout_margin="10dp"
-             android:layout_marginBottom="10dp"
-             android:layout_marginTop="10dp"
-             android:backgroundTint="@color/colorPrimaryDark"
-             android:breakStrategy="balanced"
-             android:fitsSystemWindows="true"
-             android:gravity="top"
-             android:hint="Comment..."
-             android:inputType="textMultiLine"
-             android:padding="5dp"
-             android:singleLine="false" />
-
-         <Button
-             android:id="@+id/btnSubmit"
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:layout_gravity="center_horizontal"
-             android:layout_margin="10dp"
-             android:background="@color/colorPrimaryDark"
-             android:elevation="4dp"
-             android:paddingLeft="70dp"
-             android:paddingRight="70dp"
-             android:text="Submit"
-             android:textColor="#fff" />-->
     </RelativeLayout>
 

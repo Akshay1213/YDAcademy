@@ -44,7 +44,6 @@ public class Performance extends AppCompatActivity {
         Log.d("Class", class1);
 
         urlRequest = UrlRequest.getObject();
-
         urlRequest.setContext(Performance.this);
         urlRequest.setUrl("http://yashodeepacademy.co.in/fetchexamstat.php?student_id=" + id + "&class=" + class1);
         urlRequest.getResponse(new ServerCallback() {
@@ -61,7 +60,6 @@ public class Performance extends AppCompatActivity {
                                                    JSONObject jsonObject = jsonArray.getJSONObject(i);
                                                    exam1 = jsonObject.getString("examcode");
                                                    Log.d("Exam", exam1);
-
                                                    switch (exam1.charAt(0)) {
                                                        case 'n':
                                                            dataPerformance.exam = "NEET";

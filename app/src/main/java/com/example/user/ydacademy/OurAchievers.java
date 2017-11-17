@@ -51,7 +51,8 @@ public class OurAchievers extends AppCompatActivity {
                                                JSONObject jsonObject = jsonArray.getJSONObject(i);
                                                studentData.name = jsonObject.getString("name");
                                                studentData.id = jsonObject.getString("id");
-                                               studentData.description = jsonObject.getString("description");
+                                               studentData.class1 = jsonObject.getString("class");
+                                               studentData.description = jsonObject.getString("desc");
                                                data.add(studentData);
                                            }
                                            Log.d("Size", data.size() + "");
@@ -63,7 +64,8 @@ public class OurAchievers extends AppCompatActivity {
                                                    // Toast.makeText(OurAchievers.this,"On"+data.get(position),Toast.LENGTH_LONG).show();
                                                    Intent intent = new Intent(OurAchievers.this, AchieversDescription.class);
                                                    intent.putExtra("Name", data.get(position).name);
-                                                   intent.putExtra("Id", data.get(position).id);
+                                                   //intent.putExtra("Id", data.get(position).id);
+                                                   intent.putExtra("Class", data.get(position).class1);
                                                    intent.putExtra("Desc", data.get(position).description);
                                                    intent.putExtra("Url", "http://yashodeepacademy.co.in/studentacheivers/" + data.get(position).id + ".jpg");
                                                    startActivity(intent);

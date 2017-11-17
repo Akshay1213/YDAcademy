@@ -83,27 +83,26 @@
                     android:textColor="@color/white"
                     android:textSize="20dp" />
 
-                <TextView
-                    android:id="@+id/txt_id"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="6dp"
-                    android:paddingLeft="2dp"
-                    android:text="Id"
-                    android:textColor="@color/black"
-                    android:textSize="20dp" />
+                <!--       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_marginTop="6dp"
+                           android:paddingLeft="2dp"
+                           android:text="Id"
+                           android:textColor="@color/black"
+                           android:textSize="20dp" />
+
+                       <TextView
+                           android:id="@+id/txtId"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_marginTop="0dp"
+                           android:paddingLeft="2dp"
+                           android:text=""
+                           android:textColor="@color/colorPrimaryDark"
+                           android:textSize="17dp" />-->
 
                 <TextView
-                    android:id="@+id/txtId"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="0dp"
-                    android:paddingLeft="2dp"
-                    android:text=""
-                    android:textColor="@color/colorPrimaryDark" />
-
-                <TextView
-                    android:id="@+id/txt_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingLeft="2dp"
@@ -118,157 +117,102 @@
                     android:layout_marginTop="0dp"
                     android:paddingLeft="2dp"
                     android:text=""
-                    android:textColor="@color/colorPrimaryDark" />
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="17dp" />
 
                 <TextView
-                    android:id="@+id/txt_description"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="6dp"
                     android:paddingLeft="2dp"
-                    android:text="Description"
+                    android:text="Class"
                     android:textColor="@color/black"
                     android:textSize="20dp" />
 
                 <TextView
-                    android:id="@+id/txtDescription"
+                    android:id="@+id/txtClass"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="0dp"
                     android:paddingLeft="2dp"
                     android:text=""
-                    android:textColor="@color/colorPrimaryDark" />
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="17dp" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_marginTop="6dp"
+                     android:paddingLeft="2dp"
+                    android:text="Description"
+                     android:textColor="@color/black"
+                     android:textSize="20dp" />
+
+                 <TextView
+                     android:id="@+id/txtDesc1"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_marginTop="0dp"
+                     android:paddingLeft="2dp"
+                     android:text=""
+                     android:textColor="@color/colorPrimaryDark"
+                     android:textSize="17dp" />
+
+                <TextView
+                    android:id="@+id/txtDesc2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:paddingLeft="2dp"
+                    android:text=""
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="17dp" />
 
 
                 <!--  <TextView
-                     android:id="@+id/txt_phone"
-                     android:layout_width="wrap_content"
-                     android:layout_height="wrap_content"
-                     android:layout_marginTop="6dp"
-                     android:paddingLeft="2dp"
-                     android:text="Phone number"
-                     android:textColor="@color/black"
-                     android:textSize="20dp" />
+                    android:id="@+id/txt_mobile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:paddingLeft="2dp"
+                    android:text="Mobile number"
+                    android:textColor="@color/black"
+                    android:textSize="20dp" />
 
-                 <TextView
-                     android:id="@+id/phoneNumber"
-                     android:layout_width="wrap_content"
-                     android:layout_height="wrap_content"
-                     android:layout_marginTop="0dp"
-                     android:paddingLeft="2dp"
-                     android:text="02597-987654"
-                     android:textColor="@color/colorPrimaryDark" />
-
-
-                 <TextView
-                     android:id="@+id/txt_mobile"
-                     android:layout_width="wrap_content"
-                     android:layout_height="wrap_content"
-                     android:layout_marginTop="6dp"
-                     android:paddingLeft="2dp"
-                     android:text="Mobile number"
-                     android:textColor="@color/black"
-                     android:textSize="20dp" />
-
-                 <TextView
-                     android:id="@+id/mobileNumber"
-                     android:layout_width="wrap_content"
-                     android:layout_height="wrap_content"
-                     android:layout_marginTop="0dp"
-                     android:paddingLeft="2dp"
-                     android:text="8765432678"
-                     android:textColor="@color/colorPrimaryDark" />
+                <TextView
+                    android:id="@+id/mobileNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:paddingLeft="2dp"
+                    android:text="8765432678"
+                    android:textColor="@color/colorPrimaryDark" />
 
 
-                 <TextView
-                     android:id="@+id/txt_email"
-                     android:layout_width="wrap_content"
-                     android:layout_height="wrap_content"
-                     android:layout_marginTop="6dp"
-                     android:paddingLeft="2dp"
-                     android:text="Email-Id"
-                     android:textColor="@color/black"
-                     android:textSize="20dp" />
+                <TextView
+                    android:id="@+id/txt_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:paddingLeft="2dp"
+                    android:text="Email-Id"
+                    android:textColor="@color/black"
+                    android:textSize="20dp" />
 
-                 <TextView
-                     android:id="@+id/emailid"
-                     android:layout_width="wrap_content"
-                     android:layout_height="wrap_content"
-                     android:layout_marginBottom="6dp"
-                     android:layout_marginTop="0dp"
-                     android:paddingLeft="2dp"
-                     android:text="abc@gmail.com"
-                     android:textColor="@color/colorPrimaryDark" />
- -->
+                <TextView
+                    android:id="@+id/emailid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="6dp"
+                    android:layout_marginTop="0dp"
+                    android:paddingLeft="2dp"
+                    android:text="abc@gmail.com"
+                    android:textColor="@color/colorPrimaryDark" />
+-->
 
             </LinearLayout>
         </android.support.v7.widget.CardView>
 
-        <!--  <android.support.v7.widget.CardView
-              android:id="@+id/cardviewMsg"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:layout_below="@+id/cardviewinfo"
-              android:layout_centerInParent="true"
-              android:focusable="true"
-              android:focusableInTouchMode="true"
-              android:forceHasOverlappingRendering="false"
-              android:padding="6dp"
-              app:cardCornerRadius="2dp"
-              app:cardElevation="0dp"
-              app:cardPreventCornerOverlap="true"
-              app:cardUseCompatPadding="true">
-
-              <LinearLayout
-                  android:layout_width="match_parent"
-                  android:layout_height="wrap_content"
-                  android:layout_below="@+id/cardviewinfo"
-                  android:orientation="vertical">
-
-                  <TextView
-                      android:layout_width="370dp"
-                      android:layout_height="40dp"
-                      android:layout_gravity="center"
-                      android:background="@color/colorPrimaryDark"
-                      android:gravity="center"
-                      android:text="Director message"
-
-                      android:textColor="@color/white"
-                      android:textSize="20dp" />
-
-                  <FrameLayout
-                      android:layout_width="match_parent"
-                      android:layout_height="wrap_content"
-                      android:layout_weight="1">
-
-                      <me.biubiubiu.justifytext.library.JustifyTextView
-                          android:id="@+id/directorMsg"
-                          android:layout_width="match_parent"
-                          android:layout_height="wrap_content"
-                          android:layout_below="@+id/logoimage"
-                          android:layout_centerInParent="true"
-                          android:layout_centerVertical="true"
-                          android:layout_gravity="fill_horizontal"
-                          android:layout_marginBottom="60dp"
-                          android:layout_marginLeft="30dp"
-                          android:layout_marginRight="30dp"
-                          android:layout_marginTop="30dp"
-                          android:lineSpacingMultiplier="1.1"
-                          android:text="@string/aboutus" />
-
-                      <ProgressBar
-                          android:id="@+id/progress"
-                          android:layout_width="60dp"
-                          android:layout_height="60dp"
-                          android:layout_marginLeft="120dp"
-                          android:layout_marginTop="60dp" />
-                  </FrameLayout>
-                  &lt;!&ndash;<TextView&ndash;&gt;
-                  &lt;!&ndash;android:id="@+id/directorMsg"&ndash;&gt;
-                  &lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;
-                  &lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;
-                  &lt;!&ndash;android:padding="5dp" />&ndash;&gt;
-              </LinearLayout>
-          </android.support.v7.widget.CardView>-->
     </RelativeLayout>
 </ScrollView>

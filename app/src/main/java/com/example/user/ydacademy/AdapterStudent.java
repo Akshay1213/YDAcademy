@@ -65,7 +65,7 @@ public class AdapterStudent extends RecyclerView.Adapter<RecyclerView.ViewHolder
         dataStudent = data.get(position);
         myHolder.name.setText(dataStudent.name);
         Log.d("name", dataStudent.name);
-        myHolder.description.setText(dataStudent.description);
+        myHolder.description.setText(dataStudent.class1);
 
         Glide.with(context).load("http://yashodeepacademy.co.in/studentacheivers/" + dataStudent.id + ".jpg").asBitmap().override(600, 600)
                 .placeholder(null).listener(new RequestListener<String, Bitmap>() {

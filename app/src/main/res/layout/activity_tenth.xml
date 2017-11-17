@@ -1,52 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     android:orientation="vertical"
     tools:context="com.example.user.ydacademy.TenthActivity">
 
-    <android.support.v7.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        app:cardElevation="5dp">
 
-        <ImageView
+    <ImageView
         android:id="@+id/imageEnglish"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-            android:src="@drawable/english" />
-    </android.support.v7.widget.CardView>
+        android:src="@drawable/english" />
 
-    <android.support.v7.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:layout_marginTop="10dp"
-        app:cardElevation="5dp">
-
-        <ImageView
+    <ImageView
         android:id="@+id/imageMaths"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="0.4"
-        android:src="@drawable/math" />
-    </android.support.v7.widget.CardView>
+        android:layout_marginTop="5dp"
+        android:src="@drawable/maths" />
 
-    <android.support.v7.widget.CardView
+    <ImageView
+        android:id="@+id/imageScience"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:layout_marginTop="10dp"
-        app:cardElevation="5dp">
-
-        <ImageView
-            android:id="@+id/imageScience"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.4"
-            android:src="@drawable/science" />
-    </android.support.v7.widget.CardView>
+        android:layout_marginTop="5dp"
+        android:src="@drawable/science" />
 </LinearLayout>

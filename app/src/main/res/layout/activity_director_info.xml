@@ -110,7 +110,7 @@
                 android:layout_marginLeft="3dp"
                 android:layout_marginTop="0dp"
                 android:paddingLeft="2dp"
-                android:text="Opp.cosmos bank,near chaudhary hotel,dhurve complex,Alandi,Pune-412105"
+                android:text="Opp.Cosmos bank,near Choudhary hotel,Dhurve complex,Alandi,Pune-412105"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="15dp" />
 

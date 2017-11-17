@@ -7,5 +7,5 @@ import java.io.Serializable;
  */
 
 public class DataStudent implements Serializable {
-    String id, name, description, studenturl;
+    String id, name, description, class1;
 }
