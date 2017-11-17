@@ -271,7 +271,7 @@ public class MainActivity extends ActionBarActivity
                     startActivity(new Intent(this, TabActivity.class));
                 break;
             case R.id.btn_career:
-                btn_career.startAnimation(animation);
+                //  btn_career.startAnimation(animation);
                 intent = new Intent(MainActivity.this, CareerGuidance.class);
                 startActivity(intent);
 

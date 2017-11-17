@@ -18,6 +18,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -126,6 +127,7 @@ public class LoginActivity extends AppCompatActivity {
                                                            intent = new Intent();
                                                            intent.putExtra("data", true);
                                                            setResult(RESULT_OK, intent);
+                                                           Toast.makeText(LoginActivity.this, "Login successful", Toast.LENGTH_LONG).show();
                                                            finish();
                                                        }
                                                        return;
