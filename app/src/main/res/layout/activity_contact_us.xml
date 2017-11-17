@@ -21,10 +21,10 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="130dp"
+                    android:layout_marginTop="200dp"
                     android:background="#00ffffff"
                     android:text="Our Branches"
-                    android:textSize="15dp"
+                    android:textSize="20dp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -33,7 +33,7 @@
                     android:layout_marginTop="3dp"
                     android:background="#00ffffff"
                     android:text="Branch1:"
-                    android:textSize="15dp"
+                    android:textSize="17dp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -42,7 +42,7 @@
                     android:layout_marginLeft="10dp"
                     android:background="#00ffffff"
                     android:text="Opp. Cosmos Bank, Near Choudhary Hotel, Dhurve Complex, Alandi, Pune-412105."
-                    android:textSize="14dp"
+                    android:textSize="17dp"
                     android:textStyle="italic" />
 
                 <TextView
@@ -50,7 +50,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="3dp"
                     android:text="Branch2:"
-                    android:textSize="15dp"
+                    android:textSize="17dp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -58,7 +58,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:text="Near MIT College, Dehu Phata, Alandi, Pune-412105."
-                    android:textSize="14dp"
+                    android:textSize="17dp"
                     android:textStyle="italic" />
             </LinearLayout>
 
