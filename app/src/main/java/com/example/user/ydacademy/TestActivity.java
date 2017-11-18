@@ -159,7 +159,7 @@ public class TestActivity extends AppCompatActivity {
                        count++;
                        c = 0;
                    }
-                   if (count == 49)
+                   if (count == 50)
                        btn_submit.performClick();
                    else
                        btn_next.performClick();
