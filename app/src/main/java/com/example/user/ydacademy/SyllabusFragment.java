@@ -7,6 +7,8 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.TextView;
 
 import butterknife.ButterKnife;
@@ -59,12 +61,8 @@ public class SyllabusFragment extends Fragment {
     TextView txtBiology;
     @InjectView(R.id.txtBiology1)
     TextView txtBiology1;
-    /* @InjectView(R.id.txtBiology2)
-     TextView txtBiology2;*/
     @InjectView(R.id.txtBiology3)
     TextView txtBiology3;
-    /*  @InjectView(R.id.txtMaths)
-      TextView txtMaths;*/
     @InjectView(R.id.txtMaths1)
     TextView txtMaths1;
     @InjectView(R.id.txtMaths2)
@@ -83,12 +81,11 @@ public class SyllabusFragment extends Fragment {
         return view;
     }
 
-    @OnClick({R.id.header1, R.id.header2, R.id.header3, R.id.header4, R.id.txtPhysics, R.id.txtPhysics1, R.id.txtPhysics2, R.id.txtPhysics3, R.id.txtChemistry, R.id.txtChemistry1, R.id.txtChemistry2, R.id.txtChemistry3, R.id.txtBiology, R.id.txtBiology1, /*R.id.txtBiology2, */R.id.txtBiology3,/* R.id.txtMaths,*/ R.id.txtMaths1, R.id.txtMaths2, R.id.txtMaths3})
+    @OnClick({R.id.header1, R.id.header2, R.id.header3, R.id.header4, R.id.txtPhysics, R.id.txtPhysics1, R.id.txtPhysics2, R.id.txtPhysics3, R.id.txtChemistry, R.id.txtChemistry1, R.id.txtChemistry2, R.id.txtChemistry3, R.id.txtBiology, R.id.txtBiology1, R.id.txtBiology3, R.id.txtMaths1, R.id.txtMaths2, R.id.txtMaths3})
     public void onClick(View view) {
         switch (view.getId()) {
 
             case R.id.header1:
-
 
                 exam = header1.getText().toString();
                 intent.putExtra("Exam", exam);
@@ -96,8 +93,11 @@ public class SyllabusFragment extends Fragment {
                     section2.setVisibility(View.GONE);
                     section3.setVisibility(View.GONE);
                     section4.setVisibility(View.GONE);
+                    Animation animation = AnimationUtils.loadAnimation(getActivity(), R.anim.move_down);
+                    section1.setAnimation(animation);
                     section1.setVisibility(View.VISIBLE);
                 } else {
+
                     section1.setVisibility(View.GONE);
                 }
                 break;
@@ -108,9 +108,14 @@ public class SyllabusFragment extends Fragment {
                     section3.setVisibility(View.GONE);
                     section1.setVisibility(View.GONE);
                     section4.setVisibility(View.GONE);
+                    header1.setVisibility(View.GONE);
+                    Animation animation = AnimationUtils.loadAnimation(getActivity(), R.anim.move_down);
+                    section2.setAnimation(animation);
                     section2.setVisibility(View.VISIBLE);
                 } else {
                     section2.setVisibility(View.GONE);
+                    header1.setVisibility(View.VISIBLE);
+
                 }
                 break;
             case R.id.header3:
@@ -120,9 +125,15 @@ public class SyllabusFragment extends Fragment {
                     section1.setVisibility(View.GONE);
                     section2.setVisibility(View.GONE);
                     section4.setVisibility(View.GONE);
+                    header1.setVisibility(View.GONE);
+                    header2.setVisibility(View.GONE);
+                    Animation animation = AnimationUtils.loadAnimation(getActivity(), R.anim.move_down);
+                    section3.setAnimation(animation);
                     section3.setVisibility(View.VISIBLE);
                 } else {
                     section3.setVisibility(View.GONE);
+                    header1.setVisibility(View.VISIBLE);
+                    header2.setVisibility(View.VISIBLE);
                 }
                 break;
             case R.id.header4:
@@ -131,10 +142,19 @@ public class SyllabusFragment extends Fragment {
                 if (section4.getVisibility() == View.GONE) {
                     section2.setVisibility(View.GONE);
                     section3.setVisibility(View.GONE);
+                    header1.setVisibility(View.GONE);
+                    header2.setVisibility(View.GONE);
+                    header3.setVisibility(View.GONE);
+                    Animation animation = AnimationUtils.loadAnimation(getActivity(), R.anim.move_down);
+                    section4.setAnimation(animation);
                     section4.setVisibility(View.VISIBLE);
                     section1.setVisibility(View.GONE);
                 } else {
+
                     section4.setVisibility(View.GONE);
+                    header1.setVisibility(View.VISIBLE);
+                    header2.setVisibility(View.VISIBLE);
+                    header3.setVisibility(View.VISIBLE);
                 }
                 break;
 
@@ -147,7 +167,6 @@ public class SyllabusFragment extends Fragment {
                 break;
             case R.id.txtPhysics1:
                 subject = txtPhysics1.getText().toString();
-//                Log.d("Exam",subject);
                 intent.putExtra("Subject", subject);
                 startActivity(intent);
 
@@ -192,21 +211,13 @@ public class SyllabusFragment extends Fragment {
                 intent.putExtra("Subject", subject);
                 startActivity(intent);
                 break;
-         /*   case R.id.txtBiology2:
-                subject = txtBiology2.getText().toString();
-                intent.putExtra("Subject", subject);
-                startActivity(intent);
-                break;*/
+
             case R.id.txtBiology3:
                 subject = txtBiology3.getText().toString();
                 intent.putExtra("Subject", subject);
                 startActivity(intent);
                 break;
-           /* case R.id.txtMaths:
-                subject = txtMaths.getText().toString();
-                intent.putExtra("Subject", subject);
-                startActivity(intent);
-                break;*/
+
             case R.id.txtMaths1:
                 subject = txtMaths1.getText().toString();
                 intent.putExtra("Subject", subject);

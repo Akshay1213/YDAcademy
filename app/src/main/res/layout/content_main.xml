@@ -114,6 +114,13 @@
                     android:dividerHeight="0.0px"
                     app:cardElevation="2dp"
                     app:cardPreventCornerOverlap="false">
+                    <!--<com.andexert.library.RippleView
+                        android:id="@+id/more2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+                        rv_centered="true">-->
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -130,6 +137,7 @@
                             android:textColor="@color/white"
                             android:textSize="15dp" />
                     </LinearLayout>
+                    <!--  </com.andexert.library.RippleView>-->
 
                 </android.support.v7.widget.CardView>
 

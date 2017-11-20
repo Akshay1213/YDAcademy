@@ -12,7 +12,7 @@
     <color name="bg">#b9424242</color>
     <color name="black_overlay">#66000000</color>
     <color name="primary_dark_material_light">#757575</color>
-    <color name="ad">#66179dd7</color>
+    <color name="ad">#661791d7</color>
     <color name="text">#212121</color>
     <color name="confirmotp">#fafafa</color>
     <color name="secondary">#727272</color>
@@ -28,5 +28,19 @@
     <color name="primary_text">#212121</color>
     <color name="secondary_text">#727272</color>
     <color name="proceed_enable">#72D63A</color>
+    <color name="user_icon_6">#ff8bc34a</color>
     <color name="colorWhite">#FFFFFF</color>
+    <color name="suggestion_highlight_text">#177bbd</color>
+    <color name="user_icon_3">#ff4285f4</color>
+    <color name="keyguard_text_color_unlock">#a7d84c</color>
+    <color name="highlighted_text_dark">#9983CC39</color>
+    <color name="user_icon_8">#ffff5722</color>
+    <color name="user_icon_7">#ffff9800</color>
+    <color name="keyguard_text_color_soundon">#e69310</color>
+    <color name="icon1">#FF3A27</color>
+    <color name="icon2">#2B6E8C</color>
+    <color name="icon3">#74C35C</color>
+    <color name="icon4">#3A95C0</color>
+
+
 </resources>

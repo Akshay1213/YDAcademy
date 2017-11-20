@@ -7,6 +7,8 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.TextView;
 
 import butterknife.ButterKnife;
@@ -92,6 +94,8 @@ public class TestFragment extends Fragment {
                     section2.setVisibility(View.GONE);
                     section3.setVisibility(View.GONE);
                     section4.setVisibility(View.GONE);
+                    Animation animation = AnimationUtils.loadAnimation(getActivity(), R.anim.move_down);
+                    section1.setAnimation(animation);
                     section1.setVisibility(View.VISIBLE);
                 } else {
                     section1.setVisibility(View.GONE);
@@ -103,10 +107,16 @@ public class TestFragment extends Fragment {
                 if (section2.getVisibility() == View.GONE) {
                     section3.setVisibility(View.GONE);
                     section1.setVisibility(View.GONE);
+                    header1.setVisibility(View.GONE);
+
                     section4.setVisibility(View.GONE);
+                    Animation animation = AnimationUtils.loadAnimation(getActivity(), R.anim.move_down);
+                    section2.setAnimation(animation);
                     section2.setVisibility(View.VISIBLE);
                 } else {
                     section2.setVisibility(View.GONE);
+                    header1.setVisibility(View.VISIBLE);
+
                 }
                 break;
             case R.id.header3:
@@ -116,9 +126,15 @@ public class TestFragment extends Fragment {
                     section1.setVisibility(View.GONE);
                     section2.setVisibility(View.GONE);
                     section4.setVisibility(View.GONE);
+                    header1.setVisibility(View.GONE);
+                    header2.setVisibility(View.GONE);
+                    Animation animation = AnimationUtils.loadAnimation(getActivity(), R.anim.move_down);
+                    section3.setAnimation(animation);
                     section3.setVisibility(View.VISIBLE);
                 } else {
                     section3.setVisibility(View.GONE);
+                    header1.setVisibility(View.VISIBLE);
+                    header2.setVisibility(View.VISIBLE);
                 }
                 break;
             case R.id.header4:
@@ -127,10 +143,18 @@ public class TestFragment extends Fragment {
                 if (section4.getVisibility() == View.GONE) {
                     section2.setVisibility(View.GONE);
                     section3.setVisibility(View.GONE);
+                    header1.setVisibility(View.GONE);
+                    header2.setVisibility(View.GONE);
+                    header3.setVisibility(View.GONE);
+                    Animation animation = AnimationUtils.loadAnimation(getActivity(), R.anim.move_down);
+                    section4.setAnimation(animation);
                     section4.setVisibility(View.VISIBLE);
                     section1.setVisibility(View.GONE);
                 } else {
                     section4.setVisibility(View.GONE);
+                    header1.setVisibility(View.VISIBLE);
+                    header2.setVisibility(View.VISIBLE);
+                    header3.setVisibility(View.VISIBLE);
                 }
                 break;
             case R.id.txtPhysics:
