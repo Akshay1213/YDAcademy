@@ -63,7 +63,8 @@ public class ResultActivity extends AppCompatActivity {
         userans = arr[0];
         result = arr[1];
         actionBarSetup();
-        Log.d("result", arr[0].length() + "");
+        Log.d("userans", arr[0].length() + "");
+        Log.d("result", arr[1].length() + "");
 
         for (int i = 0; i < result.length(); i++) {
 

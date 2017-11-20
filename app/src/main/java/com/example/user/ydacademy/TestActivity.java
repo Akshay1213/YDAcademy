@@ -33,7 +33,6 @@ import butterknife.InjectView;
 import butterknife.OnClick;
 
 public class TestActivity extends AppCompatActivity {
-    static int i, flag = 0;
 
     @InjectView(R.id.btn_next) Button btn_next;
     @InjectView(R.id.btn_submit) Button btn_submit;
@@ -44,8 +43,7 @@ public class TestActivity extends AppCompatActivity {
     CountDownTimer countDownTimer;
     String answerKey, ans, data, userans, exam, subject, chapter, es, class1;
     ProgressBar progressBar ;
-    CharSequence s;
-    int count, c;
+    int count, c, i, flag = 0;
     UrlRequest urlRequest;
     JSONObject json_data;
     SharedPreferences sp;
@@ -83,10 +81,10 @@ public class TestActivity extends AppCompatActivity {
 
                 if (flag == 0 || count == 50)
                     check_result();
-                while (userans.length() < 50) {
+               /* while (userans.length() < 50) {
                     userans+="E";
                 }
-
+*/
                 // Log.d("Date",)
                 urlRequest=UrlRequest.getObject();
                 urlRequest.setContext(TestActivity.this);
@@ -107,8 +105,11 @@ public class TestActivity extends AppCompatActivity {
                                 answerKey+=json_data.getString("ans");
                             }
                             Log.d("answerkey***", answerKey.length() + "");
-                            Log.d("userans***", userans);
-
+                            Log.d("userans***", userans.length() + "");
+                            Log.d("userans***", userans + " ");
+                            /*String substr=userans.substring(0,50);
+                            Log.d("substr***", substr+" ");
+                            Log.d("substr***", substr.length()+" ");*/
                             data=userans+" "+answerKey;
                             Intent intent=new Intent(TestActivity.this,ResultActivity.class);
                             intent.putExtra("data",data);
@@ -130,7 +131,8 @@ public class TestActivity extends AppCompatActivity {
                 break;
             case R.id.btn_next:
                 flag=1;
-                check_result();
+                if (!(c == 1))
+                    check_result();
 
                 load_image();
                 flag=0;
@@ -172,6 +174,7 @@ public class TestActivity extends AppCompatActivity {
                    text_queNumber.setText(count + 1 + ".");
                    countDownTimer.start();
                    count++;
+                   c = 0;
                    return false;
                }
            }).error(null).into(imageview);
@@ -226,10 +229,11 @@ public class TestActivity extends AppCompatActivity {
 
             if (count == 50)
                 btn_submit.performClick();
-
-            check_result();
-            if (count < 50)
-                load_image();
+            else {
+                check_result();
+                if (count < 50)
+                    load_image();
+            }
 
         }
     }

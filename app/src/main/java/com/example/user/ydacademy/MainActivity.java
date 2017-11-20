@@ -177,7 +177,7 @@ public class MainActivity extends ActionBarActivity
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Intent.ACTION_VIEW).setData(Uri.parse("https://www.facebook.com/xoxytech"));
+                Intent intent = new Intent(Intent.ACTION_VIEW).setData(Uri.parse("https://www.facebook.com/yashodeepacademy/"));
                 startActivity(intent);
 
             }
@@ -185,7 +185,7 @@ public class MainActivity extends ActionBarActivity
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Intent.ACTION_VIEW).setData(Uri.parse("https://twitter.com/xoxytech"));
+                Intent intent = new Intent(Intent.ACTION_VIEW).setData(Uri.parse("https://twitter.com/Yashodeep2017"));
                 startActivity(intent);
 
             }
@@ -193,7 +193,7 @@ public class MainActivity extends ActionBarActivity
         button3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Intent.ACTION_VIEW).setData(Uri.parse("https://www.pinterest.com/xoxytech/"));
+                Intent intent = new Intent(Intent.ACTION_VIEW).setData(Uri.parse("https://plus.google.com/discover"));
                 startActivity(intent);
 
             }
@@ -201,7 +201,7 @@ public class MainActivity extends ActionBarActivity
         button4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Intent.ACTION_VIEW).setData(Uri.parse("https://www.linkedin.com/company/15238415/admin/updates/"));
+                Intent intent = new Intent(Intent.ACTION_VIEW).setData(Uri.parse("https://www.linkedin.com/in/yashodeep-academy-b61232153/"));
                 startActivity(intent);
 
             }

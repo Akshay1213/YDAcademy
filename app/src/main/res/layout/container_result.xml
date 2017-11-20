@@ -21,10 +21,10 @@
                 android:textColor="@color/black" />
             <ProgressBar
                 android:id="@+id/progress"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:layout_marginLeft="150dp"
-                android:layout_marginTop="10dp" />
+                android:layout_marginTop="0dp" />
 
             <ImageView
                 android:id="@+id/ivresult"
