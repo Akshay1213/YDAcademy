@@ -50,13 +50,6 @@ public class MainActivity extends ActionBarActivity
     public FragmentManager fragmentManager;
     @InjectView(R.id.slider)
     SliderLayout sliderShow;
-    /*  @InjectView(R.id.cardAboutUs)CardView cardAboutUs;
-      @InjectView(R.id.cardAchievers)CardView cardAchievers;
-      @InjectView(R.id.cardStaff)CardView cardStaff;
-      @InjectView(R.id.cardContactUs)CardView cardContactUs;
-      @InjectView(R.id.cardCareer)CardView cardCareer;
-      @InjectView(R.id.cardSuccess)CardView cardSuccess;*/
-    /* @InjectView(R.id.btn_login)AppCompatButton btn_login;*/
     @InjectView(R.id.btn_career)
     AppCompatButton btn_career;
     @InjectView(R.id.btn_director)
@@ -224,6 +217,14 @@ public class MainActivity extends ActionBarActivity
 
             }
         });
+       /* rippleView1.setOnRippleCompleteListener(new RippleView.OnRippleCompleteListener() {
+            @Override
+            public void onComplete(RippleView rippleView) {
+                rippleView1.setRippleDuration(80);
+                intent = new Intent(MainActivity.this, AboutUs.class);
+                startActivity(intent);
+            }
+        });*/
     }
 
     public void onBackPressed() {

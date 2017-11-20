@@ -19,6 +19,7 @@ public class CareerGuidenceFragment extends Fragment implements AdapterView.OnIt
 
     Spinner spinner1, spinner2;
     View view, section1, section2;
+    View header2, header1;
     boolean flag;
 
     @Override
@@ -41,33 +42,38 @@ public class CareerGuidenceFragment extends Fragment implements AdapterView.OnIt
         section1 = view.findViewById(R.id.section1);
         section2 = view.findViewById(R.id.section2);
 
-        View header1 = view.findViewById(R.id.header1);
+        header1 = view.findViewById(R.id.header1);
+
         header1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (section1.getVisibility() == View.GONE) {
                     section1.setVisibility(View.VISIBLE);
                     section2.setVisibility(View.GONE);
+                    header2.setVisibility(View.GONE);
                     spinner1.setVisibility(View.VISIBLE);
                     spinner1.performClick();
                 } else {
                     section1.setVisibility(View.GONE);
                     spinner1.setVisibility(View.GONE);
+                    header2.setVisibility(View.VISIBLE);
                 }
             }
         });
-        View header2 = view.findViewById(R.id.header2);
+        header2 = view.findViewById(R.id.header2);
         header2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (section2.getVisibility() == View.GONE) {
                     section2.setVisibility(View.VISIBLE);
                     section1.setVisibility(View.GONE);
+                    header1.setVisibility(View.GONE);
                     spinner2.setVisibility(View.VISIBLE);
                     spinner2.performClick();
                 } else {
                     spinner2.setVisibility(View.GONE);
                     section2.setVisibility(View.GONE);
+                    header1.setVisibility(View.VISIBLE);
                 }
             }
         });
